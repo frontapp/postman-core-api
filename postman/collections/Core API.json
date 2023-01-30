@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "da8fe9ca-ebf2-4253-a284-125915606119",
 		"name": "Core API",
-		"description": "Contact Support:\n Name: Front Platform\n Email: api@frontapp.com",
+		"description": "Contact Support:  \nName: Front Platform  \nUrl: https://community.front.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_uid": "19393231-da8fe9ca-ebf2-4253-a284-125915606119"
 	},
