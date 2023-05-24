@@ -6988,6 +6988,101 @@
 							"body": ""
 						}
 					]
+				},
+				{
+					"name": "Remove contacts from group",
+					"id": "0491dab7-9c62-4d96-8726-78e7dd9f302c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"contact_ids\": [\n    \"ut dolor aliqua quis\",\n    \"ut\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/contact_groups/:contact_group_id/contacts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"contact_groups",
+								":contact_group_id",
+								"contacts"
+							],
+							"variable": [
+								{
+									"key": "contact_group_id",
+									"value": "grp_123"
+								}
+							]
+						},
+						"description": "Remove contacts from the requested group."
+					},
+					"response": [
+						{
+							"id": "69da800a-1790-4894-bddd-066c0447bb57",
+							"name": "No content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"contact_ids\": [\n    \"ut dolor aliqua quis\",\n    \"ut\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/contact_groups/:contact_group_id/contacts",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"contact_groups",
+										":contact_group_id",
+										"contacts"
+									],
+									"variable": [
+										{
+											"key": "contact_group_id"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": []
+						}
+					]
 				}
 			],
 			"id": "5591b901-9dfa-452c-89b9-84f4984aa459"
@@ -12769,6 +12864,70 @@
 							"body": "{\n  \"_links\": {\n    \"self\": \"officia do incididunt\",\n    \"related\": {\n      \"owner\": \"aliquip dolore nisi\"\n    }\n  },\n  \"id\": \"sed a\",\n  \"name\": \"esse aute in commodo sint\",\n  \"actions\": [\n    \"Ut Lorem consectetur\",\n    \"velit dolor id laborum\"\n  ],\n  \"is_private\": false\n}"
 						}
 					]
+				},
+				{
+					"name": "List all company rules",
+					"id": "0bd99bf1-dea4-4d2c-bac7-d3bd72afc681",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/company/rules",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"company",
+								"rules"
+							]
+						},
+						"description": "List the company rules."
+					},
+					"response": [
+						{
+							"id": "2128ea23-8587-437b-9da4-166ae89a9e45",
+							"name": "Untitled Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/company/rules",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"company",
+										"rules"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"owner\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"actions\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"is_private\": \"<boolean>\"\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"owner\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"actions\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"is_private\": \"<boolean>\"\n    }\n  ]\n}"
+						}
+					]
 				}
 			],
 			"id": "e7b5df5f-6107-4693-9d3c-b22bb3b68ad1"
@@ -14371,6 +14530,162 @@
 							"body": "{\n  \"_links\": {\n    \"self\": \"nisi dolore sunt\",\n    \"related\": {\n      \"conversations\": \"adipisicing commodo anim do ir\",\n      \"owner\": \"deserunt ea Excepteur labore\",\n      \"children\": \"est Duis\"\n    }\n  },\n  \"id\": \"commodo deserunt iru\",\n  \"name\": \"dolor v\",\n  \"highlight\": \"red\",\n  \"is_private\": true,\n  \"is_visible_in_conversation_lists\": false,\n  \"created_at\": -94162764,\n  \"updated_at\": 96913782\n}"
 						}
 					]
+				},
+				{
+					"name": "Create company tag",
+					"id": "aa518681-3c15-4a8b-a4f2-48f86d44ed97",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"mollit dolor culpa officia\",\n  \"highlight\": \"grey\",\n  \"is_visible_in_conversation_lists\": false\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/company/tags",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"company",
+								"tags"
+							]
+						},
+						"description": "Create a company tag."
+					},
+					"response": [
+						{
+							"id": "7c6f3898-8d4e-4c45-86f9-9d63797c3d69",
+							"name": "Untitled Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"mollit dolor culpa officia\",\n  \"highlight\": \"grey\",\n  \"is_visible_in_conversation_lists\": false\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/company/tags",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"company",
+										"tags"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"conversations\": \"<string>\",\n      \"owner\": \"<string>\",\n      \"children\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"highlight\": \"blue\",\n  \"is_private\": \"<boolean>\",\n  \"is_visible_in_conversation_lists\": \"<boolean>\",\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List company tags",
+					"id": "ae68a8c8-d55b-45c5-84e0-9a078c65ce5b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/company/tags",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"company",
+								"tags"
+							]
+						},
+						"description": "List the company tags."
+					},
+					"response": [
+						{
+							"id": "841bfff0-2cb2-49a2-b4a7-164b2855079c",
+							"name": "Untitled Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/company/tags",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"company",
+										"tags"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"conversations\": \"<string>\",\n          \"owner\": \"<string>\",\n          \"children\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"highlight\": \"purple\",\n      \"is_private\": \"<boolean>\",\n      \"is_visible_in_conversation_lists\": \"<boolean>\",\n      \"created_at\": \"<number>\",\n      \"updated_at\": \"<number>\"\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"conversations\": \"<string>\",\n          \"owner\": \"<string>\",\n          \"children\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"highlight\": \"grey\",\n      \"is_private\": \"<boolean>\",\n      \"is_visible_in_conversation_lists\": \"<boolean>\",\n      \"created_at\": \"<number>\",\n      \"updated_at\": \"<number>\"\n    }\n  ]\n}"
+						}
+					]
 				}
 			],
 			"id": "e3f941cd-7082-474d-b49f-d1dbe4dd3136"
@@ -15003,321 +15318,6 @@
 					],
 					"cookie": [],
 					"body": "{\n  \"_links\": {\n    \"self\": \"labore\"\n  },\n  \"id\": -70450280,\n  \"name\": \"et quis\"\n}"
-				}
-			]
-		},
-		{
-			"name": "Remove contacts from group",
-			"id": "0491dab7-9c62-4d96-8726-78e7dd9f302c",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "DELETE",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"contact_ids\": [\n    \"ut dolor aliqua quis\",\n    \"ut\"\n  ]\n}",
-					"options": {
-						"raw": {
-							"headerFamily": "json",
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{baseUrl}}/contact_groups/:contact_group_id/contacts",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"contact_groups",
-						":contact_group_id",
-						"contacts"
-					],
-					"variable": [
-						{
-							"key": "contact_group_id",
-							"value": "grp_123"
-						}
-					]
-				},
-				"description": "Remove contacts from the requested group."
-			},
-			"response": [
-				{
-					"id": "69da800a-1790-4894-bddd-066c0447bb57",
-					"name": "No content",
-					"originalRequest": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"description": "Added as a part of security scheme: bearer",
-								"key": "Authorization",
-								"value": "Bearer <token>"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"contact_ids\": [\n    \"ut dolor aliqua quis\",\n    \"ut\"\n  ]\n}",
-							"options": {
-								"raw": {
-									"headerFamily": "json",
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/contact_groups/:contact_group_id/contacts",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"contact_groups",
-								":contact_group_id",
-								"contacts"
-							],
-							"variable": [
-								{
-									"key": "contact_group_id"
-								}
-							]
-						}
-					},
-					"status": "No Content",
-					"code": 204,
-					"_postman_previewlanguage": "Text",
-					"header": [],
-					"cookie": []
-				}
-			]
-		},
-		{
-			"name": "List all company rules",
-			"id": "0bd99bf1-dea4-4d2c-bac7-d3bd72afc681",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json"
-					}
-				],
-				"url": {
-					"raw": "{{baseUrl}}/company/rules",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"company",
-						"rules"
-					]
-				},
-				"description": "List the company rules."
-			},
-			"response": [
-				{
-					"id": "2128ea23-8587-437b-9da4-166ae89a9e45",
-					"name": "Untitled Example",
-					"originalRequest": {
-						"method": "GET",
-						"header": [
-							{
-								"description": "Added as a part of security scheme: bearer",
-								"key": "Authorization",
-								"value": "Bearer <token>"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/company/rules",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"company",
-								"rules"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "Text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"cookie": [],
-					"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"owner\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"actions\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"is_private\": \"<boolean>\"\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"owner\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"actions\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"is_private\": \"<boolean>\"\n    }\n  ]\n}"
-				}
-			]
-		},
-		{
-			"name": "List company tags",
-			"id": "ae68a8c8-d55b-45c5-84e0-9a078c65ce5b",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json"
-					}
-				],
-				"url": {
-					"raw": "{{baseUrl}}/company/tags",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"company",
-						"tags"
-					]
-				},
-				"description": "List the company tags."
-			},
-			"response": [
-				{
-					"id": "841bfff0-2cb2-49a2-b4a7-164b2855079c",
-					"name": "Untitled Example",
-					"originalRequest": {
-						"method": "GET",
-						"header": [
-							{
-								"description": "Added as a part of security scheme: bearer",
-								"key": "Authorization",
-								"value": "Bearer <token>"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/company/tags",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"company",
-								"tags"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "Text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"cookie": [],
-					"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"conversations\": \"<string>\",\n          \"owner\": \"<string>\",\n          \"children\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"highlight\": \"purple\",\n      \"is_private\": \"<boolean>\",\n      \"is_visible_in_conversation_lists\": \"<boolean>\",\n      \"created_at\": \"<number>\",\n      \"updated_at\": \"<number>\"\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"conversations\": \"<string>\",\n          \"owner\": \"<string>\",\n          \"children\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"highlight\": \"grey\",\n      \"is_private\": \"<boolean>\",\n      \"is_visible_in_conversation_lists\": \"<boolean>\",\n      \"created_at\": \"<number>\",\n      \"updated_at\": \"<number>\"\n    }\n  ]\n}"
-				}
-			]
-		},
-		{
-			"name": "Create company tag",
-			"id": "aa518681-3c15-4a8b-a4f2-48f86d44ed97",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					},
-					{
-						"key": "Accept",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"name\": \"mollit dolor culpa officia\",\n  \"highlight\": \"grey\",\n  \"is_visible_in_conversation_lists\": false\n}",
-					"options": {
-						"raw": {
-							"headerFamily": "json",
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{baseUrl}}/company/tags",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"company",
-						"tags"
-					]
-				},
-				"description": "Create a company tag."
-			},
-			"response": [
-				{
-					"id": "7c6f3898-8d4e-4c45-86f9-9d63797c3d69",
-					"name": "Untitled Example",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"description": "Added as a part of security scheme: bearer",
-								"key": "Authorization",
-								"value": "Bearer <token>"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"name\": \"mollit dolor culpa officia\",\n  \"highlight\": \"grey\",\n  \"is_visible_in_conversation_lists\": false\n}",
-							"options": {
-								"raw": {
-									"headerFamily": "json",
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/company/tags",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"company",
-								"tags"
-							]
-						}
-					},
-					"status": "Created",
-					"code": 201,
-					"_postman_previewlanguage": "Text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"cookie": [],
-					"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"conversations\": \"<string>\",\n      \"owner\": \"<string>\",\n      \"children\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"highlight\": \"blue\",\n  \"is_private\": \"<boolean>\",\n  \"is_visible_in_conversation_lists\": \"<boolean>\",\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
 				}
 			]
 		}
