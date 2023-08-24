@@ -2377,7 +2377,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/teams/:team_id/tags",
+											"raw": "{{baseUrl}}/teams/:team_id/tags?limit=<integer>&page_token=<string>",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -2385,6 +2385,18 @@
 												"teams",
 												":team_id",
 												"tags"
+											],
+											"query": [
+												{
+													"description": "Max number of results per [page](https://dev.frontapp.com/docs/pagination)",
+													"key": "limit",
+													"value": "<integer>"
+												},
+												{
+													"description": "Token to use to request the [next page](https://dev.frontapp.com/docs/pagination)",
+													"key": "page_token",
+													"value": "<string>"
+												}
 											],
 											"variable": [
 												{
@@ -5280,7 +5292,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/teammates/:teammate_id/tags",
+											"raw": "{{baseUrl}}/teammates/:teammate_id/tags?limit=<integer>&page_token=<string>",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -5288,6 +5300,18 @@
 												"teammates",
 												":teammate_id",
 												"tags"
+											],
+											"query": [
+												{
+													"description": "Max number of results per [page](https://dev.frontapp.com/docs/pagination)",
+													"key": "limit",
+													"value": "<integer>"
+												},
+												{
+													"description": "Token to use to request the [next page](https://dev.frontapp.com/docs/pagination)",
+													"key": "page_token",
+													"value": "<string>"
+												}
 											],
 											"variable": [
 												{
@@ -14394,12 +14418,24 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/tags",
+							"raw": "{{baseUrl}}/tags?limit=<integer>&page_token=<string>",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"tags"
+							],
+							"query": [
+								{
+									"description": "Max number of results per [page](https://dev.frontapp.com/docs/pagination)",
+									"key": "limit",
+									"value": "<integer>"
+								},
+								{
+									"description": "Token to use to request the [next page](https://dev.frontapp.com/docs/pagination)",
+									"key": "page_token",
+									"value": "<string>"
+								}
 							]
 						},
 						"description": "List the tags of the company."
@@ -14638,13 +14674,25 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/company/tags",
+							"raw": "{{baseUrl}}/company/tags?limit=<integer>&page_token=<string>",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"company",
 								"tags"
+							],
+							"query": [
+								{
+									"description": "Max number of results per [page](https://dev.frontapp.com/docs/pagination)",
+									"key": "limit",
+									"value": "<integer>"
+								},
+								{
+									"description": "Token to use to request the [next page](https://dev.frontapp.com/docs/pagination)",
+									"key": "page_token",
+									"value": "<string>"
+								}
 							]
 						},
 						"description": "List the company tags."
