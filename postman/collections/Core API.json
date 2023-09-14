@@ -11297,6 +11297,49 @@
 									],
 									"cookie": [],
 									"body": ""
+								},
+								{
+									"id": "e134d45f-e69d-4fcb-8fc2-ee58112cfa98",
+									"name": "Invalid input, such as invalid custom fields",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"assignee_id\": \"labori\",\n  \"inbox_id\": \"proident\",\n  \"status\": \"archived\",\n  \"tag_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/conversations/:conversation_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"conversations",
+												":conversation_id"
+											],
+											"variable": [
+												{
+													"key": "conversation_id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "Text",
+									"header": [],
+									"cookie": []
 								}
 							]
 						},
