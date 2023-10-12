@@ -7550,7 +7550,7 @@
 							},
 							"response": [
 								{
-									"id": "087b6b27-1af9-4530-ab18-9c3b0720d912",
+									"id": "b0505847-3ebf-42fd-86d7-41fb767650e7",
 									"name": "A contact",
 									"originalRequest": {
 										"method": "GET",
@@ -7558,6 +7558,11 @@
 											{
 												"key": "Accept",
 												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
 											}
 										],
 										"url": {
@@ -7571,26 +7576,22 @@
 											],
 											"variable": [
 												{
-													"key": "contact_id",
-													"value": "crd_123",
-													"description": "(Required) The contact ID"
+													"key": "contact_id"
 												}
 											]
-										},
-										"description": "Fetch a contact."
+										}
 									},
-									"status": "Created",
-									"code": 201,
-									"_postman_previewlanguage": "json",
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "Text",
 									"header": [
 										{
 											"key": "Content-Type",
-											"value": "application/json",
-											"enabled": true
+											"value": "application/json"
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"_links\": {\n    \"self\": \"ex sit id quis incididunt\",\n    \"related\": {\n      \"notes\": \"aliquip labore sunt ullamco elit\",\n      \"conversations\": \"adipisicing officia deserunt ea est\",\n      \"owner\": \"Ut nulla dolore\"\n    }\n  },\n  \"id\": \"commodo culpa veniam mollit\",\n  \"name\": \"quis aliqua deserunt laboris Excepteur\",\n  \"description\": \"dolor sunt sed in\",\n  \"avatar_url\": \"pariatur\",\n  \"is_spammer\": false,\n  \"links\": [\n    \"consectetur proident\",\n    \"ipsum minim Excepteur\"\n  ],\n  \"groups\": [\n    {\n      \"_links\": {\n        \"self\": \"eu e\",\n        \"related\": {\n          \"contacts\": \"irure officia exercitation\",\n          \"owner\": \"aliquip sit dolor id in\"\n        }\n      },\n      \"id\": \"ad minim dolore\",\n      \"name\": \"mollit sunt ullamco\",\n      \"is_private\": true\n    },\n    {\n      \"_links\": {\n        \"self\": \"adipisicing\",\n        \"related\": {\n          \"contacts\": \"deserunt quis in sed est\",\n          \"owner\": \"in occaecat consectetur\"\n        }\n      },\n      \"id\": \"in\",\n      \"name\": \"dolor mollit non\",\n      \"is_private\": true\n    }\n  ],\n  \"handles\": [\n    {\n      \"handle\": \"veniam sint dolor\",\n      \"source\": \"twitter\"\n    },\n    {\n      \"handle\": \"sint qui aliqua\",\n      \"source\": \"front_chat\"\n    }\n  ],\n  \"custom_fields\": {},\n  \"is_private\": true\n}"
+									"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"notes\": \"<string>\",\n      \"conversations\": \"<string>\",\n      \"owner\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"avatar_url\": \"<string>\",\n  \"is_spammer\": \"<boolean>\",\n  \"links\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"groups\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"contacts\": \"<string>\",\n          \"owner\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"is_private\": \"<boolean>\"\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"contacts\": \"<string>\",\n          \"owner\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"is_private\": \"<boolean>\"\n    }\n  ],\n  \"handles\": [\n    {\n      \"handle\": \"<string>\",\n      \"source\": \"intercom\"\n    },\n    {\n      \"handle\": \"<string>\",\n      \"source\": \"facebook\"\n    }\n  ],\n  \"custom_fields\": {},\n  \"is_private\": \"<boolean>\"\n}"
 								}
 							]
 						},
@@ -12231,6 +12232,278 @@
 							"body": "{\n  \"_links\": {\n    \"self\": \"mollit\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"consectet\"\n      },\n      \"id\": \"incididunt aliquip \",\n      \"name\": \"commodo incididunt ea\",\n      \"description\": \"in sit elit u\",\n      \"type\": \"number\"\n    },\n    {\n      \"_links\": {\n        \"self\": \"dolor Ut consequat incididunt Lorem\"\n      },\n      \"id\": \"sed velit\",\n      \"name\": \"fugiat reprehenderit et elit\",\n      \"description\": \"dolor minim\",\n      \"type\": \"datetime\"\n    }\n  ]\n}"
 						}
 					]
+				},
+				{
+					"name": "List Account's custom fields",
+					"id": "4c4b12b6-0e4c-4faa-8356-b073bbaa7431",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/accounts/custom_fields",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"accounts",
+								"custom_fields"
+							]
+						},
+						"description": "Lists the custom fields that can be attached to an Account."
+					},
+					"response": [
+						{
+							"id": "9d4b0f99-2f81-4420-bdd4-ad249ce613aa",
+							"name": "Array of Custom Fields",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/accounts/custom_fields",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"accounts",
+										"custom_fields"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"string\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"teammate\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "List Conversation's custom fields",
+					"id": "4f0214dc-e5bd-467f-a7b9-2bb982dfdd7e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/conversations/custom_fields",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"conversations",
+								"custom_fields"
+							]
+						},
+						"description": "Lists the custom fields that can be attached to a Conversation."
+					},
+					"response": [
+						{
+							"id": "9bfc27f9-0be5-4c72-b5ad-0578f2bde143",
+							"name": "Array of Custom Fields",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/conversations/custom_fields",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"conversations",
+										"custom_fields"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"string\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"teammate\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "List Inbox's custom fields",
+					"id": "7aafe356-573e-45f4-be65-2dfd741e4489",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/inboxes/custom_fields",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"inboxes",
+								"custom_fields"
+							]
+						},
+						"description": "Lists the custom fields that can be attached to an Inbox."
+					},
+					"response": [
+						{
+							"id": "8e44d2ac-3858-4365-acb1-86a57f212fc5",
+							"name": "Array of Custom Fields",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/inboxes/custom_fields",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"inboxes",
+										"custom_fields"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"string\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"teammate\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "List Teammate's custom fields",
+					"id": "246b778a-c941-45a7-bfb2-2ebcc5b4b660",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/teammates/custom_fields",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"teammates",
+								"custom_fields"
+							]
+						},
+						"description": "Lists the custom fields that can be attached to a Teammate."
+					},
+					"response": [
+						{
+							"id": "46c188eb-32a3-4075-a44d-3351fa0ff561",
+							"name": "Array of Custom Fields",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/teammates/custom_fields",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"teammates",
+										"custom_fields"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"string\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"teammate\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}"
+						}
+					]
 				}
 			],
 			"id": "c6cb9376-e607-4019-8c72-33cc9e2fe96b"
@@ -15330,278 +15603,6 @@
 					],
 					"cookie": [],
 					"body": "{\n  \"_links\": {\n    \"self\": \"labore\"\n  },\n  \"id\": -70450280,\n  \"name\": \"et quis\"\n}"
-				}
-			]
-		},
-		{
-			"name": "List Account's custom fields",
-			"id": "4c4b12b6-0e4c-4faa-8356-b073bbaa7431",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json"
-					}
-				],
-				"url": {
-					"raw": "{{baseUrl}}/accounts/custom_fields",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"accounts",
-						"custom_fields"
-					]
-				},
-				"description": "Lists the custom fields that can be attached to an Account."
-			},
-			"response": [
-				{
-					"id": "9d4b0f99-2f81-4420-bdd4-ad249ce613aa",
-					"name": "Array of Custom Fields",
-					"originalRequest": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json"
-							},
-							{
-								"description": "Added as a part of security scheme: bearer",
-								"key": "Authorization",
-								"value": "Bearer <token>"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/accounts/custom_fields",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"accounts",
-								"custom_fields"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "Text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"cookie": [],
-					"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"string\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"teammate\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}"
-				}
-			]
-		},
-		{
-			"name": "List Conversation's custom fields",
-			"id": "4f0214dc-e5bd-467f-a7b9-2bb982dfdd7e",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json"
-					}
-				],
-				"url": {
-					"raw": "{{baseUrl}}/conversations/custom_fields",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"conversations",
-						"custom_fields"
-					]
-				},
-				"description": "Lists the custom fields that can be attached to a Conversation."
-			},
-			"response": [
-				{
-					"id": "9bfc27f9-0be5-4c72-b5ad-0578f2bde143",
-					"name": "Array of Custom Fields",
-					"originalRequest": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json"
-							},
-							{
-								"description": "Added as a part of security scheme: bearer",
-								"key": "Authorization",
-								"value": "Bearer <token>"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/conversations/custom_fields",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"conversations",
-								"custom_fields"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "Text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"cookie": [],
-					"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"string\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"teammate\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}"
-				}
-			]
-		},
-		{
-			"name": "List Inbox's custom fields",
-			"id": "7aafe356-573e-45f4-be65-2dfd741e4489",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json"
-					}
-				],
-				"url": {
-					"raw": "{{baseUrl}}/inboxes/custom_fields",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"inboxes",
-						"custom_fields"
-					]
-				},
-				"description": "Lists the custom fields that can be attached to an Inbox."
-			},
-			"response": [
-				{
-					"id": "8e44d2ac-3858-4365-acb1-86a57f212fc5",
-					"name": "Array of Custom Fields",
-					"originalRequest": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json"
-							},
-							{
-								"description": "Added as a part of security scheme: bearer",
-								"key": "Authorization",
-								"value": "Bearer <token>"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/inboxes/custom_fields",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"inboxes",
-								"custom_fields"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "Text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"cookie": [],
-					"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"string\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"teammate\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}"
-				}
-			]
-		},
-		{
-			"name": "List Teammate's custom fields",
-			"id": "246b778a-c941-45a7-bfb2-2ebcc5b4b660",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json"
-					}
-				],
-				"url": {
-					"raw": "{{baseUrl}}/teammates/custom_fields",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"teammates",
-						"custom_fields"
-					]
-				},
-				"description": "Lists the custom fields that can be attached to a Teammate."
-			},
-			"response": [
-				{
-					"id": "46c188eb-32a3-4075-a44d-3351fa0ff561",
-					"name": "Array of Custom Fields",
-					"originalRequest": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json"
-							},
-							{
-								"description": "Added as a part of security scheme: bearer",
-								"key": "Authorization",
-								"value": "Bearer <token>"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/teammates/custom_fields",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"teammates",
-								"custom_fields"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "Text",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"cookie": [],
-					"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"string\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"teammate\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}"
 				}
 			]
 		}
