@@ -31,7 +31,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/accounts/:account_id/contacts?page_token=adipisicing minim sunt amet laborum&limit=-22903719",
+											"raw": "{{baseUrl}}/accounts/:account_id/contacts?page_token=adipisicing minim sunt amet laborum&limit=-22903719&sort_by=<string>&sort_order=desc",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -50,6 +50,16 @@
 													"description": "Max number of results per page",
 													"key": "limit",
 													"value": "-22903719"
+												},
+												{
+													"description": "Field used to sort the contacts. Either 'created_at' or 'updated_at'.",
+													"key": "sort_by",
+													"value": "<string>"
+												},
+												{
+													"description": "Order by which results should be sorted",
+													"key": "sort_order",
+													"value": "desc"
 												}
 											],
 											"variable": [
@@ -795,7 +805,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/events?q=adipisicing minim sunt amet laborum&limit=-22903719&page_token=adipisicing minim sunt amet laborum",
+							"raw": "{{baseUrl}}/events?q=adipisicing minim sunt amet laborum&limit=-22903719&page_token=adipisicing minim sunt amet laborum&sort_by=<string>&sort_order=asc",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -817,6 +827,16 @@
 									"description": "Token to use to request the next page",
 									"key": "page_token",
 									"value": "adipisicing minim sunt amet laborum"
+								},
+								{
+									"description": "Field used to sort the events. Only supports 'created_at'.",
+									"key": "sort_by",
+									"value": "<string>"
+								},
+								{
+									"description": "Order by which results should be sorted",
+									"key": "sort_order",
+									"value": "asc"
 								}
 							]
 						},
@@ -981,7 +1001,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/teams/:team_id/message_template_folders",
+											"raw": "{{baseUrl}}/teams/:team_id/message_template_folders?sort_by=<string>&sort_order=asc",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -989,6 +1009,18 @@
 												"teams",
 												":team_id",
 												"message_template_folders"
+											],
+											"query": [
+												{
+													"description": "Field used to sort the message template folders. Either 'created_at' or 'updated_at'.",
+													"key": "sort_by",
+													"value": "<string>"
+												},
+												{
+													"description": "Order by which results should be sorted",
+													"key": "sort_order",
+													"value": "asc"
+												}
 											],
 											"variable": [
 												{
@@ -1175,7 +1207,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/teams/:team_id/message_templates",
+											"raw": "{{baseUrl}}/teams/:team_id/message_templates?sort_by=<string>&sort_order=desc",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -1183,6 +1215,18 @@
 												"teams",
 												":team_id",
 												"message_templates"
+											],
+											"query": [
+												{
+													"description": "Field used to sort the message templates. Either 'created_at', 'updated_at', or 'sort_order'.",
+													"key": "sort_by",
+													"value": "<string>"
+												},
+												{
+													"description": "Order by which results should be sorted",
+													"key": "sort_order",
+													"value": "desc"
+												}
 											],
 											"variable": [
 												{
@@ -2377,7 +2421,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/teams/:team_id/tags?limit=<integer>&page_token=<string>",
+											"raw": "{{baseUrl}}/teams/:team_id/tags?limit=<integer>&page_token=<string>&sort_by=<string>&sort_order=asc",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -2396,6 +2440,16 @@
 													"description": "Token to use to request the [next page](https://dev.frontapp.com/docs/pagination)",
 													"key": "page_token",
 													"value": "<string>"
+												},
+												{
+													"description": "Field used to sort the tags. Only supports 'id'.",
+													"key": "sort_by",
+													"value": "<string>"
+												},
+												{
+													"description": "Order by which results should be sorted",
+													"key": "sort_order",
+													"value": "asc"
 												}
 											],
 											"variable": [
@@ -3281,12 +3335,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"start\": -96671690.96829875,\n  \"end\": 35009987.74359414,\n  \"type\": \"messages\",\n  \"timezone\": \"anim est nisi\",\n  \"filters\": {\n    \"tag_ids\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  }\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
+									"raw": "{\n  \"start\": -96671690.96829875,\n  \"end\": 35009987.74359414,\n  \"type\": \"messages\",\n  \"timezone\": \"anim est nisi\",\n  \"filters\": {\n    \"tag_ids\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  },\n  \"columns\": [\n    \"Message ID\",\n    \"Conversation ID\",\n    \"Segment\",\n    \"Direction\",\n    \"Status\",\n    \"Inbox\",\n    \"Inbox API ID\",\n    \"Message date\",\n    \"Autoreply\",\n    \"Reaction time\",\n    \"Total reply time\",\n    \"Handle time\",\n    \"Response time\",\n    \"Attributed to\",\n    \"Assignee\",\n    \"Author\",\n    \"Contact name\",\n    \"Contact handle\",\n    \"Account names\",\n    \"To\",\n    \"Cc\",\n    \"Bcc\",\n    \"Extract\",\n    \"Tags\",\n    \"Tag API IDs\",\n    \"Message API ID\",\n    \"Conversation API ID\",\n    \"New Conversation\",\n    \"First response\",\n    \"Business hours\",\n    \"Subject\",\n    \"Segment start\",\n    \"Segment end\",\n    \"Segment closed\",\n    \"Last segment activity\"\n  ]\n}"
 								},
 								"url": {
 									"raw": "{{baseUrl}}/analytics/exports",
@@ -4112,12 +4161,24 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/message_template_folders",
+							"raw": "{{baseUrl}}/message_template_folders?sort_by=<string>&sort_order=asc",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"message_template_folders"
+							],
+							"query": [
+								{
+									"description": "Field used to sort the message template folders. Either 'created_at' or 'updated_at'.",
+									"key": "sort_by",
+									"value": "<string>"
+								},
+								{
+									"description": "Order by which results should be sorted",
+									"key": "sort_order",
+									"value": "asc"
+								}
 							]
 						},
 						"description": "List the message template folders."
@@ -4276,7 +4337,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/teammates/:teammate_id/message_template_folders",
+											"raw": "{{baseUrl}}/teammates/:teammate_id/message_template_folders?sort_by=<string>&sort_order=desc",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -4284,6 +4345,18 @@
 												"teammates",
 												":teammate_id",
 												"message_template_folders"
+											],
+											"query": [
+												{
+													"description": "Field used to sort the message template folders. Either 'created_at' or 'updated_at'.",
+													"key": "sort_by",
+													"value": "<string>"
+												},
+												{
+													"description": "Order by which results should be sorted",
+													"key": "sort_order",
+													"value": "desc"
+												}
 											],
 											"variable": [
 												{
@@ -4470,7 +4543,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/teammates/:teammate_id/message_templates",
+											"raw": "{{baseUrl}}/teammates/:teammate_id/message_templates?sort_by=<string>&sort_order=asc",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -4478,6 +4551,18 @@
 												"teammates",
 												":teammate_id",
 												"message_templates"
+											],
+											"query": [
+												{
+													"description": "Field used to sort the message templates. Either 'created_at', 'updated_at', or 'sort_order'.",
+													"key": "sort_by",
+													"value": "<string>"
+												},
+												{
+													"description": "Order by which results should be sorted",
+													"key": "sort_order",
+													"value": "asc"
+												}
 											],
 											"variable": [
 												{
@@ -5292,7 +5377,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/teammates/:teammate_id/tags?limit=<integer>&page_token=<string>",
+											"raw": "{{baseUrl}}/teammates/:teammate_id/tags?limit=<integer>&page_token=<string>&sort_by=<string>&sort_order=desc",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -5311,6 +5396,16 @@
 													"description": "Token to use to request the [next page](https://dev.frontapp.com/docs/pagination)",
 													"key": "page_token",
 													"value": "<string>"
+												},
+												{
+													"description": "Field used to sort the tags. Only supports 'id'.",
+													"key": "sort_by",
+													"value": "<string>"
+												},
+												{
+													"description": "Order by which results should be sorted",
+													"key": "sort_order",
+													"value": "desc"
 												}
 											],
 											"variable": [
@@ -6441,12 +6536,24 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/message_templates",
+							"raw": "{{baseUrl}}/message_templates?sort_by=<string>&sort_order=desc",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"message_templates"
+							],
+							"query": [
+								{
+									"description": "Field used to sort the message templates. Either 'created_at', 'updated_at', or 'sort_order'.",
+									"key": "sort_by",
+									"value": "<string>"
+								},
+								{
+									"description": "Order by which results should be sorted",
+									"key": "sort_order",
+									"value": "desc"
+								}
 							]
 						},
 						"description": "List the message templates."
@@ -11740,7 +11847,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/conversations?q=adipisicing minim sunt amet laborum&limit=-22903719&page_token=adipisicing minim sunt amet laborum",
+							"raw": "{{baseUrl}}/conversations?q=adipisicing minim sunt amet laborum&limit=-22903719&page_token=adipisicing minim sunt amet laborum&sort_by=<string>&sort_order=asc",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -11762,6 +11869,16 @@
 									"description": "Token to use to request the next page",
 									"key": "page_token",
 									"value": "adipisicing minim sunt amet laborum"
+								},
+								{
+									"description": "Field used to sort the conversations. Only supports 'date'.",
+									"key": "sort_by",
+									"value": "<string>"
+								},
+								{
+									"description": "Order by which results should be sorted",
+									"key": "sort_order",
+									"value": "asc"
 								}
 							]
 						},
@@ -14655,7 +14772,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/tags?limit=<integer>&page_token=<string>",
+							"raw": "{{baseUrl}}/tags?limit=<integer>&page_token=<string>&sort_by=<string>&sort_order=asc",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -14672,6 +14789,16 @@
 									"description": "Token to use to request the [next page](https://dev.frontapp.com/docs/pagination)",
 									"key": "page_token",
 									"value": "<string>"
+								},
+								{
+									"description": "Field used to sort the tags. Only supports 'id'.",
+									"key": "sort_by",
+									"value": "<string>"
+								},
+								{
+									"description": "Order by which results should be sorted",
+									"key": "sort_order",
+									"value": "asc"
 								}
 							]
 						},
@@ -14911,7 +15038,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/company/tags?limit=<integer>&page_token=<string>",
+							"raw": "{{baseUrl}}/company/tags?limit=<integer>&page_token=<string>&sort_by=<string>&sort_order=asc",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -14929,6 +15056,16 @@
 									"description": "Token to use to request the [next page](https://dev.frontapp.com/docs/pagination)",
 									"key": "page_token",
 									"value": "<string>"
+								},
+								{
+									"description": "Field used to sort the tags. Only supports 'id'.",
+									"key": "sort_by",
+									"value": "<string>"
+								},
+								{
+									"description": "Order by which results should be sorted",
+									"key": "sort_order",
+									"value": "asc"
 								}
 							]
 						},
@@ -15172,7 +15309,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/links/:link_id/conversations?q=adipisicing minim sunt amet laborum&limit=-22903719&page_token=adipisicing minim sunt amet laborum",
+									"raw": "{{baseUrl}}/links/:link_id/conversations?q=adipisicing minim sunt amet laborum&limit=-22903719&page_token=adipisicing minim sunt amet laborum&sort_by=<string>&sort_order=asc",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -15196,6 +15333,16 @@
 											"description": "Token to use to request the next page",
 											"key": "page_token",
 											"value": "adipisicing minim sunt amet laborum"
+										},
+										{
+											"description": "Field used to sort the conversations. Only supports 'date'.",
+											"key": "sort_by",
+											"value": "<string>"
+										},
+										{
+											"description": "Order by which results should be sorted",
+											"key": "sort_order",
+											"value": "asc"
 										}
 									],
 									"variable": [
@@ -15290,7 +15437,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/links?q=adipisicing minim sunt amet laborum&limit=-22903719&page_token=adipisicing minim sunt amet laborum",
+							"raw": "{{baseUrl}}/links?q=adipisicing minim sunt amet laborum&limit=-22903719&page_token=adipisicing minim sunt amet laborum&sort_by=<string>&sort_order=asc",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -15312,6 +15459,16 @@
 									"description": "Token to use to request the next page",
 									"key": "page_token",
 									"value": "adipisicing minim sunt amet laborum"
+								},
+								{
+									"description": "Field used to sort the links. Only supports 'id'.",
+									"key": "sort_by",
+									"value": "<string>"
+								},
+								{
+									"description": "Order by which results should be sorted",
+									"key": "sort_order",
+									"value": "asc"
 								}
 							]
 						},
@@ -15603,6 +15760,74 @@
 					],
 					"cookie": [],
 					"body": "{\n  \"_links\": {\n    \"self\": \"labore\"\n  },\n  \"id\": -70450280,\n  \"name\": \"et quis\"\n}"
+				}
+			]
+		},
+		{
+			"name": "List Link's custom fields",
+			"id": "17b69016-9cae-4690-a016-590e1a6f5a36",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/links/custom_fields",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"links",
+						"custom_fields"
+					]
+				},
+				"description": "Lists the custom fields that can be attached to a Link."
+			},
+			"response": [
+				{
+					"id": "811fab15-b483-420b-a879-a2d562576650",
+					"name": "Array of Custom Fields",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"description": "Added as a part of security scheme: bearer",
+								"key": "Authorization",
+								"value": "Bearer <token>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/links/custom_fields",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"links",
+								"custom_fields"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"inbox\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"inbox\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}"
 				}
 			]
 		}
