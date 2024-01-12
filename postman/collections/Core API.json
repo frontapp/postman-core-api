@@ -8722,7 +8722,7 @@
 							]
 						},
 						{
-							"name": "Create conversation",
+							"name": "Create message",
 							"id": "47f2a978-d18c-4ef4-b578-cc5b1b537c2c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -8739,15 +8739,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"to\": [\n    \"deserunt velit amet adipisicing aliquip\",\n    \"labore qui incididunt esse\"\n  ],\n  \"body\": \"officia elit ve\",\n  \"cc\": [\n    \"sint quis sed irure\",\n    \"ad eu quis elit officia\"\n  ],\n  \"bcc\": [\n    \"anim voluptate ip\",\n    \"ad Lorem\"\n  ],\n  \"sender_name\": \"cupidatat Ut\",\n  \"subject\": \"esse Ut nisi voluptate\",\n  \"author_id\": \"dolore sunt mollit ex\",\n  \"text\": \"nisi dolor sint aute\",\n  \"options\": {\n    \"tag_ids\": [\n      \"adipisicing officia sed dolore sint\",\n      \"in et\"\n    ],\n    \"archive\": true\n  },\n  \"attachments\": [\n    \"ut Excepteur aliquip dolor\",\n    \"consequat minim velit\"\n  ],\n  \"signature_id\": \"Lorem et ea Duis\",\n  \"should_add_default_signature\": false\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
 								"url": {
 									"raw": "{{baseUrl}}/channels/:channel_id/messages",
 									"host": [
@@ -10022,7 +10013,7 @@
 									]
 								},
 								{
-									"name": "Create comment",
+									"name": "Add comment",
 									"id": "35902753-235a-4f8c-bd66-2dbba7dca821",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -10039,15 +10030,6 @@
 												"value": "application/json"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n  \"body\": \"veniam sint velit\",\n  \"author_id\": \"dolor\",\n  \"attachments\": [\n    \"eu\",\n    \"adipisicing ut consectetur sunt velit\"\n  ]\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
 										"url": {
 											"raw": "{{baseUrl}}/conversations/:conversation_id/comments",
 											"host": [
@@ -10932,7 +10914,7 @@
 									]
 								},
 								{
-									"name": "Reply to conversation",
+									"name": "Create message reply",
 									"id": "c778d23d-ccac-423d-aaf2-0fe6530d7fc3",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -10949,15 +10931,6 @@
 												"value": "application/json"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n  \"body\": \"ipsum Excepteur\",\n  \"to\": [\n    \"cupidatat nost\",\n    \"magna eiusmod enim incidi\"\n  ],\n  \"cc\": [\n    \"in velit\",\n    \"dolor labore eiusmod et do\"\n  ],\n  \"bcc\": [\n    \"culpa pariatur\",\n    \"elit quis\"\n  ],\n  \"sender_name\": \"in mollit\",\n  \"subject\": \"dolor\",\n  \"author_id\": \"ea sed aliqua officia\",\n  \"channel_id\": \"laborum id\",\n  \"text\": \"exercitation Excepteur\",\n  \"options\": {\n    \"tag_ids\": [\n      \"nostrud officia esse in\",\n      \"deserunt consectetur\"\n    ],\n    \"archive\": true\n  },\n  \"attachments\": [\n    \"esse amet dolor\",\n    \"Duis sit ea anim\"\n  ],\n  \"signature_id\": \"ipsum\",\n  \"should_add_default_signature\": true\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
 										"url": {
 											"raw": "{{baseUrl}}/conversations/:conversation_id/messages",
 											"host": [
@@ -11940,7 +11913,7 @@
 					]
 				},
 				{
-					"name": "Create conversation",
+					"name": "Create discussion conversation",
 					"id": "62b5dd39-8e2b-415f-895a-39c0294b6974",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
