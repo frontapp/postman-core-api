@@ -15590,6 +15590,74 @@
 							"body": "{\n  \"_links\": {\n    \"self\": \"ipsum in Duis \"\n  },\n  \"id\": \"irure est eu in\",\n  \"name\": \"Excepteur est reprehenderit\",\n  \"type\": \"amet tempor ullamco\",\n  \"external_url\": \"aute sunt\"\n}"
 						}
 					]
+				},
+				{
+					"name": "List Link's custom fields",
+					"id": "17b69016-9cae-4690-a016-590e1a6f5a36",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/links/custom_fields",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"links",
+								"custom_fields"
+							]
+						},
+						"description": "Lists the custom fields that can be attached to a Link."
+					},
+					"response": [
+						{
+							"id": "811fab15-b483-420b-a879-a2d562576650",
+							"name": "Array of Custom Fields",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/links/custom_fields",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"links",
+										"custom_fields"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"inbox\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"inbox\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}"
+						}
+					]
 				}
 			],
 			"id": "076454ce-377f-4580-9851-c6aedd8c61b3"
@@ -15733,74 +15801,6 @@
 					],
 					"cookie": [],
 					"body": "{\n  \"_links\": {\n    \"self\": \"labore\"\n  },\n  \"id\": -70450280,\n  \"name\": \"et quis\"\n}"
-				}
-			]
-		},
-		{
-			"name": "List Link's custom fields",
-			"id": "17b69016-9cae-4690-a016-590e1a6f5a36",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json"
-					}
-				],
-				"url": {
-					"raw": "{{baseUrl}}/links/custom_fields",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"links",
-						"custom_fields"
-					]
-				},
-				"description": "Lists the custom fields that can be attached to a Link."
-			},
-			"response": [
-				{
-					"id": "811fab15-b483-420b-a879-a2d562576650",
-					"name": "Array of Custom Fields",
-					"originalRequest": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json"
-							},
-							{
-								"description": "Added as a part of security scheme: bearer",
-								"key": "Authorization",
-								"value": "Bearer <token>"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/links/custom_fields",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"links",
-								"custom_fields"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"cookie": [],
-					"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"inbox\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"type\": \"inbox\",\n      \"description\": \"<string>\",\n      \"values\": [\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        },\n        {\n          \"value\": \"<string>\",\n          \"label\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}"
 				}
 			]
 		}
