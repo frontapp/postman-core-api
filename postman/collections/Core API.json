@@ -10824,7 +10824,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/conversations/:conversation_id/messages?limit=-22903719&page_token=adipisicing minim sunt amet laborum",
+											"raw": "{{baseUrl}}/conversations/:conversation_id/messages?limit=-22903719&page_token=adipisicing minim sunt amet laborum&sort_by=<string>&sort_order=desc",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -10843,6 +10843,16 @@
 													"description": "Token to use to request the next page",
 													"key": "page_token",
 													"value": "adipisicing minim sunt amet laborum"
+												},
+												{
+													"description": "Field used to sort the messages. Only supports `created_at`.",
+													"key": "sort_by",
+													"value": "<string>"
+												},
+												{
+													"description": "Order by which results should be sorted",
+													"key": "sort_order",
+													"value": "desc"
 												}
 											],
 											"variable": [
@@ -15661,6 +15671,2583 @@
 				}
 			],
 			"id": "076454ce-377f-4580-9851-c6aedd8c61b3"
+		},
+		{
+			"name": "knowledge bases",
+			"item": [
+				{
+					"name": "Fetch a Knowledge Base Article",
+					"id": "93909973-431c-4c8c-a7c1-8518a8c46d2f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_base_articles/:article_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_base_articles",
+								":article_id"
+							],
+							"variable": [
+								{
+									"key": "article_id",
+									"value": "kba_123",
+									"description": "(Required) The ID of the article to fetch"
+								}
+							]
+						},
+						"description": "Fetches a knowledge base article"
+					},
+					"response": [
+						{
+							"id": "6f2272e1-6359-4c95-95aa-2cb18db564a5",
+							"name": "A knowledge base article",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_base_articles/:article_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_base_articles",
+										":article_id"
+									],
+									"variable": [
+										{
+											"key": "article_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"knowledge_base\": \"<string>\",\n      \"category\": \"<string>\",\n      \"content\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"locales\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete an article",
+					"id": "71d17e48-f9f7-47a9-9f71-5d78fa112566",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_base_articles/:article_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_base_articles",
+								":article_id"
+							],
+							"variable": [
+								{
+									"key": "article_id",
+									"value": "kba_123",
+									"description": "(Required) The ID of the article to delete"
+								}
+							]
+						},
+						"description": "Deletes an article and all its content and translations"
+					},
+					"response": [
+						{
+							"id": "a083f826-ffc5-4596-9c0d-e713cf028113",
+							"name": "A knowledge base article",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_base_articles/:article_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_base_articles",
+										":article_id"
+									],
+									"variable": [
+										{
+											"key": "article_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"knowledge_base\": \"<string>\",\n      \"category\": \"<string>\",\n      \"content\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"locales\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch Knowledge Base Article with content in default locale",
+					"id": "c65e1b19-e5cc-41db-ba39-14d42caec57f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_base_articles/:article_id/content",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_base_articles",
+								":article_id",
+								"content"
+							],
+							"variable": [
+								{
+									"key": "article_id",
+									"value": "kba_123",
+									"description": "(Required) The ID of the article to fetch"
+								}
+							]
+						},
+						"description": "Fetches a knowledge base article with content in the default locale"
+					},
+					"response": [
+						{
+							"id": "a5fbd790-d2db-4779-8cbb-b2a9ce60ba3e",
+							"name": "A knowledge base article with content",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_base_articles/:article_id/content",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_base_articles",
+										":article_id",
+										"content"
+									],
+									"variable": [
+										{
+											"key": "article_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"knowledge_base\": \"<string>\",\n      \"category\": \"<string>\",\n      \"last_editor\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"status\": \"<string>\",\n  \"keywords\": \"<array>\",\n  \"content\": \"<string>\",\n  \"locale\": \"<string>\",\n  \"attachments\": [\n    {\n      \"id\": \"laboris laborum\",\n      \"filename\": \"consequat occaecat\",\n      \"url\": \"ad sint\",\n      \"content_type\": \"reprehenderi\",\n      \"size\": 78884425,\n      \"metadata\": {\n        \"is_inline\": false,\n        \"cid\": \"dolor amet Lorem id irure\"\n      }\n    },\n    {\n      \"id\": \"aliqua laboris sit magna\",\n      \"filename\": \"adipisicing\",\n      \"url\": \"ipsum sit\",\n      \"content_type\": \"tempor eu aliqua\",\n      \"size\": -15868398,\n      \"metadata\": {\n        \"is_inline\": false,\n        \"cid\": \"culpa quis fugiat est minim\"\n      }\n    }\n  ],\n  \"last_edited_at\": \"<number>\",\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update article content in default locale",
+					"id": "f9aec37c-db19-49a9-83dc-a4a4b053461e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"author_id\": \"<string>\",\n  \"subject\": \"<string>\",\n  \"content\": \"<string>\",\n  \"status\": \"draft\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_base_articles/:article_id/content",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_base_articles",
+								":article_id",
+								"content"
+							],
+							"variable": [
+								{
+									"key": "article_id",
+									"value": "kba_123",
+									"description": "(Required) The ID of the article to update"
+								}
+							]
+						},
+						"description": "Updates an article's content in the default locale"
+					},
+					"response": [
+						{
+							"id": "b923e71a-b732-40cb-a4f9-15007f48c34a",
+							"name": "A knowledge base article with content",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"author_id\": \"<string>\",\n  \"subject\": \"<string>\",\n  \"content\": \"<string>\",\n  \"status\": \"draft\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_base_articles/:article_id/content",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_base_articles",
+										":article_id",
+										"content"
+									],
+									"variable": [
+										{
+											"key": "article_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"knowledge_base\": \"<string>\",\n      \"category\": \"<string>\",\n      \"last_editor\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"status\": \"<string>\",\n  \"keywords\": \"<array>\",\n  \"content\": \"<string>\",\n  \"locale\": \"<string>\",\n  \"attachments\": [\n    {\n      \"id\": \"laboris laborum\",\n      \"filename\": \"consequat occaecat\",\n      \"url\": \"ad sint\",\n      \"content_type\": \"reprehenderi\",\n      \"size\": 78884425,\n      \"metadata\": {\n        \"is_inline\": false,\n        \"cid\": \"dolor amet Lorem id irure\"\n      }\n    },\n    {\n      \"id\": \"aliqua laboris sit magna\",\n      \"filename\": \"adipisicing\",\n      \"url\": \"ipsum sit\",\n      \"content_type\": \"tempor eu aliqua\",\n      \"size\": -15868398,\n      \"metadata\": {\n        \"is_inline\": false,\n        \"cid\": \"culpa quis fugiat est minim\"\n      }\n    }\n  ],\n  \"last_edited_at\": \"<number>\",\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Download attachment from an article",
+					"id": "62d94e8f-d7e7-411e-bf5b-14f3e097e927",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_base_articles/:article_id/download/:attachment_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_base_articles",
+								":article_id",
+								"download",
+								":attachment_id"
+							],
+							"variable": [
+								{
+									"key": "article_id",
+									"value": "kba_123",
+									"description": "(Required) The ID of the article"
+								},
+								{
+									"key": "attachment_id",
+									"value": "<string>",
+									"description": "(Required) The ID of the file to download"
+								}
+							]
+						},
+						"description": "Downloads the attachment from an article in a locale"
+					},
+					"response": [
+						{
+							"id": "147ba2ae-ef59-4612-9422-317a25dac67f",
+							"name": "An attachment",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_base_articles/:article_id/download/:attachment_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_base_articles",
+										":article_id",
+										"download",
+										":attachment_id"
+									],
+									"variable": [
+										{
+											"key": "article_id"
+										},
+										{
+											"key": "attachment_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"deserunt id pariatur\",\n  \"filename\": \"voluptate irure sint\",\n  \"url\": \"in aute in\",\n  \"content_type\": \"laboris commodo eiusmod ea nulla\",\n  \"size\": -61012665,\n  \"metadata\": {\n    \"is_inline\": false,\n    \"cid\": \"ullamco Ut\"\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch Knowledge Base Article with content in locale",
+					"id": "c02f5f53-8e45-4c65-a87a-791605306fbf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_base_articles/:article_id/locales/:locale/content",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_base_articles",
+								":article_id",
+								"locales",
+								":locale",
+								"content"
+							],
+							"variable": [
+								{
+									"key": "article_id",
+									"value": "kba_123",
+									"description": "(Required) The ID of the article to fetch"
+								},
+								{
+									"key": "locale",
+									"value": "en",
+									"description": "(Required) The locale of the content to fetch"
+								}
+							]
+						},
+						"description": "Fetches a knowledge base article with content for a given locale"
+					},
+					"response": [
+						{
+							"id": "f549f7d7-31c9-4b51-a401-b862b46f55f4",
+							"name": "A knowledge base article with content",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_base_articles/:article_id/locales/:locale/content",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_base_articles",
+										":article_id",
+										"locales",
+										":locale",
+										"content"
+									],
+									"variable": [
+										{
+											"key": "article_id"
+										},
+										{
+											"key": "locale"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"knowledge_base\": \"<string>\",\n      \"category\": \"<string>\",\n      \"last_editor\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"status\": \"<string>\",\n  \"keywords\": \"<array>\",\n  \"content\": \"<string>\",\n  \"locale\": \"<string>\",\n  \"attachments\": [\n    {\n      \"id\": \"laboris laborum\",\n      \"filename\": \"consequat occaecat\",\n      \"url\": \"ad sint\",\n      \"content_type\": \"reprehenderi\",\n      \"size\": 78884425,\n      \"metadata\": {\n        \"is_inline\": false,\n        \"cid\": \"dolor amet Lorem id irure\"\n      }\n    },\n    {\n      \"id\": \"aliqua laboris sit magna\",\n      \"filename\": \"adipisicing\",\n      \"url\": \"ipsum sit\",\n      \"content_type\": \"tempor eu aliqua\",\n      \"size\": -15868398,\n      \"metadata\": {\n        \"is_inline\": false,\n        \"cid\": \"culpa quis fugiat est minim\"\n      }\n    }\n  ],\n  \"last_edited_at\": \"<number>\",\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update article content in locale",
+					"id": "c242199e-cc4c-4288-bd63-c1e756a57b06",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"author_id\": \"<string>\",\n  \"subject\": \"<string>\",\n  \"content\": \"<string>\",\n  \"status\": \"draft\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_base_articles/:article_id/locales/:locale/content",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_base_articles",
+								":article_id",
+								"locales",
+								":locale",
+								"content"
+							],
+							"variable": [
+								{
+									"key": "article_id",
+									"value": "kba_123",
+									"description": "(Required) The ID of the article to update"
+								},
+								{
+									"key": "locale",
+									"value": "en",
+									"description": "(Required) The locale of the updated content"
+								}
+							]
+						},
+						"description": "Updates an article's content for a given locale"
+					},
+					"response": [
+						{
+							"id": "15560139-36ac-4dc1-a5bc-81e34d4d37cb",
+							"name": "A knowledge base article with content",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"author_id\": \"<string>\",\n  \"subject\": \"<string>\",\n  \"content\": \"<string>\",\n  \"status\": \"draft\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_base_articles/:article_id/locales/:locale/content",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_base_articles",
+										":article_id",
+										"locales",
+										":locale",
+										"content"
+									],
+									"variable": [
+										{
+											"key": "article_id"
+										},
+										{
+											"key": "locale"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"knowledge_base\": \"<string>\",\n      \"category\": \"<string>\",\n      \"last_editor\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"status\": \"<string>\",\n  \"keywords\": \"<array>\",\n  \"content\": \"<string>\",\n  \"locale\": \"<string>\",\n  \"attachments\": [\n    {\n      \"id\": \"laboris laborum\",\n      \"filename\": \"consequat occaecat\",\n      \"url\": \"ad sint\",\n      \"content_type\": \"reprehenderi\",\n      \"size\": 78884425,\n      \"metadata\": {\n        \"is_inline\": false,\n        \"cid\": \"dolor amet Lorem id irure\"\n      }\n    },\n    {\n      \"id\": \"aliqua laboris sit magna\",\n      \"filename\": \"adipisicing\",\n      \"url\": \"ipsum sit\",\n      \"content_type\": \"tempor eu aliqua\",\n      \"size\": -15868398,\n      \"metadata\": {\n        \"is_inline\": false,\n        \"cid\": \"culpa quis fugiat est minim\"\n      }\n    }\n  ],\n  \"last_edited_at\": \"<number>\",\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch a Knowledge Base Category",
+					"id": "331b03f6-0622-4308-b3e5-688dd51c4d80",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_base_categories/:category_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_base_categories",
+								":category_id"
+							],
+							"variable": [
+								{
+									"key": "category_id",
+									"value": "kbc_123",
+									"description": "(Required) The ID of the category to fetch"
+								}
+							]
+						},
+						"description": "Fetches a knowledge base category"
+					},
+					"response": [
+						{
+							"id": "18589cf9-a201-4b3e-ad6c-af90f5b90065",
+							"name": "A knowledge base category",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_base_categories/:category_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_base_categories",
+										":category_id"
+									],
+									"variable": [
+										{
+											"key": "category_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"knowledge_base\": \"<string>\",\n      \"parent_category\": \"<string>\",\n      \"articles\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"is_hidden\": \"<boolean>\",\n  \"locales\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete a knowledge base category",
+					"id": "42dc987e-8e4f-4018-bdf0-99abb6bf161d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_base_categories/:category_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_base_categories",
+								":category_id"
+							],
+							"variable": [
+								{
+									"key": "category_id",
+									"value": "kbc_123",
+									"description": "(Required) The ID of the category to delete"
+								}
+							]
+						},
+						"description": "Deletes a knowledge base category.\n\n> ⚠️ Warning\n>\n> When a category is deleted, all articles in the category are also deleted.\n"
+					},
+					"response": [
+						{
+							"id": "1d0c600a-adc2-4860-b622-511be636d8bd",
+							"name": "No content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_base_categories/:category_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_base_categories",
+										":category_id"
+									],
+									"variable": [
+										{
+											"key": "category_id"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				},
+				{
+					"name": "List articles in a category",
+					"id": "5a1e147e-812e-44f1-82b6-cfeac8a082a5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_base_categories/:category_id/articles",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_base_categories",
+								":category_id",
+								"articles"
+							],
+							"variable": [
+								{
+									"key": "category_id",
+									"value": "kbc_123",
+									"description": "(Required) The ID of the category"
+								}
+							]
+						},
+						"description": "List articles in a category"
+					},
+					"response": [
+						{
+							"id": "56717d8b-1621-4662-afa3-1b6e61c94083",
+							"name": "Array of knowledge base articles",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_base_categories/:category_id/articles",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_base_categories",
+										":category_id",
+										"articles"
+									],
+									"variable": [
+										{
+											"key": "category_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"knowledge_base\": \"<string>\",\n          \"category\": \"<string>\",\n          \"content\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"locales\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"created_at\": \"<number>\",\n      \"updated_at\": \"<number>\"\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"knowledge_base\": \"<string>\",\n          \"category\": \"<string>\",\n          \"content\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"locales\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"created_at\": \"<number>\",\n      \"updated_at\": \"<number>\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch Knowledge Base Category content in default locale",
+					"id": "98d1f46b-11e6-4e7a-bcdc-a29fe40cd953",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_base_categories/:category_id/content",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_base_categories",
+								":category_id",
+								"content"
+							],
+							"variable": [
+								{
+									"key": "category_id",
+									"value": "kbc_123",
+									"description": "(Required) The ID of the category to fetch"
+								}
+							]
+						},
+						"description": "Fetches a knowledge base category with content in the default locale"
+					},
+					"response": [
+						{
+							"id": "f9f35d37-f429-4dc5-94e1-954ac4ae3c86",
+							"name": "A knowledge base category with content",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_base_categories/:category_id/content",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_base_categories",
+										":category_id",
+										"content"
+									],
+									"variable": [
+										{
+											"key": "category_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"knowledge_base\": \"<string>\",\n      \"parent_category\": \"<string>\",\n      \"articles\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"is_hidden\": \"<boolean>\",\n  \"locale\": \"fr\",\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update knowledge base category in default locale",
+					"id": "8355f7b0-f317-43a2-9f78-b0152c38f4a9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_base_categories/:category_id/content",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_base_categories",
+								":category_id",
+								"content"
+							],
+							"variable": [
+								{
+									"key": "category_id",
+									"value": "kbc_123",
+									"description": "(Required) The ID of the category to update"
+								}
+							]
+						},
+						"description": "Updates a knowledge base category in the default locale. Will republish the knowledge base if the knowledge base is currently published"
+					},
+					"response": [
+						{
+							"id": "1c144dc9-3340-4890-9d00-41cae161ff53",
+							"name": "A knowledge base category with content",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_base_categories/:category_id/content",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_base_categories",
+										":category_id",
+										"content"
+									],
+									"variable": [
+										{
+											"key": "category_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"knowledge_base\": \"<string>\",\n      \"parent_category\": \"<string>\",\n      \"articles\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"is_hidden\": \"<boolean>\",\n  \"locale\": \"fr\",\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch Knowledge Base Category with content in locale",
+					"id": "e03d1051-2aa2-43d2-9f68-d23e405ae5f4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_base_categories/:category_id/locales/:locale/content",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_base_categories",
+								":category_id",
+								"locales",
+								":locale",
+								"content"
+							],
+							"variable": [
+								{
+									"key": "category_id",
+									"value": "kbc_123",
+									"description": "(Required) The ID of the category to fetch"
+								},
+								{
+									"key": "locale",
+									"value": "en",
+									"description": "(Required) The locale of the content to fetch"
+								}
+							]
+						},
+						"description": "Fetches a knowledge base category with content for a given locale"
+					},
+					"response": [
+						{
+							"id": "c2c6ca5d-befe-4fad-9d6c-40a66700266a",
+							"name": "A knowledge base category with content",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_base_categories/:category_id/locales/:locale/content",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_base_categories",
+										":category_id",
+										"locales",
+										":locale",
+										"content"
+									],
+									"variable": [
+										{
+											"key": "category_id"
+										},
+										{
+											"key": "locale"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"knowledge_base\": \"<string>\",\n      \"parent_category\": \"<string>\",\n      \"articles\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"is_hidden\": \"<boolean>\",\n  \"locale\": \"fr\",\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update knowledge base category in locale",
+					"id": "6007f8f9-a83f-48ce-81f6-1fc32e20b862",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_base_categories/:category_id/locales/:locale/content",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_base_categories",
+								":category_id",
+								"locales",
+								":locale",
+								"content"
+							],
+							"variable": [
+								{
+									"key": "category_id",
+									"value": "kbc_123",
+									"description": "(Required) The ID of the category to update"
+								},
+								{
+									"key": "locale",
+									"value": "en",
+									"description": "(Required) The locale of the updated content"
+								}
+							]
+						},
+						"description": "Updates a knowledge base category for a given locale. Will republish the knowledge base if the knowledge base is currently published"
+					},
+					"response": [
+						{
+							"id": "0cf54684-dabe-4bf5-a6ff-007837579843",
+							"name": "A knowledge base category with content",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_base_categories/:category_id/locales/:locale/content",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_base_categories",
+										":category_id",
+										"locales",
+										":locale",
+										"content"
+									],
+									"variable": [
+										{
+											"key": "category_id"
+										},
+										{
+											"key": "locale"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"knowledge_base\": \"<string>\",\n      \"parent_category\": \"<string>\",\n      \"articles\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"is_hidden\": \"<boolean>\",\n  \"locale\": \"fr\",\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List Knowledge Bases",
+					"id": "dc81a617-59e7-4b0f-976c-5c365f681f6a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_bases",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_bases"
+							]
+						},
+						"description": "List the knowledge bases of the company."
+					},
+					"response": [
+						{
+							"id": "8e40ae7b-2d85-41e9-b1bd-ba874303d9fa",
+							"name": "Array of knowledge bases",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_bases",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_bases"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"articles\": \"<string>\",\n          \"categories\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"status\": \"published\",\n      \"type\": \"external\",\n      \"locale\": \"en\",\n      \"created_at\": \"<number>\",\n      \"updated_at\": \"<number>\"\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"articles\": \"<string>\",\n          \"categories\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"status\": \"published\",\n      \"type\": \"internal\",\n      \"locale\": \"en\",\n      \"created_at\": \"<number>\",\n      \"updated_at\": \"<number>\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create a Knowledge Base",
+					"id": "61ade58d-3d6e-4578-b532-83a07fa13843",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"<string>\",\n  \"type\": \"external\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_bases",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_bases"
+							]
+						},
+						"description": "Create a knowledge base"
+					},
+					"response": [
+						{
+							"id": "9f7c0c14-117a-4945-bc7a-29ab12302a97",
+							"name": "A knowledge base with content",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"type\": \"external\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_bases",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_bases"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"articles\": \"<string>\",\n      \"categories\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"status\": \"unpublished\",\n  \"type\": \"internal\",\n  \"locale\": \"fr\",\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch a knowledge base",
+					"id": "8a2fc98b-1dbd-4951-8e33-1a3923f33f91",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_bases",
+								":knowledge_base_id"
+							],
+							"variable": [
+								{
+									"key": "knowledge_base_id",
+									"value": "knb_123",
+									"description": "(Required) The ID of the knowledge base to fetch"
+								}
+							]
+						},
+						"description": "Fetches a knowledge base"
+					},
+					"response": [
+						{
+							"id": "a241a31a-337a-4088-9cbe-a676cb27cebc",
+							"name": "A knowledge base",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_bases",
+										":knowledge_base_id"
+									],
+									"variable": [
+										{
+											"key": "knowledge_base_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"articles\": \"<string>\",\n      \"categories\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"type\": \"internal\",\n  \"locales\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List articles in a knowledge base",
+					"id": "fd879400-955a-400c-9f3f-48981a8e645d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/articles",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_bases",
+								":knowledge_base_id",
+								"articles"
+							],
+							"variable": [
+								{
+									"key": "knowledge_base_id",
+									"value": "knb_123",
+									"description": "(Required) The ID of the knowledge base"
+								}
+							]
+						},
+						"description": "List articles in a knowledge base"
+					},
+					"response": [
+						{
+							"id": "5e8659ef-3c9f-49b9-8a74-021e381bbc5b",
+							"name": "Array of knowledge base articles",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/articles",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_bases",
+										":knowledge_base_id",
+										"articles"
+									],
+									"variable": [
+										{
+											"key": "knowledge_base_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"knowledge_base\": \"<string>\",\n          \"category\": \"<string>\",\n          \"content\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"locales\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"created_at\": \"<number>\",\n      \"updated_at\": \"<number>\"\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"knowledge_base\": \"<string>\",\n          \"category\": \"<string>\",\n          \"content\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"locales\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"created_at\": \"<number>\",\n      \"updated_at\": \"<number>\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create article in a knowledge base in default locale",
+					"id": "ae47935e-cc0d-4eed-8f74-135d4790ae18",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"category_id\": \"<string>\",\n  \"author_id\": \"<string>\",\n  \"subject\": \"<string>\",\n  \"content\": \"<string>\",\n  \"status\": \"draft\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/articles",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_bases",
+								":knowledge_base_id",
+								"articles"
+							],
+							"variable": [
+								{
+									"key": "knowledge_base_id",
+									"value": "knb_123",
+									"description": "(Required) The ID of the knowledge base to create the article in"
+								}
+							]
+						},
+						"description": "Create an article in a knowledge base in the default locale"
+					},
+					"response": [
+						{
+							"id": "c04129db-b5db-4723-955e-7db4af07104c",
+							"name": "A knowledge base article with content",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"category_id\": \"<string>\",\n  \"author_id\": \"<string>\",\n  \"subject\": \"<string>\",\n  \"content\": \"<string>\",\n  \"status\": \"draft\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/articles",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_bases",
+										":knowledge_base_id",
+										"articles"
+									],
+									"variable": [
+										{
+											"key": "knowledge_base_id"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"knowledge_base\": \"<string>\",\n      \"category\": \"<string>\",\n      \"last_editor\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"status\": \"<string>\",\n  \"keywords\": \"<array>\",\n  \"content\": \"<string>\",\n  \"locale\": \"<string>\",\n  \"attachments\": [\n    {\n      \"id\": \"laboris laborum\",\n      \"filename\": \"consequat occaecat\",\n      \"url\": \"ad sint\",\n      \"content_type\": \"reprehenderi\",\n      \"size\": 78884425,\n      \"metadata\": {\n        \"is_inline\": false,\n        \"cid\": \"dolor amet Lorem id irure\"\n      }\n    },\n    {\n      \"id\": \"aliqua laboris sit magna\",\n      \"filename\": \"adipisicing\",\n      \"url\": \"ipsum sit\",\n      \"content_type\": \"tempor eu aliqua\",\n      \"size\": -15868398,\n      \"metadata\": {\n        \"is_inline\": false,\n        \"cid\": \"culpa quis fugiat est minim\"\n      }\n    }\n  ],\n  \"last_edited_at\": \"<number>\",\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List categories in a knowledge base",
+					"id": "64030038-a749-4908-acc7-fa80c1d59bec",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/categories",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_bases",
+								":knowledge_base_id",
+								"categories"
+							],
+							"variable": [
+								{
+									"key": "knowledge_base_id",
+									"value": "knb_123",
+									"description": "(Required) The ID of the knowledge base"
+								}
+							]
+						},
+						"description": "List categories in a knowledge base"
+					},
+					"response": [
+						{
+							"id": "b93f7d32-b8df-4b4d-a0c3-444d06cc056e",
+							"name": "Array of knowledge base categories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/categories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_bases",
+										":knowledge_base_id",
+										"categories"
+									],
+									"variable": [
+										{
+											"key": "knowledge_base_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"knowledge_base\": \"<string>\",\n          \"parent_category\": \"<string>\",\n          \"articles\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"is_hidden\": \"<boolean>\",\n      \"locales\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"created_at\": \"<number>\",\n      \"updated_at\": \"<number>\"\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"knowledge_base\": \"<string>\",\n          \"parent_category\": \"<string>\",\n          \"articles\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"is_hidden\": \"<boolean>\",\n      \"locales\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"created_at\": \"<number>\",\n      \"updated_at\": \"<number>\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Knowledge Base Category in default locale",
+					"id": "be8e8a3d-0057-40d9-a2a8-80a0a911f9ab",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"<string>\",\n  \"parent_category_id\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/categories",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_bases",
+								":knowledge_base_id",
+								"categories"
+							],
+							"variable": [
+								{
+									"key": "knowledge_base_id",
+									"value": "knb_123",
+									"description": "(Required) The ID of the knowledge base to create the category in"
+								}
+							]
+						},
+						"description": "Create a Knowledge Base Category in the default locale"
+					},
+					"response": [
+						{
+							"id": "12a393ba-6ad3-47df-b8fd-1743eae0c438",
+							"name": "A knowledge base category with content",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"parent_category_id\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/categories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_bases",
+										":knowledge_base_id",
+										"categories"
+									],
+									"variable": [
+										{
+											"key": "knowledge_base_id"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"knowledge_base\": \"<string>\",\n      \"parent_category\": \"<string>\",\n      \"articles\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"is_hidden\": \"<boolean>\",\n  \"locale\": \"fr\",\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch a knowledge base with content",
+					"id": "13eb8417-ea21-47cf-be05-5ac8eeef2825",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/content",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_bases",
+								":knowledge_base_id",
+								"content"
+							],
+							"variable": [
+								{
+									"key": "knowledge_base_id",
+									"value": "knb_123",
+									"description": "(Required) The ID of the knowledge base to fetch"
+								}
+							]
+						},
+						"description": "Fetches a knowledge base with its content in the default locale"
+					},
+					"response": [
+						{
+							"id": "f8fb58bd-af20-4526-9532-797e702d3215",
+							"name": "A knowledge base with content",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/content",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_bases",
+										":knowledge_base_id",
+										"content"
+									],
+									"variable": [
+										{
+											"key": "knowledge_base_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"articles\": \"<string>\",\n      \"categories\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"status\": \"unpublished\",\n  \"type\": \"internal\",\n  \"locale\": \"fr\",\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update knowledge base",
+					"id": "c1cbf618-7b10-487c-9a0d-df0b1a7fd0f7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/content",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_bases",
+								":knowledge_base_id",
+								"content"
+							],
+							"variable": [
+								{
+									"key": "knowledge_base_id",
+									"value": "knb_123",
+									"description": "(Required) The ID of the knowledge base to update"
+								}
+							]
+						},
+						"description": "Updates a knowledge base in the default locale. Will republish the knowledge base if the knowledge base is currently published."
+					},
+					"response": [
+						{
+							"id": "9fe3eefd-db54-47d0-86cf-6c12b7725804",
+							"name": "A knowledge base with content",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/content",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_bases",
+										":knowledge_base_id",
+										"content"
+									],
+									"variable": [
+										{
+											"key": "knowledge_base_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"articles\": \"<string>\",\n      \"categories\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"status\": \"unpublished\",\n  \"type\": \"internal\",\n  \"locale\": \"fr\",\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create article in a knowledge base in locale",
+					"id": "842fe42e-9519-4eb5-afbc-f24ef2b52b8d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"category_id\": \"<string>\",\n  \"author_id\": \"<string>\",\n  \"subject\": \"<string>\",\n  \"content\": \"<string>\",\n  \"status\": \"draft\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/locales/:locale/articles",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_bases",
+								":knowledge_base_id",
+								"locales",
+								":locale",
+								"articles"
+							],
+							"variable": [
+								{
+									"key": "knowledge_base_id",
+									"value": "knb_123",
+									"description": "(Required) The ID of the knowledge base to create the article in"
+								},
+								{
+									"key": "locale",
+									"value": "en",
+									"description": "(Required) The locale of the article's content"
+								}
+							]
+						},
+						"description": "Create an article for a given locale in a knowledge base"
+					},
+					"response": [
+						{
+							"id": "83e0b808-38cf-439e-839a-e405b315ede8",
+							"name": "A knowledge base article with content",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"category_id\": \"<string>\",\n  \"author_id\": \"<string>\",\n  \"subject\": \"<string>\",\n  \"content\": \"<string>\",\n  \"status\": \"draft\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/locales/:locale/articles",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_bases",
+										":knowledge_base_id",
+										"locales",
+										":locale",
+										"articles"
+									],
+									"variable": [
+										{
+											"key": "knowledge_base_id"
+										},
+										{
+											"key": "locale"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"knowledge_base\": \"<string>\",\n      \"category\": \"<string>\",\n      \"last_editor\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"status\": \"<string>\",\n  \"keywords\": \"<array>\",\n  \"content\": \"<string>\",\n  \"locale\": \"<string>\",\n  \"attachments\": [\n    {\n      \"id\": \"laboris laborum\",\n      \"filename\": \"consequat occaecat\",\n      \"url\": \"ad sint\",\n      \"content_type\": \"reprehenderi\",\n      \"size\": 78884425,\n      \"metadata\": {\n        \"is_inline\": false,\n        \"cid\": \"dolor amet Lorem id irure\"\n      }\n    },\n    {\n      \"id\": \"aliqua laboris sit magna\",\n      \"filename\": \"adipisicing\",\n      \"url\": \"ipsum sit\",\n      \"content_type\": \"tempor eu aliqua\",\n      \"size\": -15868398,\n      \"metadata\": {\n        \"is_inline\": false,\n        \"cid\": \"culpa quis fugiat est minim\"\n      }\n    }\n  ],\n  \"last_edited_at\": \"<number>\",\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Knowledge Base Category in locale",
+					"id": "b067a085-ddc3-47cf-8b1c-a0ddf19d8965",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"<string>\",\n  \"parent_category_id\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/locales/:locale/categories",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_bases",
+								":knowledge_base_id",
+								"locales",
+								":locale",
+								"categories"
+							],
+							"variable": [
+								{
+									"key": "knowledge_base_id",
+									"value": "knb_123",
+									"description": "(Required) The ID of the knowledge base to create the category in"
+								},
+								{
+									"key": "locale",
+									"value": "en",
+									"description": "(Required) The locale of the category's content"
+								}
+							]
+						},
+						"description": "Create a Knowledge Base Category for a given locale"
+					},
+					"response": [
+						{
+							"id": "c6acb0f7-7055-42c6-a6f0-e2e0c3d06bed",
+							"name": "A knowledge base category with content",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"parent_category_id\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/locales/:locale/categories",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_bases",
+										":knowledge_base_id",
+										"locales",
+										":locale",
+										"categories"
+									],
+									"variable": [
+										{
+											"key": "knowledge_base_id"
+										},
+										{
+											"key": "locale"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"knowledge_base\": \"<string>\",\n      \"parent_category\": \"<string>\",\n      \"articles\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"is_hidden\": \"<boolean>\",\n  \"locale\": \"fr\",\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Fetch a knowledge base with content in locale",
+					"id": "de3ec4f3-cf64-4592-aebe-a0c17021c2d9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/locales/:locale/content",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_bases",
+								":knowledge_base_id",
+								"locales",
+								":locale",
+								"content"
+							],
+							"variable": [
+								{
+									"key": "knowledge_base_id",
+									"value": "knb_123",
+									"description": "(Required) The ID of the knowledge base to fetch"
+								},
+								{
+									"key": "locale",
+									"value": "en",
+									"description": "(Required) The locale of the content to fetch"
+								}
+							]
+						},
+						"description": "Fetches a knowledge base with its content for a given locale"
+					},
+					"response": [
+						{
+							"id": "cfff9951-725b-4131-b62e-6408949374ca",
+							"name": "A knowledge base with content",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/locales/:locale/content",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_bases",
+										":knowledge_base_id",
+										"locales",
+										":locale",
+										"content"
+									],
+									"variable": [
+										{
+											"key": "knowledge_base_id"
+										},
+										{
+											"key": "locale"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"articles\": \"<string>\",\n      \"categories\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"status\": \"unpublished\",\n  \"type\": \"internal\",\n  \"locale\": \"fr\",\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update knowledge base in locale",
+					"id": "de3454cc-dd87-458a-a3f7-39244e80957e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/locales/:locale/content",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"knowledge_bases",
+								":knowledge_base_id",
+								"locales",
+								":locale",
+								"content"
+							],
+							"variable": [
+								{
+									"key": "knowledge_base_id",
+									"value": "knb_123",
+									"description": "(Required) The ID of the knowledge base to update"
+								},
+								{
+									"key": "locale",
+									"value": "en",
+									"description": "(Required) The locale of the updated content"
+								}
+							]
+						},
+						"description": "Updates a knowledge base for a given locale. Will republish the knowledge base if the knowledge base is currently published."
+					},
+					"response": [
+						{
+							"id": "1b991130-780b-481a-9a33-36c7eef1cb4f",
+							"name": "A knowledge base with content",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/locales/:locale/content",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"knowledge_bases",
+										":knowledge_base_id",
+										"locales",
+										":locale",
+										"content"
+									],
+									"variable": [
+										{
+											"key": "knowledge_base_id"
+										},
+										{
+											"key": "locale"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"articles\": \"<string>\",\n      \"categories\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"status\": \"unpublished\",\n  \"type\": \"internal\",\n  \"locale\": \"fr\",\n  \"created_at\": \"<number>\",\n  \"updated_at\": \"<number>\"\n}"
+						}
+					]
+				}
+			],
+			"id": "00692d62-f0ee-4804-a1c9-ecd763a571c7"
 		},
 		{
 			"name": "Download attachment",
