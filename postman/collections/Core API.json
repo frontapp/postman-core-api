@@ -15676,7 +15676,7 @@
 			"name": "knowledge bases",
 			"item": [
 				{
-					"name": "Fetch a Knowledge Base Article",
+					"name": "Get a knowledge base article",
 					"id": "93909973-431c-4c8c-a7c1-8518a8c46d2f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -15836,7 +15836,7 @@
 					]
 				},
 				{
-					"name": "Fetch Knowledge Base Article with content in default locale",
+					"name": "Get knowledge base article with content in default locale",
 					"id": "c65e1b19-e5cc-41db-ba39-14d42caec57f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -15918,7 +15918,7 @@
 					]
 				},
 				{
-					"name": "Update article content in default locale",
+					"name": "Update article content in default locale.",
 					"id": "f9aec37c-db19-49a9-83dc-a4a4b053461e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -15935,16 +15935,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"author_id\": \"<string>\",\n  \"subject\": \"<string>\",\n  \"content\": \"<string>\",\n  \"status\": \"draft\"\n}",
-							"options": {
-								"raw": {
-									"headerFamily": "json",
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "{{baseUrl}}/knowledge_base_articles/:article_id/content",
 							"host": [
@@ -16120,7 +16110,7 @@
 					]
 				},
 				{
-					"name": "Fetch Knowledge Base Article with content in locale",
+					"name": "Get knowledge base article with content in specified locale",
 					"id": "c02f5f53-8e45-4c65-a87a-791605306fbf",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -16214,7 +16204,7 @@
 					]
 				},
 				{
-					"name": "Update article content in locale",
+					"name": "Update article content in specified locale",
 					"id": "c242199e-cc4c-4288-bd63-c1e756a57b06",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -16231,16 +16221,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"author_id\": \"<string>\",\n  \"subject\": \"<string>\",\n  \"content\": \"<string>\",\n  \"status\": \"draft\"\n}",
-							"options": {
-								"raw": {
-									"headerFamily": "json",
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "{{baseUrl}}/knowledge_base_articles/:article_id/locales/:locale/content",
 							"host": [
@@ -16336,7 +16316,7 @@
 					]
 				},
 				{
-					"name": "Fetch a Knowledge Base Category",
+					"name": "Get a knowledge base category",
 					"id": "331b03f6-0622-4308-b3e5-688dd51c4d80",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -16563,7 +16543,7 @@
 					]
 				},
 				{
-					"name": "Fetch Knowledge Base Category content in default locale",
+					"name": "Get knowledge base category content in default locale",
 					"id": "98d1f46b-11e6-4e7a-bcdc-a29fe40cd953",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -16755,7 +16735,7 @@
 					]
 				},
 				{
-					"name": "Fetch Knowledge Base Category with content in locale",
+					"name": "Get knowledge base category with content in specified locale",
 					"id": "e03d1051-2aa2-43d2-9f68-d23e405ae5f4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -16849,7 +16829,7 @@
 					]
 				},
 				{
-					"name": "Update knowledge base category in locale",
+					"name": "Update knowledge base category in specified locale",
 					"id": "6007f8f9-a83f-48ce-81f6-1fc32e20b862",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -16866,16 +16846,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\"\n}",
-							"options": {
-								"raw": {
-									"headerFamily": "json",
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "{{baseUrl}}/knowledge_base_categories/:category_id/locales/:locale/content",
 							"host": [
@@ -16971,7 +16941,7 @@
 					]
 				},
 				{
-					"name": "List Knowledge Bases",
+					"name": "List knowledge bases",
 					"id": "dc81a617-59e7-4b0f-976c-5c365f681f6a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -17037,7 +17007,7 @@
 					]
 				},
 				{
-					"name": "Create a Knowledge Base",
+					"name": "Create a knowledge base",
 					"id": "61ade58d-3d6e-4578-b532-83a07fa13843",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -17054,16 +17024,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"name\": \"<string>\",\n  \"type\": \"external\"\n}",
-							"options": {
-								"raw": {
-									"headerFamily": "json",
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "{{baseUrl}}/knowledge_bases",
 							"host": [
@@ -17131,7 +17091,7 @@
 					]
 				},
 				{
-					"name": "Fetch a knowledge base",
+					"name": "Get a knowledge base",
 					"id": "8a2fc98b-1dbd-4951-8e33-1a3923f33f91",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -17485,7 +17445,7 @@
 					]
 				},
 				{
-					"name": "Create Knowledge Base Category in default locale",
+					"name": "Create knowledge base category in default locale",
 					"id": "be8e8a3d-0057-40d9-a2a8-80a0a911f9ab",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -17502,16 +17462,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"name\": \"<string>\",\n  \"parent_category_id\": \"<string>\",\n  \"description\": \"<string>\"\n}",
-							"options": {
-								"raw": {
-									"headerFamily": "json",
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/categories",
 							"host": [
@@ -17595,7 +17545,7 @@
 					]
 				},
 				{
-					"name": "Fetch a knowledge base with content",
+					"name": "Get a knowledge base with content in default locale",
 					"id": "13eb8417-ea21-47cf-be05-5ac8eeef2825",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -17677,7 +17627,7 @@
 					]
 				},
 				{
-					"name": "Update knowledge base",
+					"name": "Update knowledge base in default locale",
 					"id": "c1cbf618-7b10-487c-9a0d-df0b1a7fd0f7",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -17694,16 +17644,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"name\": \"<string>\"\n}",
-							"options": {
-								"raw": {
-									"headerFamily": "json",
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/content",
 							"host": [
@@ -17787,7 +17727,7 @@
 					]
 				},
 				{
-					"name": "Create article in a knowledge base in locale",
+					"name": "Create article in a knowledge base in specified locale",
 					"id": "842fe42e-9519-4eb5-afbc-f24ef2b52b8d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -17804,16 +17744,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"category_id\": \"<string>\",\n  \"author_id\": \"<string>\",\n  \"subject\": \"<string>\",\n  \"content\": \"<string>\",\n  \"status\": \"draft\"\n}",
-							"options": {
-								"raw": {
-									"headerFamily": "json",
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/locales/:locale/articles",
 							"host": [
@@ -17909,7 +17839,7 @@
 					]
 				},
 				{
-					"name": "Create Knowledge Base Category in locale",
+					"name": "Create knowledge base category in specified locale",
 					"id": "b067a085-ddc3-47cf-8b1c-a0ddf19d8965",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -17926,16 +17856,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"name\": \"<string>\",\n  \"parent_category_id\": \"<string>\",\n  \"description\": \"<string>\"\n}",
-							"options": {
-								"raw": {
-									"headerFamily": "json",
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/locales/:locale/categories",
 							"host": [
@@ -18031,7 +17951,7 @@
 					]
 				},
 				{
-					"name": "Fetch a knowledge base with content in locale",
+					"name": "Get a knowledge base with content in specified locale",
 					"id": "de3ec4f3-cf64-4592-aebe-a0c17021c2d9",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -18125,7 +18045,7 @@
 					]
 				},
 				{
-					"name": "Update knowledge base in locale",
+					"name": "Update knowledge base in specified locale",
 					"id": "de3454cc-dd87-458a-a3f7-39244e80957e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -18142,16 +18062,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"name\": \"<string>\"\n}",
-							"options": {
-								"raw": {
-									"headerFamily": "json",
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/locales/:locale/content",
 							"host": [
