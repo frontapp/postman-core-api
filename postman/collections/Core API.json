@@ -16475,7 +16475,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/knowledge_base_categories/:category_id/articles",
+							"raw": "{{baseUrl}}/knowledge_base_categories/:category_id/articles?limit=25&page_token=2d018a5809eb90d349bc08c52cb1f4980dac",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -16483,6 +16483,16 @@
 								"knowledge_base_categories",
 								":category_id",
 								"articles"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "25"
+								},
+								{
+									"key": "page_token",
+									"value": "2d018a5809eb90d349bc08c52cb1f4980dac"
+								}
 							],
 							"variable": [
 								{
@@ -17185,7 +17195,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/articles",
+							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/articles?limit=25&page_token=2d018a5809eb90d349bc08c52cb1f4980dac",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -17193,6 +17203,18 @@
 								"knowledge_bases",
 								":knowledge_base_id",
 								"articles"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "25",
+									"type": "text"
+								},
+								{
+									"key": "page_token",
+									"value": "2d018a5809eb90d349bc08c52cb1f4980dac",
+									"type": "text"
+								}
 							],
 							"variable": [
 								{
@@ -17377,7 +17399,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/categories",
+							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/categories?limit=25&page_token=2d018a5809eb90d349bc08c52cb1f4980dac",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -17385,6 +17407,18 @@
 								"knowledge_bases",
 								":knowledge_base_id",
 								"categories"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "25",
+									"type": "text"
+								},
+								{
+									"key": "page_token",
+									"value": "2d018a5809eb90d349bc08c52cb1f4980dac",
+									"type": "text"
+								}
 							],
 							"variable": [
 								{
