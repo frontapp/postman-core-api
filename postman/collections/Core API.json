@@ -16475,7 +16475,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/knowledge_base_categories/:category_id/articles?limit=25&page_token=2d018a5809eb90d349bc08c52cb1f4980dac",
+							"raw": "{{baseUrl}}/knowledge_base_categories/:category_id/articles?limit=<integer>&page_token=<string>",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -16487,11 +16487,11 @@
 							"query": [
 								{
 									"key": "limit",
-									"value": "25"
+									"value": "<integer>"
 								},
 								{
 									"key": "page_token",
-									"value": "2d018a5809eb90d349bc08c52cb1f4980dac"
+									"value": "<string>"
 								}
 							],
 							"variable": [
@@ -17195,7 +17195,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/articles?limit=25&page_token=2d018a5809eb90d349bc08c52cb1f4980dac",
+							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/articles?limit=<integer>&page_token=<string>",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -17207,13 +17207,11 @@
 							"query": [
 								{
 									"key": "limit",
-									"value": "25",
-									"type": "text"
+									"value": "<integer>"
 								},
 								{
 									"key": "page_token",
-									"value": "2d018a5809eb90d349bc08c52cb1f4980dac",
-									"type": "text"
+									"value": "<string>"
 								}
 							],
 							"variable": [
@@ -17399,7 +17397,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/categories?limit=25&page_token=2d018a5809eb90d349bc08c52cb1f4980dac",
+							"raw": "{{baseUrl}}/knowledge_bases/:knowledge_base_id/categories?limit=<integer>&page_token=<string>",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -17411,13 +17409,11 @@
 							"query": [
 								{
 									"key": "limit",
-									"value": "25",
-									"type": "text"
+									"value": "<integer>"
 								},
 								{
 									"key": "page_token",
-									"value": "2d018a5809eb90d349bc08c52cb1f4980dac",
-									"type": "text"
+									"value": "<string>"
 								}
 							],
 							"variable": [
