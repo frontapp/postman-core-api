@@ -18330,6 +18330,116 @@
 					"body": "{\n  \"_links\": {\n    \"self\": \"labore\"\n  },\n  \"id\": -70450280,\n  \"name\": \"et quis\"\n}"
 				}
 			]
+		},
+		{
+			"name": "Update comment",
+			"id": "bca49c8c-d442-4f7f-b560-be40615dcaa4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"body\": \"<string>\",\n  \"is_pinned\": \"<boolean>\"\n}",
+					"options": {
+						"raw": {
+							"headerFamily": "json",
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/comments/:comment_id/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"comments",
+						":comment_id",
+						""
+					],
+					"variable": [
+						{
+							"key": "comment_id",
+							"value": "com_123",
+							"description": "(Required) The Comment ID"
+						}
+					]
+				},
+				"description": "Update a comment in a [conversation](https://dev.frontapp.com/reference/conversations)."
+			},
+			"response": [
+				{
+					"id": "89eeeee7-ffda-4c99-893e-a1da6c72f09e",
+					"name": "A comment",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"description": "Added as a part of security scheme: bearer",
+								"key": "Authorization",
+								"value": "Bearer <token>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"body\": \"<string>\",\n  \"is_pinned\": \"<boolean>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/comments/:comment_id/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"comments",
+								":comment_id",
+								""
+							],
+							"variable": [
+								{
+									"key": "comment_id"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"_links\": {\n    \"self\": \"fugiat tempor quis\",\n    \"related\": {\n      \"conversations\": \"adipisicing\",\n      \"mentions\": \"qui deserunt sit commodo\"\n    }\n  },\n  \"id\": \"ullamco dolore nisi officia sed\",\n  \"author\": {\n    \"_links\": {\n      \"self\": \"mollit\",\n      \"related\": {\n        \"inboxes\": \"officia pariatur id\",\n        \"conversations\": \"magna ex adipisicing\"\n      }\n    },\n    \"id\": \"Duis minim\",\n    \"email\": \"est Duis adipisicing\",\n    \"username\": \"eiusmod ullamco et nostrud sit\",\n    \"first_name\": \"irure re\",\n    \"last_name\": \"dolore Duis incididunt\",\n    \"is_admin\": false,\n    \"is_available\": true,\n    \"is_blocked\": true,\n    \"custom_fields\": {}\n  },\n  \"body\": \"esse Excepteur laboris proident minim\",\n  \"posted_at\": 95110542.3306238,\n  \"attachments\": [\n    {\n      \"id\": \"pariatur veniam consectetur Duis\",\n      \"filename\": \"veniam sunt qui\",\n      \"url\": \"ex reprehenderit quis\",\n      \"content_type\": \"sint\",\n      \"size\": 266101,\n      \"metadata\": {\n        \"is_inline\": true,\n        \"cid\": \"sed in enim\"\n      }\n    },\n    {\n      \"id\": \"elit dolore\",\n      \"filename\": \"cillum voluptate ut\",\n      \"url\": \"ut nostrud esse\",\n      \"content_type\": \"consequat ad veniam\",\n      \"size\": -67930577,\n      \"metadata\": {\n        \"is_inline\": true,\n        \"cid\": \"nostrud consectetur\"\n      }\n    }\n  ],\n  \"is_pinned\": false\n}"
+				}
+			]
 		}
 	],
 	"auth": {
