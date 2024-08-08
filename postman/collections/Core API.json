@@ -12184,6 +12184,116 @@
 					]
 				},
 				{
+					"name": "Update comment",
+					"id": "bca49c8c-d442-4f7f-b560-be40615dcaa4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"body\": \"<string>\",\n  \"is_pinned\": \"<boolean>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/comments/:comment_id/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"comments",
+								":comment_id",
+								""
+							],
+							"variable": [
+								{
+									"key": "comment_id",
+									"value": "com_123",
+									"description": "(Required) The Comment ID"
+								}
+							]
+						},
+						"description": "Update a comment in a [conversation](https://dev.frontapp.com/reference/conversations)."
+					},
+					"response": [
+						{
+							"id": "89eeeee7-ffda-4c99-893e-a1da6c72f09e",
+							"name": "A comment",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"body\": \"<string>\",\n  \"is_pinned\": \"<boolean>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/comments/:comment_id/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"comments",
+										":comment_id",
+										""
+									],
+									"variable": [
+										{
+											"key": "comment_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"fugiat tempor quis\",\n    \"related\": {\n      \"conversations\": \"adipisicing\",\n      \"mentions\": \"qui deserunt sit commodo\"\n    }\n  },\n  \"id\": \"ullamco dolore nisi officia sed\",\n  \"author\": {\n    \"_links\": {\n      \"self\": \"mollit\",\n      \"related\": {\n        \"inboxes\": \"officia pariatur id\",\n        \"conversations\": \"magna ex adipisicing\"\n      }\n    },\n    \"id\": \"Duis minim\",\n    \"email\": \"est Duis adipisicing\",\n    \"username\": \"eiusmod ullamco et nostrud sit\",\n    \"first_name\": \"irure re\",\n    \"last_name\": \"dolore Duis incididunt\",\n    \"is_admin\": false,\n    \"is_available\": true,\n    \"is_blocked\": true,\n    \"custom_fields\": {}\n  },\n  \"body\": \"esse Excepteur laboris proident minim\",\n  \"posted_at\": 95110542.3306238,\n  \"attachments\": [\n    {\n      \"id\": \"pariatur veniam consectetur Duis\",\n      \"filename\": \"veniam sunt qui\",\n      \"url\": \"ex reprehenderit quis\",\n      \"content_type\": \"sint\",\n      \"size\": 266101,\n      \"metadata\": {\n        \"is_inline\": true,\n        \"cid\": \"sed in enim\"\n      }\n    },\n    {\n      \"id\": \"elit dolore\",\n      \"filename\": \"cillum voluptate ut\",\n      \"url\": \"ut nostrud esse\",\n      \"content_type\": \"consequat ad veniam\",\n      \"size\": -67930577,\n      \"metadata\": {\n        \"is_inline\": true,\n        \"cid\": \"nostrud consectetur\"\n      }\n    }\n  ],\n  \"is_pinned\": false\n}"
+						}
+					]
+				},
+				{
 					"name": "List comment mentions",
 					"id": "ef42b774-0a7b-4b71-86d0-d90926dfa4c2",
 					"protocolProfileBehavior": {
@@ -18190,43 +18300,629 @@
 			"id": "00692d62-f0ee-4804-a1c9-ecd763a571c7"
 		},
 		{
-			"name": "Download attachment",
-			"id": "ec31458c-8f33-4e68-9740-95e8c41c6d1a",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json"
-					}
-				],
-				"url": {
-					"raw": "{{baseUrl}}/download/:attachment_link_id",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"download",
-						":attachment_link_id"
-					],
-					"variable": [
+			"name": "teammate groups",
+			"item": [
+				{
+					"name": "List teammate groups",
+					"id": "f8678ddb-a00b-48b2-8aa4-22dfffc8b753",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/teammate_groups",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"teammate_groups"
+							]
+						},
+						"description": "List the teammate groups in the company."
+					},
+					"response": [
 						{
-							"key": "attachment_link_id",
-							"value": "fil_55c8c149",
-							"description": "(Required) The Attachment ID"
+							"id": "5b610d2d-31b6-4e45-83d8-05509a641d66",
+							"name": "Array of teammate groups",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/teammate_groups",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"teammate_groups"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"teammates\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"type\": \"<string>\",\n      \"permissions\": {\n        \"contacts\": {\n          \"access\": \"<string>\",\n          \"contact_group_ids\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      }\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"teammates\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"type\": \"<string>\",\n      \"permissions\": {\n        \"contacts\": {\n          \"access\": \"<string>\",\n          \"contact_group_ids\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      }\n    }\n  ]\n}"
 						}
 					]
 				},
-				"description": "Download an attachment file."
-			},
-			"response": [
 				{
-					"id": "31392a10-4f39-4081-baf7-e02a4ad5b22f",
-					"name": "An attachment",
-					"originalRequest": {
+					"name": "Create teammate group",
+					"id": "9a559f68-eaa9-447c-a5b1-449e2dbf1c12",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"permissions\": {\n    \"contacts\": {\n      \"access\": \"<string>\",\n      \"contact_group_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/teammate_groups",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"teammate_groups"
+							]
+						},
+						"description": "Create a new teammate group."
+					},
+					"response": [
+						{
+							"id": "d1afcf57-4c94-41f2-ada8-9e7400d4fa0d",
+							"name": "A teammate group",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"permissions\": {\n    \"contacts\": {\n      \"access\": \"<string>\",\n      \"contact_group_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/teammate_groups",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"teammate_groups"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"teammates\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"type\": \"<string>\",\n  \"permissions\": {\n    \"contacts\": {\n      \"access\": \"<string>\",\n      \"contact_group_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get teammate group",
+					"id": "5ec3339e-6712-4445-aba7-ac0d84302c18",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"teammate_groups",
+								":teammate_group_id"
+							],
+							"variable": [
+								{
+									"key": "teammate_group_id",
+									"value": "cir_123",
+									"description": "(Required) The teammate group ID."
+								}
+							]
+						},
+						"description": "Fetch a teammate group."
+					},
+					"response": [
+						{
+							"id": "f685989b-4274-49b9-931b-3140664bc0c0",
+							"name": "A teammate group",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"teammate_groups",
+										":teammate_group_id"
+									],
+									"variable": [
+										{
+											"key": "teammate_group_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"teammates\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"type\": \"<string>\",\n  \"permissions\": {\n    \"contacts\": {\n      \"access\": \"<string>\",\n      \"contact_group_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update a teammate group",
+					"id": "868830fb-b00f-40df-8cf5-1a98d8f4d3c0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"permissions\": {\n    \"contacts\": {\n      \"access\": \"<string>\",\n      \"contact_group_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"teammate_groups",
+								":teammate_group_id"
+							],
+							"variable": [
+								{
+									"key": "teammate_group_id",
+									"value": "cir_123",
+									"description": "(Required) The teammate group ID."
+								}
+							]
+						},
+						"description": "Updates a teammate group. Note - You cannot modify a teammate group that is managed by SCIM."
+					},
+					"response": [
+						{
+							"id": "1d6c8b98-5930-40f6-a945-aacd7695402b",
+							"name": "No content",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"permissions\": {\n    \"contacts\": {\n      \"access\": \"<string>\",\n      \"contact_group_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"teammate_groups",
+										":teammate_group_id"
+									],
+									"variable": [
+										{
+											"key": "teammate_group_id"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				},
+				{
+					"name": "List teammate group teammates",
+					"id": "ef525733-abab-4b3f-9544-e7e15086b239",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id/teammates",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"teammate_groups",
+								":teammate_group_id",
+								"teammates"
+							],
+							"variable": [
+								{
+									"key": "teammate_group_id",
+									"value": "cir_123",
+									"description": "(Required) The teammate group ID."
+								}
+							]
+						},
+						"description": "List teammate group teammates."
+					},
+					"response": [
+						{
+							"id": "aca0f4c9-3949-4522-ae64-f8a69a9aed8a",
+							"name": "Array of teammates",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id/teammates",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"teammate_groups",
+										":teammate_group_id",
+										"teammates"
+									],
+									"variable": [
+										{
+											"key": "teammate_group_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"inboxes\": \"<string>\",\n          \"conversations\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"email\": \"<string>\",\n      \"username\": \"<string>\",\n      \"first_name\": \"<string>\",\n      \"last_name\": \"<string>\",\n      \"is_admin\": \"<boolean>\",\n      \"is_available\": \"<boolean>\",\n      \"is_blocked\": \"<boolean>\",\n      \"custom_fields\": {}\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"inboxes\": \"<string>\",\n          \"conversations\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"email\": \"<string>\",\n      \"username\": \"<string>\",\n      \"first_name\": \"<string>\",\n      \"last_name\": \"<string>\",\n      \"is_admin\": \"<boolean>\",\n      \"is_available\": \"<boolean>\",\n      \"is_blocked\": \"<boolean>\",\n      \"custom_fields\": {}\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Add teammate group teammates",
+					"id": "104f730d-7e16-4311-ae21-db3887fd0607",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"teammate_ids\": [\n    \"incididunt cupidatat anim\",\n    \"occae\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id/teammates",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"teammate_groups",
+								":teammate_group_id",
+								"teammates"
+							],
+							"variable": [
+								{
+									"key": "teammate_group_id",
+									"value": "cir_123",
+									"description": "(Required) The teammate group ID."
+								}
+							]
+						},
+						"description": "Add teammate group teammates. Note - You cannot modify a teammate group that is managed by SCIM."
+					},
+					"response": [
+						{
+							"id": "190f2aff-725b-408b-9864-30a94c5ebd7c",
+							"name": "No content",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"teammate_ids\": [\n    \"incididunt cupidatat anim\",\n    \"occae\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id/teammates",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"teammate_groups",
+										":teammate_group_id",
+										"teammates"
+									],
+									"variable": [
+										{
+											"key": "teammate_group_id"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				},
+				{
+					"name": "Remove teammate group teammates",
+					"id": "f3ade4d0-db73-4ec1-b8a4-a54324f1184c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"teammate_ids\": [\n    \"incididunt cupidatat anim\",\n    \"occae\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id/teammates",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"teammate_groups",
+								":teammate_group_id",
+								"teammates"
+							],
+							"variable": [
+								{
+									"key": "teammate_group_id",
+									"value": "cir_123",
+									"description": "(Required) The teammate group ID."
+								}
+							]
+						},
+						"description": "Remove teammate group teammates. Note - You cannot modify a teammate group that is managed by SCIM."
+					},
+					"response": [
+						{
+							"id": "2a53b2e8-f8eb-439c-8ab6-b61621ef322e",
+							"name": "No content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"teammate_ids\": [\n    \"incididunt cupidatat anim\",\n    \"occae\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id/teammates",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"teammate_groups",
+										":teammate_group_id",
+										"teammates"
+									],
+									"variable": [
+										{
+											"key": "teammate_group_id"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				}
+			],
+			"id": "30d1ebf1-7413-4a35-bffd-ad353bddb437"
+		},
+		{
+			"name": "attachments",
+			"item": [
+				{
+					"name": "Download attachment",
+					"id": "ec31458c-8f33-4e68-9740-95e8c41c6d1a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
 						"method": "GET",
 						"header": [
 							{
@@ -18253,20 +18949,54 @@
 						},
 						"description": "Download an attachment file."
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
+					"response": [
 						{
-							"key": "Content-Type",
-							"value": "application/json",
-							"enabled": true
+							"id": "31392a10-4f39-4081-baf7-e02a4ad5b22f",
+							"name": "An attachment",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/download/:attachment_link_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"download",
+										":attachment_link_id"
+									],
+									"variable": [
+										{
+											"key": "attachment_link_id",
+											"value": "fil_55c8c149",
+											"description": "(Required) The Attachment ID"
+										}
+									]
+								},
+								"description": "Download an attachment file."
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"enabled": true
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": \"eiusm\",\n  \"filename\": \"aute do\",\n  \"url\": \"dolor ut\",\n  \"content_type\": \"reprehenderit ex culpa voluptate aliquip\",\n  \"size\": 92449186,\n  \"metadata\": {\n    \"is_inline\": false,\n    \"cid\": \"officia la\"\n  }\n}"
 						}
-					],
-					"cookie": [],
-					"body": "{\n  \"id\": \"eiusm\",\n  \"filename\": \"aute do\",\n  \"url\": \"dolor ut\",\n  \"content_type\": \"reprehenderit ex culpa voluptate aliquip\",\n  \"size\": 92449186,\n  \"metadata\": {\n    \"is_inline\": false,\n    \"cid\": \"officia la\"\n  }\n}"
+					]
 				}
-			]
+			],
+			"id": "ba030767-07dd-46a5-acd6-0e3be36d663f"
 		},
 		{
 			"name": "API Token details",
@@ -18328,116 +19058,6 @@
 					],
 					"cookie": [],
 					"body": "{\n  \"_links\": {\n    \"self\": \"labore\"\n  },\n  \"id\": -70450280,\n  \"name\": \"et quis\"\n}"
-				}
-			]
-		},
-		{
-			"name": "Update comment",
-			"id": "bca49c8c-d442-4f7f-b560-be40615dcaa4",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "PATCH",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					},
-					{
-						"key": "Accept",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"body\": \"<string>\",\n  \"is_pinned\": \"<boolean>\"\n}",
-					"options": {
-						"raw": {
-							"headerFamily": "json",
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{baseUrl}}/comments/:comment_id/",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"comments",
-						":comment_id",
-						""
-					],
-					"variable": [
-						{
-							"key": "comment_id",
-							"value": "com_123",
-							"description": "(Required) The Comment ID"
-						}
-					]
-				},
-				"description": "Update a comment in a [conversation](https://dev.frontapp.com/reference/conversations)."
-			},
-			"response": [
-				{
-					"id": "89eeeee7-ffda-4c99-893e-a1da6c72f09e",
-					"name": "A comment",
-					"originalRequest": {
-						"method": "PATCH",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Accept",
-								"value": "application/json"
-							},
-							{
-								"description": "Added as a part of security scheme: bearer",
-								"key": "Authorization",
-								"value": "Bearer <token>"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"body\": \"<string>\",\n  \"is_pinned\": \"<boolean>\"\n}",
-							"options": {
-								"raw": {
-									"headerFamily": "json",
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/comments/:comment_id/",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"comments",
-								":comment_id",
-								""
-							],
-							"variable": [
-								{
-									"key": "comment_id"
-								}
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"cookie": [],
-					"body": "{\n  \"_links\": {\n    \"self\": \"fugiat tempor quis\",\n    \"related\": {\n      \"conversations\": \"adipisicing\",\n      \"mentions\": \"qui deserunt sit commodo\"\n    }\n  },\n  \"id\": \"ullamco dolore nisi officia sed\",\n  \"author\": {\n    \"_links\": {\n      \"self\": \"mollit\",\n      \"related\": {\n        \"inboxes\": \"officia pariatur id\",\n        \"conversations\": \"magna ex adipisicing\"\n      }\n    },\n    \"id\": \"Duis minim\",\n    \"email\": \"est Duis adipisicing\",\n    \"username\": \"eiusmod ullamco et nostrud sit\",\n    \"first_name\": \"irure re\",\n    \"last_name\": \"dolore Duis incididunt\",\n    \"is_admin\": false,\n    \"is_available\": true,\n    \"is_blocked\": true,\n    \"custom_fields\": {}\n  },\n  \"body\": \"esse Excepteur laboris proident minim\",\n  \"posted_at\": 95110542.3306238,\n  \"attachments\": [\n    {\n      \"id\": \"pariatur veniam consectetur Duis\",\n      \"filename\": \"veniam sunt qui\",\n      \"url\": \"ex reprehenderit quis\",\n      \"content_type\": \"sint\",\n      \"size\": 266101,\n      \"metadata\": {\n        \"is_inline\": true,\n        \"cid\": \"sed in enim\"\n      }\n    },\n    {\n      \"id\": \"elit dolore\",\n      \"filename\": \"cillum voluptate ut\",\n      \"url\": \"ut nostrud esse\",\n      \"content_type\": \"consequat ad veniam\",\n      \"size\": -67930577,\n      \"metadata\": {\n        \"is_inline\": true,\n        \"cid\": \"nostrud consectetur\"\n      }\n    }\n  ],\n  \"is_pinned\": false\n}"
 				}
 			]
 		}
