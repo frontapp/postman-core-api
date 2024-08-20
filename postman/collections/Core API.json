@@ -15888,6 +15888,551 @@
 									"cookie": []
 								}
 							]
+						},
+						{
+							"name": "Delete teammate group",
+							"id": "ad0424fd-ddf8-4fa7-aade-9e6dd39e3ee5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"teammate_groups",
+										":teammate_group_id"
+									],
+									"variable": [
+										{
+											"key": "teammate_group_id",
+											"value": "cir_123",
+											"description": "(Required) The teammate group ID."
+										}
+									]
+								},
+								"description": "Deletes a teammate group. Note - You cannot delete a teammate group that is managed by SCIM."
+							},
+							"response": [
+								{
+									"id": "8c8cc632-5e61-44b1-8e7b-def542a1cce8",
+									"name": "No content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"teammate_groups",
+												":teammate_group_id"
+											],
+											"variable": [
+												{
+													"key": "teammate_group_id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": []
+								}
+							]
+						},
+						{
+							"name": "List teammate group team inboxes",
+							"id": "27323634-ec5a-475c-9279-48d6d47d01b3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"team_ids\": [\n    \"ullamco occaecat culpa\",\n    \"ut proident qui fugiat\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id/inboxes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"teammate_groups",
+										":teammate_group_id",
+										"inboxes"
+									],
+									"variable": [
+										{
+											"key": "teammate_group_id",
+											"value": "cir_123",
+											"description": "(Required) The teammate group ID."
+										}
+									]
+								},
+								"description": "List inboxes that the teammate group has access to via its associated teams."
+							},
+							"response": [
+								{
+									"id": "d3289008-d022-4b62-90e2-430a73eb0058",
+									"name": "Array of Inboxes",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"team_ids\": [\n    \"ullamco occaecat culpa\",\n    \"ut proident qui fugiat\"\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id/inboxes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"teammate_groups",
+												":teammate_group_id",
+												"inboxes"
+											],
+											"variable": [
+												{
+													"key": "teammate_group_id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"teammates\": \"<string>\",\n          \"conversations\": \"<string>\",\n          \"channels\": \"<string>\",\n          \"owner\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"is_private\": \"<boolean>\",\n      \"is_public\": \"<boolean>\",\n      \"custom_fields\": {}\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"teammates\": \"<string>\",\n          \"conversations\": \"<string>\",\n          \"channels\": \"<string>\",\n          \"owner\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"is_private\": \"<boolean>\",\n      \"is_public\": \"<boolean>\",\n      \"custom_fields\": {}\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Add teammate group team inboxes",
+							"id": "94e8f65d-6c61-4f4a-8387-fec980850f57",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"inbox_ids\": [\n    \"ipsum velit\",\n    \"reprehenderit\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id/inboxes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"teammate_groups",
+										":teammate_group_id",
+										"inboxes"
+									],
+									"variable": [
+										{
+											"key": "teammate_group_id",
+											"value": "cir_123",
+											"description": "(Required) The teammate group ID."
+										}
+									]
+								},
+								"description": "Links non-public inboxes to the teammate group. The inbox must be part of a team that has been added to the teammate group."
+							},
+							"response": [
+								{
+									"id": "a01ee0fc-f5c9-4493-9c14-77bd5d6745af",
+									"name": "No content",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"inbox_ids\": [\n    \"ipsum velit\",\n    \"reprehenderit\"\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id/inboxes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"teammate_groups",
+												":teammate_group_id",
+												"inboxes"
+											],
+											"variable": [
+												{
+													"key": "teammate_group_id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": []
+								}
+							]
+						},
+						{
+							"name": "Remove teammate group team inboxes",
+							"id": "95e9e723-904c-4fd8-807f-cdd0a8fa0fb7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"inbox_ids\": [\n    \"ipsum velit\",\n    \"reprehenderit\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id/inboxes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"teammate_groups",
+										":teammate_group_id",
+										"inboxes"
+									],
+									"variable": [
+										{
+											"key": "teammate_group_id",
+											"value": "cir_123",
+											"description": "(Required) The teammate group ID."
+										}
+									]
+								},
+								"description": "Unlinks non-public inboxes from the teammate group."
+							},
+							"response": [
+								{
+									"id": "82f0d38e-285a-4617-9539-50fcaf1166c2",
+									"name": "No content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"inbox_ids\": [\n    \"ipsum velit\",\n    \"reprehenderit\"\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id/inboxes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"teammate_groups",
+												":teammate_group_id",
+												"inboxes"
+											],
+											"variable": [
+												{
+													"key": "teammate_group_id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": []
+								}
+							]
+						},
+						{
+							"name": "List teammate group teams",
+							"id": "079858ce-5746-49a9-a29d-76818fb5a2dc",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id/teams",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"teammate_groups",
+										":teammate_group_id",
+										"teams"
+									],
+									"variable": [
+										{
+											"key": "teammate_group_id",
+											"value": "cir_123",
+											"description": "(Required) The teammate group ID."
+										}
+									]
+								},
+								"description": "List teams added to the teammate group. Any teams added to the teammate group will automatically link public inboxes."
+							},
+							"response": [
+								{
+									"id": "771850df-37f2-4eac-a3b3-6f779b934f1e",
+									"name": "Array of teams",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id/teams",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"teammate_groups",
+												":teammate_group_id",
+												"teams"
+											],
+											"variable": [
+												{
+													"key": "teammate_group_id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\"\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Remove teammate group teams",
+							"id": "82cf579b-e91b-45e3-87cb-0e15d6a9a720",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"team_ids\": [\n    \"ullamco occaecat culpa\",\n    \"ut proident qui fugiat\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id/teams",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"teammate_groups",
+										":teammate_group_id",
+										"teams"
+									],
+									"variable": [
+										{
+											"key": "teammate_group_id",
+											"value": "cir_123",
+											"description": "(Required) The teammate group ID."
+										}
+									]
+								},
+								"description": "Remove teams from the teammate group. Unlinks to any associated team inboxes."
+							},
+							"response": [
+								{
+									"id": "8915a69f-f993-41b5-86b3-2a9b1a2251fe",
+									"name": "No content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"team_ids\": [\n    \"ullamco occaecat culpa\",\n    \"ut proident qui fugiat\"\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id/teams",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"teammate_groups",
+												":teammate_group_id",
+												"teams"
+											],
+											"variable": [
+												{
+													"key": "teammate_group_id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": []
+								}
+							]
 						}
 					],
 					"id": "30d1ebf1-7413-4a35-bffd-ad353bddb437"
@@ -19058,6 +19603,102 @@
 					],
 					"cookie": [],
 					"body": "{\n  \"_links\": {\n    \"self\": \"labore\"\n  },\n  \"id\": -70450280,\n  \"name\": \"et quis\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add teammate group teams",
+			"id": "a98c4cc8-3ceb-4a07-ba47-db737efc0aa0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"team_ids\": [\n    \"ullamco occaecat culpa\",\n    \"ut proident qui fugiat\"\n  ]\n}",
+					"options": {
+						"raw": {
+							"headerFamily": "json",
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id/teams",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"teammate_groups",
+						":teammate_group_id",
+						"teams"
+					],
+					"variable": [
+						{
+							"key": "teammate_group_id",
+							"value": "cir_123",
+							"description": "(Required) The teammate group ID."
+						}
+					]
+				},
+				"description": "Adds teams to the teammate group. Any teams added to the teammate group will automatically link public inboxes. Non-public inboxes can be added to the teammate group separately."
+			},
+			"response": [
+				{
+					"id": "19902ade-fe36-4ad5-bf8b-1a0434b94c3a",
+					"name": "No content",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"description": "Added as a part of security scheme: bearer",
+								"key": "Authorization",
+								"value": "Bearer <token>"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"team_ids\": [\n    \"ullamco occaecat culpa\",\n    \"ut proident qui fugiat\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id/teams",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"teammate_groups",
+								":teammate_group_id",
+								"teams"
+							],
+							"variable": [
+								{
+									"key": "teammate_group_id"
+								}
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "text",
+					"header": [],
+					"cookie": []
 				}
 			]
 		}
