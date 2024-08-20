@@ -15348,6 +15348,102 @@
 							]
 						},
 						{
+							"name": "Add teammate group teams",
+							"id": "a98c4cc8-3ceb-4a07-ba47-db737efc0aa0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"team_ids\": [\n    \"ullamco occaecat culpa\",\n    \"ut proident qui fugiat\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id/teams",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"teammate_groups",
+										":teammate_group_id",
+										"teams"
+									],
+									"variable": [
+										{
+											"key": "teammate_group_id",
+											"value": "cir_123",
+											"description": "(Required) The teammate group ID."
+										}
+									]
+								},
+								"description": "Adds teams to the teammate group. Any teams added to the teammate group will automatically link public inboxes. Non-public inboxes can be added to the teammate group separately."
+							},
+							"response": [
+								{
+									"id": "19902ade-fe36-4ad5-bf8b-1a0434b94c3a",
+									"name": "No content",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"team_ids\": [\n    \"ullamco occaecat culpa\",\n    \"ut proident qui fugiat\"\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id/teams",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"teammate_groups",
+												":teammate_group_id",
+												"teams"
+											],
+											"variable": [
+												{
+													"key": "teammate_group_id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": []
+								}
+							]
+						},
+						{
 							"name": "Create teammate group",
 							"id": "9a559f68-eaa9-447c-a5b1-449e2dbf1c12",
 							"protocolProfileBehavior": {
@@ -19603,102 +19699,6 @@
 					],
 					"cookie": [],
 					"body": "{\n  \"_links\": {\n    \"self\": \"labore\"\n  },\n  \"id\": -70450280,\n  \"name\": \"et quis\"\n}"
-				}
-			]
-		},
-		{
-			"name": "Add teammate group teams",
-			"id": "a98c4cc8-3ceb-4a07-ba47-db737efc0aa0",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"team_ids\": [\n    \"ullamco occaecat culpa\",\n    \"ut proident qui fugiat\"\n  ]\n}",
-					"options": {
-						"raw": {
-							"headerFamily": "json",
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id/teams",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"teammate_groups",
-						":teammate_group_id",
-						"teams"
-					],
-					"variable": [
-						{
-							"key": "teammate_group_id",
-							"value": "cir_123",
-							"description": "(Required) The teammate group ID."
-						}
-					]
-				},
-				"description": "Adds teams to the teammate group. Any teams added to the teammate group will automatically link public inboxes. Non-public inboxes can be added to the teammate group separately."
-			},
-			"response": [
-				{
-					"id": "19902ade-fe36-4ad5-bf8b-1a0434b94c3a",
-					"name": "No content",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"description": "Added as a part of security scheme: bearer",
-								"key": "Authorization",
-								"value": "Bearer <token>"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"team_ids\": [\n    \"ullamco occaecat culpa\",\n    \"ut proident qui fugiat\"\n  ]\n}",
-							"options": {
-								"raw": {
-									"headerFamily": "json",
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/teammate_groups/:teammate_group_id/teams",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"teammate_groups",
-								":teammate_group_id",
-								"teams"
-							],
-							"variable": [
-								{
-									"key": "teammate_group_id"
-								}
-							]
-						}
-					},
-					"status": "No Content",
-					"code": 204,
-					"_postman_previewlanguage": "text",
-					"header": [],
-					"cookie": []
 				}
 			]
 		}
