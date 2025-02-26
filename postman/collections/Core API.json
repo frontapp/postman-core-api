@@ -13628,6 +13628,1075 @@
 			"id": "e7b5df5f-6107-4693-9d3c-b22bb3b68ad1"
 		},
 		{
+			"name": "shifts",
+			"item": [
+				{
+					"name": "List Shifts",
+					"id": "6238b876-f69b-4708-8cc0-a70aa3ca2918",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/shifts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"shifts"
+							]
+						},
+						"description": "List the shifts."
+					},
+					"response": [
+						{
+							"id": "e90bd165-6cb8-4318-9a71-571c0c673ab7",
+							"name": "Array of Shifts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/shifts",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"shifts"
+									]
+								},
+								"description": "List the shifts."
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"enabled": true
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"magna ullamco\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"ad\",\n        \"related\": {\n          \"teammates\": \"Lorem\",\n          \"owner\": \"nostrud\"\n        }\n      },\n      \"id\": \"commodo\",\n      \"name\": \"dolore dolore mollit\",\n      \"color\": \"black\",\n      \"timezone\": \"esse anim eu\",\n      \"times\": {\n        \"mon\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"tue\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"wed\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"thu\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"fri\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"sat\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"sun\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        }\n      },\n      \"created_at\": 28872426,\n      \"updated_at\": -85379601\n    },\n    {\n      \"_links\": {\n        \"self\": \"dolore in veniam\",\n        \"related\": {\n          \"teammates\": \"co\",\n          \"owner\": \"Lorem Duis laboris nostrud\"\n        }\n      },\n      \"id\": \"velit irure labore veniam\",\n      \"name\": \"consectetur Lorem\",\n      \"color\": \"black\",\n      \"timezone\": \"nostrud\",\n      \"times\": {\n        \"mon\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"tue\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"wed\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"thu\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"fri\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"sat\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"sun\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        }\n      },\n      \"created_at\": 57908229,\n      \"updated_at\": -17878179\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create shift",
+					"id": "4c5ea6ea-3222-46ec-ba26-ae3483bb4a2a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Duis deserunt\",\n  \"color\": \"pink\",\n  \"timezone\": \"voluptate\",\n  \"times\": {\n    \"mon\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"tue\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"wed\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"thu\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"fri\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sat\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sun\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    }\n  },\n  \"teammate_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/shifts",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"shifts"
+							]
+						},
+						"description": "Create a shift."
+					},
+					"response": [
+						{
+							"id": "be33b757-9b05-4dc5-8a2a-5e4bbef73920",
+							"name": "A shift",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Duis deserunt\",\n  \"color\": \"pink\",\n  \"timezone\": \"voluptate\",\n  \"times\": {\n    \"mon\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"tue\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"wed\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"thu\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"fri\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sat\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sun\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    }\n  },\n  \"teammate_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/shifts",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"shifts"
+									]
+								},
+								"description": "Create a shift."
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"enabled": true
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"ipsum adipisicing ut consequat\",\n    \"related\": {\n      \"teammates\": \"culpa cupidatat\",\n      \"owner\": \"consequat ea id fugiat ut\"\n    }\n  },\n  \"id\": \"ad sed\",\n  \"name\": \"Excepteu\",\n  \"color\": \"black\",\n  \"timezone\": \"enim fugiat labore\",\n  \"times\": {\n    \"mon\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"tue\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"wed\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"thu\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"fri\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sat\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sun\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    }\n  },\n  \"created_at\": -36144074,\n  \"updated_at\": 67088811\n}"
+						}
+					]
+				},
+				{
+					"name": "Update shift",
+					"id": "11e4d117-0d79-4868-a49d-05fc68db29e3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"non veniam ull\",\n  \"color\": \"red\",\n  \"timezone\": \"est officia consequat\",\n  \"times\": {\n    \"mon\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"tue\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"wed\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"thu\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"fri\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sat\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sun\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    }\n  },\n  \"teammate_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/shifts/:shift_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"shifts",
+								":shift_id"
+							],
+							"variable": [
+								{
+									"key": "shift_id",
+									"value": "shf_123",
+									"description": "(Required) The Shift ID"
+								}
+							]
+						},
+						"description": "Update a shift."
+					},
+					"response": [
+						{
+							"id": "2355552a-4c80-4090-87d0-09a962cdb44a",
+							"name": "No content",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"non veniam ull\",\n  \"color\": \"red\",\n  \"timezone\": \"est officia consequat\",\n  \"times\": {\n    \"mon\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"tue\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"wed\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"thu\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"fri\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sat\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sun\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    }\n  },\n  \"teammate_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/shifts/:shift_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"shifts",
+										":shift_id"
+									],
+									"variable": [
+										{
+											"key": "shift_id",
+											"value": "shf_123",
+											"description": "(Required) The Shift ID"
+										}
+									]
+								},
+								"description": "Update a shift."
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain",
+									"enabled": true
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"id": "2bf9f0f5-2e5d-4fcf-b45f-d712e0c8ea54"
+		},
+		{
+			"name": "shift/{shift id}",
+			"item": [
+				{
+					"name": "teammates",
+					"item": [
+						{
+							"name": "List shift's teammates",
+							"id": "9d777bc9-871e-4ea6-a888-575abdaf8e83",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/shift/:shift_id/teammates",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"shift",
+										":shift_id",
+										"teammates"
+									],
+									"variable": [
+										{
+											"key": "shift_id",
+											"value": "shf_123",
+											"description": "(Required) The Shift ID"
+										}
+									]
+								},
+								"description": "List the teammates assigned to a shift."
+							},
+							"response": [
+								{
+									"id": "479fc7b9-327f-4390-a7bb-3f6fd250fc25",
+									"name": "Array of teammates",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/shift/:shift_id/teammates",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"shift",
+												":shift_id",
+												"teammates"
+											],
+											"variable": [
+												{
+													"key": "shift_id",
+													"value": "shf_123",
+													"description": "(Required) The Shift ID"
+												}
+											]
+										},
+										"description": "List the teammates assigned to a shift."
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"enabled": true
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"_links\": {\n    \"self\": \"sint fugiat ut esse adipisicing\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"in sunt veniam minim\",\n        \"related\": {\n          \"inboxes\": \"non \",\n          \"conversations\": \"magna voluptate dolor\"\n        }\n      },\n      \"id\": \"esse se\",\n      \"email\": \"incididunt in laboris commodo\",\n      \"username\": \"officia\",\n      \"first_name\": \"culpa\",\n      \"last_name\": \"cillum dolor mollit\",\n      \"is_admin\": false,\n      \"is_available\": true,\n      \"is_blocked\": false\n    },\n    {\n      \"_links\": {\n        \"self\": \"Ut sint commodo Exc\",\n        \"related\": {\n          \"inboxes\": \"incididunt minim sunt\",\n          \"conversations\": \"dolor dolore\"\n        }\n      },\n      \"id\": \"cupidatat dolor\",\n      \"email\": \"deserunt fugiat proident eiusmod\",\n      \"username\": \"incididunt cupidatat in laboris\",\n      \"first_name\": \"amet magna\",\n      \"last_name\": \"aute aliqua\",\n      \"is_admin\": false,\n      \"is_available\": false,\n      \"is_blocked\": false\n    }\n  ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Add teammates to shift",
+							"id": "b820f30c-19f7-4476-9502-2ae0c9e96e4e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"teammate_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/shift/:shift_id/teammates",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"shift",
+										":shift_id",
+										"teammates"
+									],
+									"variable": [
+										{
+											"key": "shift_id",
+											"value": "shf_123",
+											"description": "(Required) The Shift ID"
+										}
+									]
+								},
+								"description": "Add teammates to a shift. The selected teammates must be in the team that owns the shift."
+							},
+							"response": [
+								{
+									"id": "4892066c-de7f-4181-877c-240ce280b924",
+									"name": "No content",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"teammate_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/shift/:shift_id/teammates",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"shift",
+												":shift_id",
+												"teammates"
+											],
+											"variable": [
+												{
+													"key": "shift_id",
+													"value": "shf_123",
+													"description": "(Required) The Shift ID"
+												}
+											]
+										},
+										"description": "Add teammates to a shift. The selected teammates must be in the team that owns the shift."
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain",
+											"enabled": true
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Remove teammates from shift",
+							"id": "b4e70197-9917-46cc-8e8e-415b6ad5ebd0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"teammate_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/shift/:shift_id/teammates",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"shift",
+										":shift_id",
+										"teammates"
+									],
+									"variable": [
+										{
+											"key": "shift_id",
+											"value": "shf_123",
+											"description": "(Required) The Shift ID"
+										}
+									]
+								},
+								"description": "Remove teammates from a shift."
+							},
+							"response": [
+								{
+									"id": "2deea4da-3f23-42a0-b60a-d2c2d5e1845f",
+									"name": "No content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"teammate_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/shift/:shift_id/teammates",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"shift",
+												":shift_id",
+												"teammates"
+											],
+											"variable": [
+												{
+													"key": "shift_id",
+													"value": "shf_123",
+													"description": "(Required) The Shift ID"
+												}
+											]
+										},
+										"description": "Remove teammates from a shift."
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain",
+											"enabled": true
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"id": "0b2dc16e-1f99-4c84-943a-1efd387934a1"
+				},
+				{
+					"name": "Get shift",
+					"id": "bb1d2441-250d-43b6-8ccd-aea3ae2981ee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/shift/:shift_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"shift",
+								":shift_id"
+							],
+							"variable": [
+								{
+									"key": "shift_id",
+									"value": "shf_123",
+									"description": "(Required) The Shift ID"
+								}
+							]
+						},
+						"description": "Fetch a shift."
+					},
+					"response": [
+						{
+							"id": "4efb41df-bf44-40bf-a91f-eb9492e81e82",
+							"name": "A shift",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/shift/:shift_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"shift",
+										":shift_id"
+									],
+									"variable": [
+										{
+											"key": "shift_id",
+											"value": "shf_123",
+											"description": "(Required) The Shift ID"
+										}
+									]
+								},
+								"description": "Fetch a shift."
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"enabled": true
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"ipsum adipisicing ut consequat\",\n    \"related\": {\n      \"teammates\": \"culpa cupidatat\",\n      \"owner\": \"consequat ea id fugiat ut\"\n    }\n  },\n  \"id\": \"ad sed\",\n  \"name\": \"Excepteu\",\n  \"color\": \"black\",\n  \"timezone\": \"enim fugiat labore\",\n  \"times\": {\n    \"mon\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"tue\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"wed\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"thu\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"fri\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sat\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sun\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    }\n  },\n  \"created_at\": -36144074,\n  \"updated_at\": 67088811\n}"
+						}
+					]
+				}
+			],
+			"id": "8d980b08-ab02-46d3-9940-6ceb61d3d866"
+		},
+		{
+			"name": "signatures/{signature id}",
+			"item": [
+				{
+					"name": "Get signatures",
+					"id": "47a5fdb2-ec3e-4192-a0ed-6efdcca81545",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/signatures/:signature_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"signatures",
+								":signature_id"
+							],
+							"variable": [
+								{
+									"key": "signature_id",
+									"value": "sig_123",
+									"description": "(Required) The signature ID"
+								}
+							]
+						},
+						"description": "Get the given signature."
+					},
+					"response": [
+						{
+							"id": "e0dc64bb-a08b-49d6-ae74-5212a943fee9",
+							"name": "A signature",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/signatures/:signature_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"signatures",
+										":signature_id"
+									],
+									"variable": [
+										{
+											"key": "signature_id",
+											"value": "sig_123",
+											"description": "(Required) The signature ID"
+										}
+									]
+								},
+								"description": "Get the given signature."
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"enabled": true
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"id ad irure dolor\",\n    \"related\": {\n      \"owner\": \"ea sint\"\n    }\n  },\n  \"id\": \"sig_123\",\n  \"name\": \"Duis in pro\",\n  \"body\": \"sunt ad \",\n  \"sender_info\": \"nisi in consectetur\",\n  \"is_visible_for_all_teammate_channels\": true,\n  \"channel_ids\": [\n    \"aute eu quis fugiat\",\n    \"culpa in labore consequat\"\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete signature",
+					"id": "7dce95fc-f9b8-4604-b440-cdf082fb7fa1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/signatures/:signature_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"signatures",
+								":signature_id"
+							],
+							"variable": [
+								{
+									"key": "signature_id",
+									"value": "sig_123",
+									"description": "(Required) The signature ID"
+								}
+							]
+						},
+						"description": "Delete signature"
+					},
+					"response": [
+						{
+							"id": "68c8094b-d8f9-43db-a2f9-0304274f0e25",
+							"name": "No content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/signatures/:signature_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"signatures",
+										":signature_id"
+									],
+									"variable": [
+										{
+											"key": "signature_id",
+											"value": "sig_123",
+											"description": "(Required) The signature ID"
+										}
+									]
+								},
+								"description": "Delete signature"
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain",
+									"enabled": true
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Update signature",
+					"id": "5c9711a9-d60b-4b71-a0ec-c7d74197fb7a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"qui Excepteur labore\",\n  \"sender_info\": \"quis tempor elit reprehenderit\",\n  \"body\": \"in commodo labore\",\n  \"is_visible_for_all_teammate_channels\": true,\n  \"channel_ids\": [\n    \"id\",\n    \"minim dolor proident est adipisicing\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/signatures/:signature_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"signatures",
+								":signature_id"
+							],
+							"variable": [
+								{
+									"key": "signature_id",
+									"value": "sig_123",
+									"description": "(Required) The signature ID"
+								}
+							]
+						},
+						"description": "Update signature"
+					},
+					"response": [
+						{
+							"id": "346dc162-c17e-4d25-989b-59d156e88bf3",
+							"name": "A signature",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"qui Excepteur labore\",\n  \"sender_info\": \"quis tempor elit reprehenderit\",\n  \"body\": \"in commodo labore\",\n  \"is_visible_for_all_teammate_channels\": true,\n  \"channel_ids\": [\n    \"id\",\n    \"minim dolor proident est adipisicing\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/signatures/:signature_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"signatures",
+										":signature_id"
+									],
+									"variable": [
+										{
+											"key": "signature_id",
+											"value": "sig_123",
+											"description": "(Required) The signature ID"
+										}
+									]
+								},
+								"description": "Update signature"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"enabled": true
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"id ad irure dolor\",\n    \"related\": {\n      \"owner\": \"ea sint\"\n    }\n  },\n  \"id\": \"sig_123\",\n  \"name\": \"Duis in pro\",\n  \"body\": \"sunt ad \",\n  \"sender_info\": \"nisi in consectetur\",\n  \"is_visible_for_all_teammate_channels\": true,\n  \"channel_ids\": [\n    \"aute eu quis fugiat\",\n    \"culpa in labore consequat\"\n  ]\n}"
+						}
+					]
+				}
+			],
+			"id": "cf9e8f06-ad25-472a-998a-52716aa0d97c"
+		},
+		{
+			"name": "statuses",
+			"item": [
+				{
+					"name": "List company ticket statuses",
+					"id": "f1dfb5ba-940e-4bd4-9b4d-5e95b9c57d8d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/company/statuses",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"company",
+								"statuses"
+							]
+						},
+						"description": "List the ticket statuses available for your company."
+					},
+					"response": [
+						{
+							"id": "d74b3208-2c58-478e-9026-a8d5b4654eab",
+							"name": "Array of ticket statuses",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/company/statuses",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"company",
+										"statuses"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"category\": \"open\",\n      \"description\": \"<string>\",\n      \"updated_at\": \"<number>\",\n      \"created_at\": \"<number>\"\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"category\": \"resolved\",\n      \"description\": \"<string>\",\n      \"updated_at\": \"<number>\",\n      \"created_at\": \"<number>\"\n    }\n  ]\n}"
+						},
+						{
+							"id": "b3c17c1a-92c9-4ff8-9aec-f9a6d03c6752",
+							"name": "Ticketing is not enabled, therefore, there are no ticket statuses.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/company/statuses",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"company",
+										"statuses"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				},
+				{
+					"name": "Get ticket status",
+					"id": "5db3b30d-e17e-4f52-a6ff-b0b022d8b9c1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/company/statuses/:status_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"company",
+								"statuses",
+								":status_id"
+							],
+							"variable": [
+								{
+									"key": "status_id",
+									"value": "sts_5z",
+									"description": "(Required) The ticket status ID"
+								}
+							]
+						},
+						"description": "Fetch a ticket status."
+					},
+					"response": [
+						{
+							"id": "64f7b061-07d1-4367-bf5f-87c674d6d847",
+							"name": "A ticket status",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/company/statuses/:status_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"company",
+										"statuses",
+										":status_id"
+									],
+									"variable": [
+										{
+											"key": "status_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"category\": \"open\",\n  \"description\": \"<string>\",\n  \"updated_at\": \"<number>\",\n  \"created_at\": \"<number>\"\n}"
+						}
+					]
+				}
+			],
+			"id": "f292f808-18e8-4c25-abe9-03166eac478b"
+		},
+		{
 			"name": "tags",
 			"item": [
 				{
@@ -19903,890 +20972,6 @@
 			"id": "8e8ba176-cddf-4631-aa67-bfda9b80acc0"
 		},
 		{
-			"name": "shifts",
-			"item": [
-				{
-					"name": "List Shifts",
-					"id": "6238b876-f69b-4708-8cc0-a70aa3ca2918",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/shifts",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"shifts"
-							]
-						},
-						"description": "List the shifts."
-					},
-					"response": [
-						{
-							"id": "e90bd165-6cb8-4318-9a71-571c0c673ab7",
-							"name": "Array of Shifts",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/shifts",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"shifts"
-									]
-								},
-								"description": "List the shifts."
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json",
-									"enabled": true
-								}
-							],
-							"cookie": [],
-							"body": "{\n  \"_links\": {\n    \"self\": \"magna ullamco\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"ad\",\n        \"related\": {\n          \"teammates\": \"Lorem\",\n          \"owner\": \"nostrud\"\n        }\n      },\n      \"id\": \"commodo\",\n      \"name\": \"dolore dolore mollit\",\n      \"color\": \"black\",\n      \"timezone\": \"esse anim eu\",\n      \"times\": {\n        \"mon\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"tue\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"wed\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"thu\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"fri\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"sat\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"sun\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        }\n      },\n      \"created_at\": 28872426,\n      \"updated_at\": -85379601\n    },\n    {\n      \"_links\": {\n        \"self\": \"dolore in veniam\",\n        \"related\": {\n          \"teammates\": \"co\",\n          \"owner\": \"Lorem Duis laboris nostrud\"\n        }\n      },\n      \"id\": \"velit irure labore veniam\",\n      \"name\": \"consectetur Lorem\",\n      \"color\": \"black\",\n      \"timezone\": \"nostrud\",\n      \"times\": {\n        \"mon\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"tue\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"wed\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"thu\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"fri\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"sat\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        },\n        \"sun\": {\n          \"start\": \"09:00\",\n          \"end\": \"17:00\"\n        }\n      },\n      \"created_at\": 57908229,\n      \"updated_at\": -17878179\n    }\n  ]\n}"
-						}
-					]
-				},
-				{
-					"name": "Create shift",
-					"id": "4c5ea6ea-3222-46ec-ba26-ae3483bb4a2a",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Accept",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"name\": \"Duis deserunt\",\n  \"color\": \"pink\",\n  \"timezone\": \"voluptate\",\n  \"times\": {\n    \"mon\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"tue\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"wed\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"thu\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"fri\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sat\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sun\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    }\n  },\n  \"teammate_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/shifts",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"shifts"
-							]
-						},
-						"description": "Create a shift."
-					},
-					"response": [
-						{
-							"id": "be33b757-9b05-4dc5-8a2a-5e4bbef73920",
-							"name": "A shift",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"name\": \"Duis deserunt\",\n  \"color\": \"pink\",\n  \"timezone\": \"voluptate\",\n  \"times\": {\n    \"mon\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"tue\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"wed\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"thu\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"fri\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sat\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sun\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    }\n  },\n  \"teammate_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{baseUrl}}/shifts",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"shifts"
-									]
-								},
-								"description": "Create a shift."
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json",
-									"enabled": true
-								}
-							],
-							"cookie": [],
-							"body": "{\n  \"_links\": {\n    \"self\": \"ipsum adipisicing ut consequat\",\n    \"related\": {\n      \"teammates\": \"culpa cupidatat\",\n      \"owner\": \"consequat ea id fugiat ut\"\n    }\n  },\n  \"id\": \"ad sed\",\n  \"name\": \"Excepteu\",\n  \"color\": \"black\",\n  \"timezone\": \"enim fugiat labore\",\n  \"times\": {\n    \"mon\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"tue\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"wed\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"thu\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"fri\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sat\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sun\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    }\n  },\n  \"created_at\": -36144074,\n  \"updated_at\": 67088811\n}"
-						}
-					]
-				},
-				{
-					"name": "Update shift",
-					"id": "11e4d117-0d79-4868-a49d-05fc68db29e3",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "PATCH",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"name\": \"non veniam ull\",\n  \"color\": \"red\",\n  \"timezone\": \"est officia consequat\",\n  \"times\": {\n    \"mon\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"tue\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"wed\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"thu\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"fri\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sat\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sun\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    }\n  },\n  \"teammate_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/shifts/:shift_id",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"shifts",
-								":shift_id"
-							],
-							"variable": [
-								{
-									"key": "shift_id",
-									"value": "shf_123",
-									"description": "(Required) The Shift ID"
-								}
-							]
-						},
-						"description": "Update a shift."
-					},
-					"response": [
-						{
-							"id": "2355552a-4c80-4090-87d0-09a962cdb44a",
-							"name": "No content",
-							"originalRequest": {
-								"method": "PATCH",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"name\": \"non veniam ull\",\n  \"color\": \"red\",\n  \"timezone\": \"est officia consequat\",\n  \"times\": {\n    \"mon\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"tue\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"wed\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"thu\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"fri\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sat\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sun\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    }\n  },\n  \"teammate_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{baseUrl}}/shifts/:shift_id",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"shifts",
-										":shift_id"
-									],
-									"variable": [
-										{
-											"key": "shift_id",
-											"value": "shf_123",
-											"description": "(Required) The Shift ID"
-										}
-									]
-								},
-								"description": "Update a shift."
-							},
-							"status": "No Content",
-							"code": 204,
-							"_postman_previewlanguage": "text",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "text/plain",
-									"enabled": true
-								}
-							],
-							"cookie": [],
-							"body": ""
-						}
-					]
-				}
-			],
-			"id": "2bf9f0f5-2e5d-4fcf-b45f-d712e0c8ea54"
-		},
-		{
-			"name": "shift/{shift id}",
-			"item": [
-				{
-					"name": "teammates",
-					"item": [
-						{
-							"name": "List shift's teammates",
-							"id": "9d777bc9-871e-4ea6-a888-575abdaf8e83",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/shift/:shift_id/teammates",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"shift",
-										":shift_id",
-										"teammates"
-									],
-									"variable": [
-										{
-											"key": "shift_id",
-											"value": "shf_123",
-											"description": "(Required) The Shift ID"
-										}
-									]
-								},
-								"description": "List the teammates assigned to a shift."
-							},
-							"response": [
-								{
-									"id": "479fc7b9-327f-4390-a7bb-3f6fd250fc25",
-									"name": "Array of teammates",
-									"originalRequest": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "Accept",
-												"value": "application/json"
-											}
-										],
-										"url": {
-											"raw": "{{baseUrl}}/shift/:shift_id/teammates",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"shift",
-												":shift_id",
-												"teammates"
-											],
-											"variable": [
-												{
-													"key": "shift_id",
-													"value": "shf_123",
-													"description": "(Required) The Shift ID"
-												}
-											]
-										},
-										"description": "List the teammates assigned to a shift."
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "application/json",
-											"enabled": true
-										}
-									],
-									"cookie": [],
-									"body": "{\n  \"_links\": {\n    \"self\": \"sint fugiat ut esse adipisicing\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"in sunt veniam minim\",\n        \"related\": {\n          \"inboxes\": \"non \",\n          \"conversations\": \"magna voluptate dolor\"\n        }\n      },\n      \"id\": \"esse se\",\n      \"email\": \"incididunt in laboris commodo\",\n      \"username\": \"officia\",\n      \"first_name\": \"culpa\",\n      \"last_name\": \"cillum dolor mollit\",\n      \"is_admin\": false,\n      \"is_available\": true,\n      \"is_blocked\": false\n    },\n    {\n      \"_links\": {\n        \"self\": \"Ut sint commodo Exc\",\n        \"related\": {\n          \"inboxes\": \"incididunt minim sunt\",\n          \"conversations\": \"dolor dolore\"\n        }\n      },\n      \"id\": \"cupidatat dolor\",\n      \"email\": \"deserunt fugiat proident eiusmod\",\n      \"username\": \"incididunt cupidatat in laboris\",\n      \"first_name\": \"amet magna\",\n      \"last_name\": \"aute aliqua\",\n      \"is_admin\": false,\n      \"is_available\": false,\n      \"is_blocked\": false\n    }\n  ]\n}"
-								}
-							]
-						},
-						{
-							"name": "Add teammates to shift",
-							"id": "b820f30c-19f7-4476-9502-2ae0c9e96e4e",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"teammate_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{baseUrl}}/shift/:shift_id/teammates",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"shift",
-										":shift_id",
-										"teammates"
-									],
-									"variable": [
-										{
-											"key": "shift_id",
-											"value": "shf_123",
-											"description": "(Required) The Shift ID"
-										}
-									]
-								},
-								"description": "Add teammates to a shift. The selected teammates must be in the team that owns the shift."
-							},
-							"response": [
-								{
-									"id": "4892066c-de7f-4181-877c-240ce280b924",
-									"name": "No content",
-									"originalRequest": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n  \"teammate_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{baseUrl}}/shift/:shift_id/teammates",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"shift",
-												":shift_id",
-												"teammates"
-											],
-											"variable": [
-												{
-													"key": "shift_id",
-													"value": "shf_123",
-													"description": "(Required) The Shift ID"
-												}
-											]
-										},
-										"description": "Add teammates to a shift. The selected teammates must be in the team that owns the shift."
-									},
-									"status": "No Content",
-									"code": 204,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "text/plain",
-											"enabled": true
-										}
-									],
-									"cookie": [],
-									"body": ""
-								}
-							]
-						},
-						{
-							"name": "Remove teammates from shift",
-							"id": "b4e70197-9917-46cc-8e8e-415b6ad5ebd0",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "DELETE",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"teammate_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{baseUrl}}/shift/:shift_id/teammates",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"shift",
-										":shift_id",
-										"teammates"
-									],
-									"variable": [
-										{
-											"key": "shift_id",
-											"value": "shf_123",
-											"description": "(Required) The Shift ID"
-										}
-									]
-								},
-								"description": "Remove teammates from a shift."
-							},
-							"response": [
-								{
-									"id": "2deea4da-3f23-42a0-b60a-d2c2d5e1845f",
-									"name": "No content",
-									"originalRequest": {
-										"method": "DELETE",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n  \"teammate_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{baseUrl}}/shift/:shift_id/teammates",
-											"host": [
-												"{{baseUrl}}"
-											],
-											"path": [
-												"shift",
-												":shift_id",
-												"teammates"
-											],
-											"variable": [
-												{
-													"key": "shift_id",
-													"value": "shf_123",
-													"description": "(Required) The Shift ID"
-												}
-											]
-										},
-										"description": "Remove teammates from a shift."
-									},
-									"status": "No Content",
-									"code": 204,
-									"_postman_previewlanguage": "text",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "text/plain",
-											"enabled": true
-										}
-									],
-									"cookie": [],
-									"body": ""
-								}
-							]
-						}
-					],
-					"id": "0b2dc16e-1f99-4c84-943a-1efd387934a1"
-				},
-				{
-					"name": "Get shift",
-					"id": "bb1d2441-250d-43b6-8ccd-aea3ae2981ee",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/shift/:shift_id",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"shift",
-								":shift_id"
-							],
-							"variable": [
-								{
-									"key": "shift_id",
-									"value": "shf_123",
-									"description": "(Required) The Shift ID"
-								}
-							]
-						},
-						"description": "Fetch a shift."
-					},
-					"response": [
-						{
-							"id": "4efb41df-bf44-40bf-a91f-eb9492e81e82",
-							"name": "A shift",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/shift/:shift_id",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"shift",
-										":shift_id"
-									],
-									"variable": [
-										{
-											"key": "shift_id",
-											"value": "shf_123",
-											"description": "(Required) The Shift ID"
-										}
-									]
-								},
-								"description": "Fetch a shift."
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json",
-									"enabled": true
-								}
-							],
-							"cookie": [],
-							"body": "{\n  \"_links\": {\n    \"self\": \"ipsum adipisicing ut consequat\",\n    \"related\": {\n      \"teammates\": \"culpa cupidatat\",\n      \"owner\": \"consequat ea id fugiat ut\"\n    }\n  },\n  \"id\": \"ad sed\",\n  \"name\": \"Excepteu\",\n  \"color\": \"black\",\n  \"timezone\": \"enim fugiat labore\",\n  \"times\": {\n    \"mon\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"tue\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"wed\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"thu\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"fri\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sat\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    },\n    \"sun\": {\n      \"start\": \"09:00\",\n      \"end\": \"17:00\"\n    }\n  },\n  \"created_at\": -36144074,\n  \"updated_at\": 67088811\n}"
-						}
-					]
-				}
-			],
-			"id": "8d980b08-ab02-46d3-9940-6ceb61d3d866"
-		},
-		{
-			"name": "signatures/{signature id}",
-			"item": [
-				{
-					"name": "Get signatures",
-					"id": "47a5fdb2-ec3e-4192-a0ed-6efdcca81545",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/signatures/:signature_id",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"signatures",
-								":signature_id"
-							],
-							"variable": [
-								{
-									"key": "signature_id",
-									"value": "sig_123",
-									"description": "(Required) The signature ID"
-								}
-							]
-						},
-						"description": "Get the given signature."
-					},
-					"response": [
-						{
-							"id": "e0dc64bb-a08b-49d6-ae74-5212a943fee9",
-							"name": "A signature",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/signatures/:signature_id",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"signatures",
-										":signature_id"
-									],
-									"variable": [
-										{
-											"key": "signature_id",
-											"value": "sig_123",
-											"description": "(Required) The signature ID"
-										}
-									]
-								},
-								"description": "Get the given signature."
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json",
-									"enabled": true
-								}
-							],
-							"cookie": [],
-							"body": "{\n  \"_links\": {\n    \"self\": \"id ad irure dolor\",\n    \"related\": {\n      \"owner\": \"ea sint\"\n    }\n  },\n  \"id\": \"sig_123\",\n  \"name\": \"Duis in pro\",\n  \"body\": \"sunt ad \",\n  \"sender_info\": \"nisi in consectetur\",\n  \"is_visible_for_all_teammate_channels\": true,\n  \"channel_ids\": [\n    \"aute eu quis fugiat\",\n    \"culpa in labore consequat\"\n  ]\n}"
-						}
-					]
-				},
-				{
-					"name": "Delete signature",
-					"id": "7dce95fc-f9b8-4604-b440-cdf082fb7fa1",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "{{baseUrl}}/signatures/:signature_id",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"signatures",
-								":signature_id"
-							],
-							"variable": [
-								{
-									"key": "signature_id",
-									"value": "sig_123",
-									"description": "(Required) The signature ID"
-								}
-							]
-						},
-						"description": "Delete signature"
-					},
-					"response": [
-						{
-							"id": "68c8094b-d8f9-43db-a2f9-0304274f0e25",
-							"name": "No content",
-							"originalRequest": {
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "{{baseUrl}}/signatures/:signature_id",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"signatures",
-										":signature_id"
-									],
-									"variable": [
-										{
-											"key": "signature_id",
-											"value": "sig_123",
-											"description": "(Required) The signature ID"
-										}
-									]
-								},
-								"description": "Delete signature"
-							},
-							"status": "No Content",
-							"code": 204,
-							"_postman_previewlanguage": "text",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "text/plain",
-									"enabled": true
-								}
-							],
-							"cookie": [],
-							"body": ""
-						}
-					]
-				},
-				{
-					"name": "Update signature",
-					"id": "5c9711a9-d60b-4b71-a0ec-c7d74197fb7a",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "PATCH",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Accept",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"name\": \"qui Excepteur labore\",\n  \"sender_info\": \"quis tempor elit reprehenderit\",\n  \"body\": \"in commodo labore\",\n  \"is_visible_for_all_teammate_channels\": true,\n  \"channel_ids\": [\n    \"id\",\n    \"minim dolor proident est adipisicing\"\n  ]\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/signatures/:signature_id",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"signatures",
-								":signature_id"
-							],
-							"variable": [
-								{
-									"key": "signature_id",
-									"value": "sig_123",
-									"description": "(Required) The signature ID"
-								}
-							]
-						},
-						"description": "Update signature"
-					},
-					"response": [
-						{
-							"id": "346dc162-c17e-4d25-989b-59d156e88bf3",
-							"name": "A signature",
-							"originalRequest": {
-								"method": "PATCH",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"name\": \"qui Excepteur labore\",\n  \"sender_info\": \"quis tempor elit reprehenderit\",\n  \"body\": \"in commodo labore\",\n  \"is_visible_for_all_teammate_channels\": true,\n  \"channel_ids\": [\n    \"id\",\n    \"minim dolor proident est adipisicing\"\n  ]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{baseUrl}}/signatures/:signature_id",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"signatures",
-										":signature_id"
-									],
-									"variable": [
-										{
-											"key": "signature_id",
-											"value": "sig_123",
-											"description": "(Required) The signature ID"
-										}
-									]
-								},
-								"description": "Update signature"
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json",
-									"enabled": true
-								}
-							],
-							"cookie": [],
-							"body": "{\n  \"_links\": {\n    \"self\": \"id ad irure dolor\",\n    \"related\": {\n      \"owner\": \"ea sint\"\n    }\n  },\n  \"id\": \"sig_123\",\n  \"name\": \"Duis in pro\",\n  \"body\": \"sunt ad \",\n  \"sender_info\": \"nisi in consectetur\",\n  \"is_visible_for_all_teammate_channels\": true,\n  \"channel_ids\": [\n    \"aute eu quis fugiat\",\n    \"culpa in labore consequat\"\n  ]\n}"
-						}
-					]
-				}
-			],
-			"id": "cf9e8f06-ad25-472a-998a-52716aa0d97c"
-		},
-		{
 			"name": "API Token details",
 			"id": "87187f84-768b-4dcc-8b52-a5b9455103b3",
 			"protocolProfileBehavior": {
@@ -20846,185 +21031,6 @@
 					],
 					"cookie": [],
 					"body": "{\n  \"_links\": {\n    \"self\": \"labore\"\n  },\n  \"id\": -70450280,\n  \"name\": \"et quis\"\n}"
-				}
-			]
-		},
-		{
-			"name": "List company ticket statuses",
-			"id": "f1dfb5ba-940e-4bd4-9b4d-5e95b9c57d8d",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json"
-					}
-				],
-				"url": {
-					"raw": "{{baseUrl}}/company/statuses",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"company",
-						"statuses"
-					]
-				},
-				"description": "List the ticket statuses available for your company."
-			},
-			"response": [
-				{
-					"id": "d74b3208-2c58-478e-9026-a8d5b4654eab",
-					"name": "Array of ticket statuses",
-					"originalRequest": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json"
-							},
-							{
-								"description": "Added as a part of security scheme: bearer",
-								"key": "Authorization",
-								"value": "Bearer <token>"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/company/statuses",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"company",
-								"statuses"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"cookie": [],
-					"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"category\": \"open\",\n      \"description\": \"<string>\",\n      \"updated_at\": \"<number>\",\n      \"created_at\": \"<number>\"\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\"\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"category\": \"resolved\",\n      \"description\": \"<string>\",\n      \"updated_at\": \"<number>\",\n      \"created_at\": \"<number>\"\n    }\n  ]\n}"
-				},
-				{
-					"id": "b3c17c1a-92c9-4ff8-9aec-f9a6d03c6752",
-					"name": "Ticketing is not enabled, therefore, there are no ticket statuses.",
-					"originalRequest": {
-						"method": "GET",
-						"header": [
-							{
-								"description": "Added as a part of security scheme: bearer",
-								"key": "Authorization",
-								"value": "Bearer <token>"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/company/statuses",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"company",
-								"statuses"
-							]
-						}
-					},
-					"status": "Not Found",
-					"code": 404,
-					"_postman_previewlanguage": "text",
-					"header": [],
-					"cookie": []
-				}
-			]
-		},
-		{
-			"name": "Get ticket status",
-			"id": "5db3b30d-e17e-4f52-a6ff-b0b022d8b9c1",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json"
-					}
-				],
-				"url": {
-					"raw": "{{baseUrl}}/company/statuses/:status_id",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"company",
-						"statuses",
-						":status_id"
-					],
-					"variable": [
-						{
-							"key": "status_id",
-							"value": "sts_5z",
-							"description": "(Required) The ticket status ID"
-						}
-					]
-				},
-				"description": "Fetch a ticket status."
-			},
-			"response": [
-				{
-					"id": "64f7b061-07d1-4367-bf5f-87c674d6d847",
-					"name": "A ticket status",
-					"originalRequest": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json"
-							},
-							{
-								"description": "Added as a part of security scheme: bearer",
-								"key": "Authorization",
-								"value": "Bearer <token>"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/company/statuses/:status_id",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"company",
-								"statuses",
-								":status_id"
-							],
-							"variable": [
-								{
-									"key": "status_id"
-								}
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"cookie": [],
-					"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"category\": \"open\",\n  \"description\": \"<string>\",\n  \"updated_at\": \"<number>\",\n  \"created_at\": \"<number>\"\n}"
 				}
 			]
 		}
