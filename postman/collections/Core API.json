@@ -1141,6 +1141,108 @@
 			"id": "10ad6e0b-c298-490b-a20a-6aee9045110a"
 		},
 		{
+			"name": "applications",
+			"item": [
+				{
+					"name": "Trigger application event",
+					"id": "486b6580-17db-4fa8-8ee4-e7cfa99cdd88",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"event_type\": \"<string>\",\n  \"app_object\": {\n    \"id\": \"<string>\",\n    \"ext_link\": \"<string>\"\n  }\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/applications/:application_uid/events",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"applications",
+								":application_uid",
+								"events"
+							],
+							"variable": [
+								{
+									"key": "application_uid",
+									"value": "<string>",
+									"description": "(Required) The application UID"
+								}
+							]
+						},
+						"description": "Triggers an event on behalf of an application. These events can trigger Front workflows, like rules.\nFor more information, see the [developer docs](https://dev.frontapp.com/docs/application-triggers#/).\n"
+					},
+					"response": [
+						{
+							"id": "d008b7c2-d154-4e0a-a676-89cecf0fccaa",
+							"name": "No content",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"event_type\": \"<string>\",\n  \"app_object\": {\n    \"id\": \"<string>\",\n    \"ext_link\": \"<string>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/applications/:application_uid/events",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"applications",
+										":application_uid",
+										"events"
+									],
+									"variable": [
+										{
+											"key": "application_uid"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				}
+			],
+			"id": "1afbeab3-1a45-438e-afe2-011494ef6f96"
+		},
+		{
 			"name": "attachments",
 			"item": [
 				{
