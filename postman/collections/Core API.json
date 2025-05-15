@@ -5143,6 +5143,41 @@
 											],
 											"cookie": [],
 											"body": "{\n  \"_links\": {\n    \"self\": \"aliquip cillum adipisicing incididunt\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"cupi\",\n        \"related\": {\n          \"conversations\": \"ex velit labore esse sint\",\n          \"mentions\": \"amet\"\n        }\n      },\n      \"id\": \"pariatur\",\n      \"author\": {\n        \"_links\": {\n          \"self\": \"voluptate aliqua\",\n          \"related\": {\n            \"inboxes\": \"veniam sint mollit\",\n            \"conversations\": \"esse est sunt in\"\n          }\n        },\n        \"id\": \"sint dolore\",\n        \"email\": \"amet non nostrud dolore\",\n        \"username\": \"consequat pariatur aute\",\n        \"first_name\": \"anim sit eiusmod\",\n        \"last_name\": \"ea consectetur\",\n        \"is_admin\": true,\n        \"is_available\": false,\n        \"is_blocked\": false\n      },\n      \"body\": \"nulla\",\n      \"posted_at\": -97556520,\n      \"attachments\": [\n        {\n          \"id\": \"ex cupidatat velit\",\n          \"filename\": \"anim consequat\",\n          \"url\": \"commodo dolore repre\",\n          \"content_type\": \"sunt dolore\",\n          \"size\": 60829959,\n          \"metadata\": {\n            \"is_inline\": false,\n            \"cid\": \"qui consequat labore laboris\"\n          }\n        },\n        {\n          \"id\": \"ut\",\n          \"filename\": \"ullamco e\",\n          \"url\": \"id dolore anim\",\n          \"content_type\": \"mollit commodo Excepteur culpa exercitation\",\n          \"size\": 99589830,\n          \"metadata\": {\n            \"is_inline\": false,\n            \"cid\": \"magna tempor dolore irure in\"\n          }\n        }\n      ]\n    },\n    {\n      \"_links\": {\n        \"self\": \"est eiusmod\",\n        \"related\": {\n          \"conversations\": \"eiusmod\",\n          \"mentions\": \"officia non sit\"\n        }\n      },\n      \"id\": \"commodo dolore irure ipsu\",\n      \"author\": {\n        \"_links\": {\n          \"self\": \"nostrud deserunt mollit ea\",\n          \"related\": {\n            \"inboxes\": \"eu Lorem sit fugiat esse\",\n            \"conversations\": \"eiusmod nisi\"\n          }\n        },\n        \"id\": \"non nul\",\n        \"email\": \"ipsum cupidat\",\n        \"username\": \"ex tempor ut\",\n        \"first_name\": \"culpa ut sed dolor\",\n        \"last_name\": \"non velit consequat sit\",\n        \"is_admin\": false,\n        \"is_available\": false,\n        \"is_blocked\": false\n      },\n      \"body\": \"dolore fugiat mollit in voluptate\",\n      \"posted_at\": -12237619,\n      \"attachments\": [\n        {\n          \"id\": \"esse laboris exercitation\",\n          \"filename\": \"velit\",\n          \"url\": \"cupidatat laborum dolor labore ipsum\",\n          \"content_type\": \"et ea aliqua nisi\",\n          \"size\": 42615679,\n          \"metadata\": {\n            \"is_inline\": false,\n            \"cid\": \"amet reprehenderit consectetur adipisicing labore\"\n          }\n        },\n        {\n          \"id\": \"aliquip consequat\",\n          \"filename\": \"officia dolore minim mollit \",\n          \"url\": \"in irure ut\",\n          \"content_type\": \"cillum pariatur Lorem ad\",\n          \"size\": 75775384,\n          \"metadata\": {\n            \"is_inline\": false,\n            \"cid\": \"magna occa\"\n          }\n        }\n      ]\n    }\n  ]\n}"
+										},
+										{
+											"id": "a1b77f0c-30c9-4cd8-b376-4c96ba4049f2",
+											"name": "If the conversation has been merged, the response redirects you to the merged conversation.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/conversations/:conversation_id/comments",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"conversations",
+														":conversation_id",
+														"comments"
+													],
+													"variable": [
+														{
+															"key": "conversation_id"
+														}
+													]
+												}
+											},
+											"status": "Moved Permanently",
+											"code": 301,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": []
 										}
 									]
 								},
@@ -5241,6 +5276,41 @@
 											],
 											"cookie": [],
 											"body": "{\n  \"_links\": {\n    \"self\": \"incididunt deserunt\",\n    \"related\": {\n      \"conversations\": \"reprehenderit\",\n      \"mentions\": \"non in aliquip anim tempor\"\n    }\n  },\n  \"id\": \"deserunt\",\n  \"author\": {\n    \"_links\": {\n      \"self\": \"in aliquip ea officia id\",\n      \"related\": {\n        \"inboxes\": \"culpa nulla elit\",\n        \"conversations\": \"incididunt moll\"\n      }\n    },\n    \"id\": \"adipisicing in nulla cillum\",\n    \"email\": \"id eiusmod\",\n    \"username\": \"Duis Lorem ullamco\",\n    \"first_name\": \"cupidatat cillum consequat\",\n    \"last_name\": \"in\",\n    \"is_admin\": false,\n    \"is_available\": false,\n    \"is_blocked\": true\n  },\n  \"body\": \"elit ut Lorem do\",\n  \"posted_at\": 97788672,\n  \"attachments\": [\n    {\n      \"id\": \"laboris nulla cupidatat\",\n      \"filename\": \"elit dolor\",\n      \"url\": \"est nisi\",\n      \"content_type\": \"consectetur adipisicing non\",\n      \"size\": 1274759,\n      \"metadata\": {\n        \"is_inline\": false,\n        \"cid\": \"Ut elit\"\n      }\n    },\n    {\n      \"id\": \"nisi dolor reprehenderit sed\",\n      \"filename\": \"fugiat aute qui i\",\n      \"url\": \"voluptate deserunt\",\n      \"content_type\": \"sint incididunt exercitation Ut in\",\n      \"size\": -5482802,\n      \"metadata\": {\n        \"is_inline\": false,\n        \"cid\": \"culpa aliqua\"\n      }\n    }\n  ]\n}"
+										},
+										{
+											"id": "1a5b8132-c66f-49e7-9f2c-e4392def2759",
+											"name": "If the conversation has been merged, the response redirects you to the merged conversation.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/conversations/:conversation_id/comments",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"conversations",
+														":conversation_id",
+														"comments"
+													],
+													"variable": [
+														{
+															"key": "conversation_id"
+														}
+													]
+												}
+											},
+											"status": "Moved Permanently",
+											"code": 301,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": []
 										}
 									]
 								}
@@ -5327,6 +5397,41 @@
 											],
 											"cookie": [],
 											"body": "{\n  \"_pagination\": {\n    \"next\": \"aliqua do\"\n  },\n  \"_links\": {\n    \"self\": \"officia\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"aliquip minim et\",\n        \"related\": {\n          \"conversation\": \"elit qui ullamco quis Lorem\",\n          \"message_replied_to\": \"cillum\"\n        }\n      },\n      \"id\": \"ut ad\",\n      \"type\": \"email\",\n      \"is_inbound\": true,\n      \"draft_mode\": \"private\",\n      \"error_type\": \"ea\",\n      \"version\": \"enim nostrud Ut fugiat sed\",\n      \"created_at\": -82831612,\n      \"subject\": \"fugiat sint\",\n      \"blurb\": \"dolor et sit\",\n      \"author\": {\n        \"_links\": {\n          \"self\": \"deserunt id\",\n          \"related\": {\n            \"inboxes\": \"nisi deserunt cupidatat sunt\",\n            \"conversations\": \"ullamco amet enim proident dolore\"\n          }\n        },\n        \"id\": \"elit ea\",\n        \"email\": \"nostrud elit qui\",\n        \"username\": \"enim sunt\",\n        \"first_name\": \"reprehenderit sint elit com\",\n        \"last_name\": \"ex magna\",\n        \"is_admin\": true,\n        \"is_available\": true,\n        \"is_blocked\": true\n      },\n      \"recipients\": [\n        {\n          \"_links\": {\n            \"related\": {\n              \"contact\": \"non sint\"\n            }\n          },\n          \"handle\": \"commodo in\",\n          \"role\": \"bcc\"\n        },\n        {\n          \"_links\": {\n            \"related\": {\n              \"contact\": \"ut in dolor esse\"\n            }\n          },\n          \"handle\": \"fugiat\",\n          \"role\": \"to\"\n        }\n      ],\n      \"body\": \"elit enim ut culpa\",\n      \"text\": \"ea cillum Lorem ullamco\",\n      \"attachments\": [\n        {\n          \"id\": \"qui ut ea\",\n          \"filename\": \"adipisicing magna incididunt\",\n          \"url\": \"esse dolor ullamco\",\n          \"content_type\": \"consectetur mollit ea\",\n          \"size\": -84061924,\n          \"metadata\": {\n            \"is_inline\": true,\n            \"cid\": \"et non\"\n          }\n        },\n        {\n          \"id\": \"Excepteur ea\",\n          \"filename\": \"cillum incididunt occaecat\",\n          \"url\": \"culpa et in nisi\",\n          \"content_type\": \"nulla\",\n          \"size\": -39217509,\n          \"metadata\": {\n            \"is_inline\": true,\n            \"cid\": \"Duis cupidatat\"\n          }\n        }\n      ],\n      \"signature\": {\n        \"_links\": {\n          \"self\": \"amet nisi culpa non\",\n          \"related\": {\n            \"owner\": \"Ut nulla officia\"\n          }\n        },\n        \"id\": \"sig_123\",\n        \"name\": \"fugiat veniam in\",\n        \"body\": \"exercitation culpa\",\n        \"sender_info\": \"in voluptate laboris \",\n        \"is_visible_for_all_teammate_channels\": true,\n        \"channel_ids\": [\n          \"officia elit id ullamco l\",\n          \"anim\"\n        ]\n      },\n      \"metadata\": {\n        \"intercom_url\": \"proident enim\",\n        \"duration\": -74264230,\n        \"have_been_answered\": false,\n        \"external_id\": \"labor\",\n        \"twitter_url\": \"sit\",\n        \"is_retweet\": false,\n        \"have_been_retweeted\": false,\n        \"have_been_favorited\": false,\n        \"thread_ref\": \"laboris exercitation fugiat\",\n        \"headers\": {}\n      }\n    },\n    {\n      \"_links\": {\n        \"self\": \"veniam magna consequat\",\n        \"related\": {\n          \"conversation\": \"aliquip nisi ad\",\n          \"message_replied_to\": \"incididunt mollit sint tem\"\n        }\n      },\n      \"id\": \"et ex veniam cillu\",\n      \"type\": \"intercom\",\n      \"is_inbound\": true,\n      \"draft_mode\": \"shared\",\n      \"error_type\": \"magna enim ullamco\",\n      \"version\": \"eiusmod pariatur amet\",\n      \"created_at\": 93577636,\n      \"subject\": \"mollit cillum ut et ea\",\n      \"blurb\": \"ipsum mollit exercitation\",\n      \"author\": {\n        \"_links\": {\n          \"self\": \"consequat non consectetur eu\",\n          \"related\": {\n            \"inboxes\": \"quis dolore\",\n            \"conversations\": \"\"\n          }\n        },\n        \"id\": \"incididunt in in ipsum\",\n        \"email\": \"irure ut in\",\n        \"username\": \"minim ullamco cillum\",\n        \"first_name\": \"sunt \",\n        \"last_name\": \"ut\",\n        \"is_admin\": true,\n        \"is_available\": false,\n        \"is_blocked\": false\n      },\n      \"recipients\": [\n        {\n          \"_links\": {\n            \"related\": {\n              \"contact\": \"ut voluptate adipisicing\"\n            }\n          },\n          \"handle\": \"occaecat consectetur mollit Duis ut\",\n          \"role\": \"cc\"\n        },\n        {\n          \"_links\": {\n            \"related\": {\n              \"contact\": \"mollit dolore incididunt\"\n            }\n          },\n          \"handle\": \"laboris minim deserunt dolore et\",\n          \"role\": \"cc\"\n        }\n      ],\n      \"body\": \"laboris ex enim adipisicing cillum\",\n      \"text\": \"consectetur nisi culpa laborum\",\n      \"attachments\": [\n        {\n          \"id\": \"dolore\",\n          \"filename\": \"laboris do\",\n          \"url\": \"enim amet dolor incidid\",\n          \"content_type\": \"in mollit elit\",\n          \"size\": 58208203,\n          \"metadata\": {\n            \"is_inline\": true,\n            \"cid\": \"aliqua et sunt exercitation\"\n          }\n        },\n        {\n          \"id\": \"reprehenderit Ut\",\n          \"filename\": \"incididunt proident qui fugiat sint\",\n          \"url\": \"commodo dolor eiusmod venia\",\n          \"content_type\": \"esse sunt ea\",\n          \"size\": -35421399,\n          \"metadata\": {\n            \"is_inline\": true,\n            \"cid\": \"pariatur in enim\"\n          }\n        }\n      ],\n      \"signature\": {\n        \"_links\": {\n          \"self\": \"commodo occaecat ad\",\n          \"related\": {\n            \"owner\": \"ipsum velit aliquip\"\n          }\n        },\n        \"id\": \"sig_123\",\n        \"name\": \"sint fugiat laboris nulla\",\n        \"body\": \"nisi eiusmod\",\n        \"sender_info\": \"sit in qui\",\n        \"is_visible_for_all_teammate_channels\": true,\n        \"channel_ids\": [\n          \"laboris dolor nisi\",\n          \"deserunt id\"\n        ]\n      },\n      \"metadata\": {\n        \"intercom_url\": \"proident veniam elit consequat\",\n        \"duration\": -94302581,\n        \"have_been_answered\": true,\n        \"external_id\": \"nulla sunt\",\n        \"twitter_url\": \"sint nisi irure Duis\",\n        \"is_retweet\": true,\n        \"have_been_retweeted\": false,\n        \"have_been_favorited\": false,\n        \"thread_ref\": \"nulla\",\n        \"headers\": {}\n      }\n    }\n  ]\n}"
+										},
+										{
+											"id": "9bdaf6b6-4df7-4f9e-a3ff-4b71a9a18c94",
+											"name": "If the conversation has been merged, the response redirects you to the merged conversation.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/conversations/:conversation_id/drafts",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"conversations",
+														":conversation_id",
+														"drafts"
+													],
+													"variable": [
+														{
+															"key": "conversation_id"
+														}
+													]
+												}
+											},
+											"status": "Moved Permanently",
+											"code": 301,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": []
 										}
 									]
 								},
@@ -5433,6 +5538,50 @@
 											],
 											"cookie": [],
 											"body": "{\n  \"_links\": {\n    \"self\": \"enim tempo\",\n    \"related\": {\n      \"conversation\": \"do reprehend\",\n      \"message_replied_to\": \"reprehenderit\"\n    }\n  },\n  \"id\": \"aute sunt labore\",\n  \"type\": \"call\",\n  \"is_inbound\": false,\n  \"draft_mode\": \"shared\",\n  \"error_type\": \"in aliqua eiusmod\",\n  \"version\": \"eu non\",\n  \"created_at\": 43045876,\n  \"subject\": \"amet id non Lorem ex\",\n  \"blurb\": \"aliquip in\",\n  \"author\": {\n    \"_links\": {\n      \"self\": \"culpa voluptate ut mollit dolor\",\n      \"related\": {\n        \"inboxes\": \"nostrud fugiat\",\n        \"conversations\": \"aliqua laborum sit magna\"\n      }\n    },\n    \"id\": \"mollit ut magna\",\n    \"email\": \"velit commodo officia\",\n    \"username\": \"consectetur deserunt\",\n    \"first_name\": \"officia quis volupt\",\n    \"last_name\": \"do ea\",\n    \"is_admin\": true,\n    \"is_available\": false,\n    \"is_blocked\": false\n  },\n  \"recipients\": [\n    {\n      \"_links\": {\n        \"related\": {\n          \"contact\": \"ex dolore Duis exercitation\"\n        }\n      },\n      \"handle\": \"est amet magna\",\n      \"role\": \"to\"\n    },\n    {\n      \"_links\": {\n        \"related\": {\n          \"contact\": \"dolore tempor aliqua\"\n        }\n      },\n      \"handle\": \"incididunt qui Lorem elit cupidatat\",\n      \"role\": \"cc\"\n    }\n  ],\n  \"body\": \"enim in aliqua dolor\",\n  \"text\": \"nostrud do eu Duis\",\n  \"attachments\": [\n    {\n      \"id\": \"ad\",\n      \"filename\": \"velit est\",\n      \"url\": \"aliquip aute nisi\",\n      \"content_type\": \"enim ut sit\",\n      \"size\": -40676801,\n      \"metadata\": {\n        \"is_inline\": false,\n        \"cid\": \"proident enim eu non\"\n      }\n    },\n    {\n      \"id\": \"ani\",\n      \"filename\": \"nulla cillum\",\n      \"url\": \"ea ex\",\n      \"content_type\": \"consequat consectetur occaecat id sint\",\n      \"size\": -32173073,\n      \"metadata\": {\n        \"is_inline\": true,\n        \"cid\": \"exercitation amet\"\n      }\n    }\n  ],\n  \"signature\": {\n    \"_links\": {\n      \"self\": \"voluptate consectetur\",\n      \"related\": {\n        \"owner\": \"ut cu\"\n      }\n    },\n    \"id\": \"sig_123\",\n    \"name\": \"irure dolor in incididunt esse\",\n    \"body\": \"dolore ea ex consectetur\",\n    \"sender_info\": \"nisi aute tempor\",\n    \"is_visible_for_all_teammate_channels\": true,\n    \"channel_ids\": [\n      \"et quis\",\n      \"sint irure mollit elit\"\n    ]\n  },\n  \"metadata\": {\n    \"intercom_url\": \"in consequat\",\n    \"duration\": 57457154,\n    \"have_been_answered\": true,\n    \"external_id\": \"dolor sint in ut cillum\",\n    \"twitter_url\": \"in ut\",\n    \"is_retweet\": true,\n    \"have_been_retweeted\": false,\n    \"have_been_favorited\": false,\n    \"thread_ref\": \"in ut\",\n    \"headers\": {}\n  }\n}"
+										},
+										{
+											"id": "ea44bd48-1c4b-4e31-bb09-967dfabfdf36",
+											"name": "If the conversation has been merged, the response redirects you to the merged conversation.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"author_id\": \"magna irure anim\",\n  \"body\": \"cupidatat do\",\n  \"to\": [\n    \"consectetur\",\n    \"sunt\"\n  ],\n  \"cc\": [\n    \"adipisicing ut aliquip veniam\",\n    \"officia eiusmod proident enim\"\n  ],\n  \"bcc\": [\n    \"ea Lorem in commodo\",\n    \"aute fugiat eiusmod commodo\"\n  ],\n  \"subject\": \"adipisicing consectetur\",\n  \"attachments\": [\n    \"aliq\",\n    \"do nisi dolor dolore\"\n  ],\n  \"mode\": \"private\",\n  \"signature_id\": \"ipsum Duis\",\n  \"should_add_default_signature\": true,\n  \"channel_id\": \"do\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/conversations/:conversation_id/drafts",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"conversations",
+														":conversation_id",
+														"drafts"
+													],
+													"variable": [
+														{
+															"key": "conversation_id"
+														}
+													]
+												}
+											},
+											"status": "Moved Permanently",
+											"code": 301,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": []
 										}
 									]
 								}
@@ -5520,6 +5669,41 @@
 											],
 											"cookie": [],
 											"body": "{\n  \"_links\": {\n    \"self\": \"sint fugiat ut esse adipisicing\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"in sunt veniam minim\",\n        \"related\": {\n          \"inboxes\": \"non \",\n          \"conversations\": \"magna voluptate dolor\"\n        }\n      },\n      \"id\": \"esse se\",\n      \"email\": \"incididunt in laboris commodo\",\n      \"username\": \"officia\",\n      \"first_name\": \"culpa\",\n      \"last_name\": \"cillum dolor mollit\",\n      \"is_admin\": false,\n      \"is_available\": true,\n      \"is_blocked\": false\n    },\n    {\n      \"_links\": {\n        \"self\": \"Ut sint commodo Exc\",\n        \"related\": {\n          \"inboxes\": \"incididunt minim sunt\",\n          \"conversations\": \"dolor dolore\"\n        }\n      },\n      \"id\": \"cupidatat dolor\",\n      \"email\": \"deserunt fugiat proident eiusmod\",\n      \"username\": \"incididunt cupidatat in laboris\",\n      \"first_name\": \"amet magna\",\n      \"last_name\": \"aute aliqua\",\n      \"is_admin\": false,\n      \"is_available\": false,\n      \"is_blocked\": false\n    }\n  ]\n}"
+										},
+										{
+											"id": "35670229-8417-46b9-9671-4dd9a488699c",
+											"name": "If the conversation has been merged, the response redirects you to the merged conversation.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/conversations/:conversation_id/followers",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"conversations",
+														":conversation_id",
+														"followers"
+													],
+													"variable": [
+														{
+															"key": "conversation_id"
+														}
+													]
+												}
+											},
+											"status": "Moved Permanently",
+											"code": 301,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": []
 										}
 									]
 								},
@@ -5619,6 +5803,50 @@
 											],
 											"cookie": [],
 											"body": ""
+										},
+										{
+											"id": "9ee8a377-24fd-4a30-a8ef-f2db59482e72",
+											"name": "If the conversation has been merged, the response redirects you to the merged conversation.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"teammate_ids\": [\n    \"aliquip sed\",\n    \"amet mol\"\n  ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/conversations/:conversation_id/followers",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"conversations",
+														":conversation_id",
+														"followers"
+													],
+													"variable": [
+														{
+															"key": "conversation_id"
+														}
+													]
+												}
+											},
+											"status": "Moved Permanently",
+											"code": 301,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": []
 										}
 									]
 								},
@@ -5718,6 +5946,50 @@
 											],
 											"cookie": [],
 											"body": ""
+										},
+										{
+											"id": "a0495635-f279-4225-aa7c-849d12207b92",
+											"name": "If the conversation has been merged, the response redirects you to the merged conversation.",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"teammate_ids\": [\n    \"magna\",\n    \"eu dolore qui\"\n  ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/conversations/:conversation_id/followers",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"conversations",
+														":conversation_id",
+														"followers"
+													],
+													"variable": [
+														{
+															"key": "conversation_id"
+														}
+													]
+												}
+											},
+											"status": "Moved Permanently",
+											"code": 301,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": []
 										}
 									]
 								}
@@ -5823,6 +6095,50 @@
 											],
 											"cookie": [],
 											"body": ""
+										},
+										{
+											"id": "ec77bc37-8e61-4a9c-8473-d36d13e257f7",
+											"name": "If the conversation has been merged, the response redirects you to the merged conversation.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"link_ids\": [\n    \"ut et amet nisi\",\n    \"incididunt labore\"\n  ],\n  \"link_external_urls\": [\n    \"labore non aliqua consequat\",\n    \"dolor deserunt in Ut sit\"\n  ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/conversations/:conversation_id/links",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"conversations",
+														":conversation_id",
+														"links"
+													],
+													"variable": [
+														{
+															"key": "conversation_id"
+														}
+													]
+												}
+											},
+											"status": "Moved Permanently",
+											"code": 301,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": []
 										}
 									]
 								},
@@ -5922,6 +6238,50 @@
 											],
 											"cookie": [],
 											"body": ""
+										},
+										{
+											"id": "88a1d9f8-6f47-47fd-9c79-1f386e4a44b6",
+											"name": "If the conversation has been merged, the response redirects you to the merged conversation.",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"link_ids\": [\n    \"cillum proident\",\n    \"sint fugiat sed dolor\"\n  ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/conversations/:conversation_id/links",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"conversations",
+														":conversation_id",
+														"links"
+													],
+													"variable": [
+														{
+															"key": "conversation_id"
+														}
+													]
+												}
+											},
+											"status": "Moved Permanently",
+											"code": 301,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": []
 										}
 									]
 								}
@@ -6042,6 +6402,41 @@
 											],
 											"cookie": [],
 											"body": "{\n  \"_pagination\": {\n    \"next\": \"ipsum Excepteur\"\n  },\n  \"_links\": {\n    \"self\": \"non id ad do\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"consectetur qui Ut enim adipisicing\",\n        \"related\": {\n          \"conversation\": \"Lorem\",\n          \"message_replied_to\": \"ipsum culpa\"\n        }\n      },\n      \"id\": \"occaecat anim\",\n      \"type\": \"email\",\n      \"is_inbound\": true,\n      \"draft_mode\": \"shared\",\n      \"error_type\": \"officia la\",\n      \"version\": \"nulla dolore non\",\n      \"created_at\": 48103891,\n      \"subject\": \"enim officia consequat aute\",\n      \"blurb\": \"laboris sed dolore cupidatat\",\n      \"author\": {\n        \"_links\": {\n          \"self\": \"adipisicing nulla dolore ullamco\",\n          \"related\": {\n            \"inboxes\": \"nostrud\",\n            \"conversations\": \"ut ad qui\"\n          }\n        },\n        \"id\": \"ea cillum\",\n        \"email\": \"deserunt exercitation enim irure anim\",\n        \"username\": \"ea\",\n        \"first_name\": \"sunt\",\n        \"last_name\": \"nostrud commodo pariatur quis voluptate\",\n        \"is_admin\": true,\n        \"is_available\": true,\n        \"is_blocked\": true\n      },\n      \"recipients\": [\n        {\n          \"_links\": {\n            \"related\": {\n              \"contact\": \"sunt ad ipsum\"\n            }\n          },\n          \"handle\": \"proident nostrud qui ea\",\n          \"role\": \"cc\"\n        },\n        {\n          \"_links\": {\n            \"related\": {\n              \"contact\": \"do laborum\"\n            }\n          },\n          \"handle\": \"fugiat\",\n          \"role\": \"bcc\"\n        }\n      ],\n      \"body\": \"occaecat eu aute anim\",\n      \"text\": \"voluptate ipsum in eu\",\n      \"attachments\": [\n        {\n          \"id\": \"fugiat aute occaecat\",\n          \"filename\": \"occaecat sed eiusmod\",\n          \"url\": \"deserunt irure\",\n          \"content_type\": \"pariatur dolor\",\n          \"size\": -34611068,\n          \"metadata\": {\n            \"is_inline\": false,\n            \"cid\": \"sed culpa amet ut laboris\"\n          }\n        },\n        {\n          \"id\": \"in in dolor\",\n          \"filename\": \"et qui ex in\",\n          \"url\": \"consequat qui\",\n          \"content_type\": \"Duis culpa sint\",\n          \"size\": -48732494,\n          \"metadata\": {\n            \"is_inline\": false,\n            \"cid\": \"exercitation non veniam ut laborum\"\n          }\n        }\n      ],\n      \"signature\": {\n        \"_links\": {\n          \"self\": \"reprehenderit incididunt dolor labore mollit\",\n          \"related\": {\n            \"owner\": \"amet magna tempor ea\"\n          }\n        },\n        \"id\": \"sig_123\",\n        \"name\": \"dolore ex labore ut\",\n        \"body\": \"fugiat in sit sed\",\n        \"sender_info\": \"Excepteur dolore dolor\",\n        \"is_visible_for_all_teammate_channels\": true,\n        \"channel_ids\": [\n          \"ea irure\",\n          \"deserunt ut\"\n        ]\n      },\n      \"metadata\": {\n        \"intercom_url\": \"cupidatat aute dolor\",\n        \"duration\": -5459324,\n        \"have_been_answered\": true,\n        \"external_id\": \"do voluptate aliqua\",\n        \"twitter_url\": \"quis commodo co\",\n        \"is_retweet\": false,\n        \"have_been_retweeted\": true,\n        \"have_been_favorited\": false,\n        \"thread_ref\": \"ut culpa\",\n        \"headers\": {}\n      }\n    },\n    {\n      \"_links\": {\n        \"self\": \"veniam\",\n        \"related\": {\n          \"conversation\": \"aute\",\n          \"message_replied_to\": \"reprehenderit ut\"\n        }\n      },\n      \"id\": \"reprehenderit fugiat commodo\",\n      \"type\": \"front_chat\",\n      \"is_inbound\": false,\n      \"draft_mode\": \"shared\",\n      \"error_type\": \"officia ipsum non ut\",\n      \"version\": \"adipisicing officia ex ipsum mollit\",\n      \"created_at\": 58598634,\n      \"subject\": \"incididunt occaecat pariatur irure deserunt\",\n      \"blurb\": \"do fugiat officia\",\n      \"author\": {\n        \"_links\": {\n          \"self\": \"voluptate laboris aliqua \",\n          \"related\": {\n            \"inboxes\": \"cillum quis cupidatat \",\n            \"conversations\": \"veniam\"\n          }\n        },\n        \"id\": \"labore sunt reprehenderit\",\n        \"email\": \"enim commodo proident\",\n        \"username\": \"ipsum in est eiusmod commod\",\n        \"first_name\": \"veniam ut non aliquip\",\n        \"last_name\": \"sint ut cillum\",\n        \"is_admin\": true,\n        \"is_available\": false,\n        \"is_blocked\": false\n      },\n      \"recipients\": [\n        {\n          \"_links\": {\n            \"related\": {\n              \"contact\": \"laboris irure nulla a\"\n            }\n          },\n          \"handle\": \"voluptate laboris adipisicing Ut dolore\",\n          \"role\": \"from\"\n        },\n        {\n          \"_links\": {\n            \"related\": {\n              \"contact\": \"aliquip\"\n            }\n          },\n          \"handle\": \"ipsum\",\n          \"role\": \"to\"\n        }\n      ],\n      \"body\": \"consectetur ad\",\n      \"text\": \"elit fugiat dolor culpa\",\n      \"attachments\": [\n        {\n          \"id\": \"occaecat ullamco nisi adipisicing ea\",\n          \"filename\": \"ex fugiat dolore Dui\",\n          \"url\": \"irure\",\n          \"content_type\": \"do est\",\n          \"size\": 74927544,\n          \"metadata\": {\n            \"is_inline\": false,\n            \"cid\": \"esse ex adipisicing\"\n          }\n        },\n        {\n          \"id\": \"velit est ea\",\n          \"filename\": \"dolor ullamco laboris\",\n          \"url\": \"sunt et nisi eu\",\n          \"content_type\": \"sed laborum\",\n          \"size\": -67129175,\n          \"metadata\": {\n            \"is_inline\": true,\n            \"cid\": \"amet dolor\"\n          }\n        }\n      ],\n      \"signature\": {\n        \"_links\": {\n          \"self\": \"enim in\",\n          \"related\": {\n            \"owner\": \"ipsum ex do\"\n          }\n        },\n        \"id\": \"sig_123\",\n        \"name\": \"occaecat in dolor\",\n        \"body\": \"reprehend\",\n        \"sender_info\": \"adipisicing eu\",\n        \"is_visible_for_all_teammate_channels\": true,\n        \"channel_ids\": [\n          \"do laboris consectetur\",\n          \"qui dolor in\"\n        ]\n      },\n      \"metadata\": {\n        \"intercom_url\": \"non ullamco enim voluptate\",\n        \"duration\": 83003775,\n        \"have_been_answered\": false,\n        \"external_id\": \"nulla elit\",\n        \"twitter_url\": \"laborum ea non ipsum\",\n        \"is_retweet\": true,\n        \"have_been_retweeted\": false,\n        \"have_been_favorited\": true,\n        \"thread_ref\": \"adipisicing\",\n        \"headers\": {}\n      }\n    }\n  ]\n}"
+										},
+										{
+											"id": "36a72258-fd2a-4b19-a83d-561a97f6d41b",
+											"name": "If the conversation has been merged, the response redirects you to the merged conversation.",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/conversations/:conversation_id/messages",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"conversations",
+														":conversation_id",
+														"messages"
+													],
+													"variable": [
+														{
+															"key": "conversation_id"
+														}
+													]
+												}
+											},
+											"status": "Moved Permanently",
+											"code": 301,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": []
 										}
 									]
 								},
@@ -6139,6 +6534,41 @@
 											],
 											"cookie": [],
 											"body": "{\n  \"_links\": {\n    \"self\": \"enim tempo\",\n    \"related\": {\n      \"conversation\": \"do reprehend\",\n      \"message_replied_to\": \"reprehenderit\"\n    }\n  },\n  \"id\": \"aute sunt labore\",\n  \"type\": \"whatsapp\",\n  \"is_inbound\": false,\n  \"draft_mode\": \"shared\",\n  \"error_type\": \"in aliqua eiusmod\",\n  \"version\": \"eu non\",\n  \"created_at\": 43045876,\n  \"subject\": \"amet id non Lorem ex\",\n  \"blurb\": \"aliquip in\",\n  \"author\": {\n    \"_links\": {\n      \"self\": \"culpa voluptate ut mollit dolor\",\n      \"related\": {\n        \"inboxes\": \"nostrud fugiat\",\n        \"conversations\": \"aliqua laborum sit magna\"\n      }\n    },\n    \"id\": \"mollit ut magna\",\n    \"email\": \"velit commodo officia\",\n    \"username\": \"consectetur deserunt\",\n    \"first_name\": \"officia quis volupt\",\n    \"last_name\": \"do ea\",\n    \"is_admin\": true,\n    \"is_available\": false,\n    \"is_blocked\": false\n  },\n  \"recipients\": [\n    {\n      \"_links\": {\n        \"related\": {\n          \"contact\": \"ex dolore Duis exercitation\"\n        }\n      },\n      \"handle\": \"est amet magna\",\n      \"role\": \"to\"\n    },\n    {\n      \"_links\": {\n        \"related\": {\n          \"contact\": \"dolore tempor aliqua\"\n        }\n      },\n      \"handle\": \"incididunt qui Lorem elit cupidatat\",\n      \"role\": \"cc\"\n    }\n  ],\n  \"body\": \"enim in aliqua dolor\",\n  \"text\": \"nostrud do eu Duis\",\n  \"attachments\": [\n    {\n      \"id\": \"ad\",\n      \"filename\": \"velit est\",\n      \"url\": \"aliquip aute nisi\",\n      \"content_type\": \"enim ut sit\",\n      \"size\": -40676801,\n      \"metadata\": {\n        \"is_inline\": false,\n        \"cid\": \"proident enim eu non\"\n      }\n    },\n    {\n      \"id\": \"ani\",\n      \"filename\": \"nulla cillum\",\n      \"url\": \"ea ex\",\n      \"content_type\": \"consequat consectetur occaecat id sint\",\n      \"size\": -32173073,\n      \"metadata\": {\n        \"is_inline\": true,\n        \"cid\": \"exercitation amet\"\n      }\n    }\n  ],\n  \"signature\": {\n    \"_links\": {\n      \"self\": \"voluptate consectetur\",\n      \"related\": {\n        \"owner\": \"ut cu\"\n      }\n    },\n    \"id\": \"sig_123\",\n    \"name\": \"irure dolor in incididunt esse\",\n    \"body\": \"dolore ea ex consectetur\",\n    \"sender_info\": \"nisi aute tempor\",\n    \"is_visible_for_all_teammate_channels\": true,\n    \"channel_ids\": [\n      \"et quis\",\n      \"sint irure mollit elit\"\n    ]\n  },\n  \"metadata\": {\n    \"intercom_url\": \"in consequat\",\n    \"duration\": 57457154,\n    \"have_been_answered\": true,\n    \"external_id\": \"dolor sint in ut cillum\",\n    \"twitter_url\": \"in ut\",\n    \"is_retweet\": true,\n    \"have_been_retweeted\": false,\n    \"have_been_favorited\": false,\n    \"thread_ref\": \"in ut\",\n    \"headers\": {}\n  }\n}"
+										},
+										{
+											"id": "bec1ebd5-50d9-446d-8aea-b2b5efe15a1d",
+											"name": "If the conversation has been merged, the response redirects you to the merged conversation.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/conversations/:conversation_id/messages",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"conversations",
+														":conversation_id",
+														"messages"
+													],
+													"variable": [
+														{
+															"key": "conversation_id"
+														}
+													]
+												}
+											},
+											"status": "Moved Permanently",
+											"code": 301,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": []
 										}
 									]
 								}
@@ -6244,6 +6674,50 @@
 											],
 											"cookie": [],
 											"body": ""
+										},
+										{
+											"id": "3af4c444-3ef5-4833-b1ad-50bb71efb357",
+											"name": "If the conversation has been merged, the response redirects you to the merged conversation.",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"tag_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/conversations/:conversation_id/tags",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"conversations",
+														":conversation_id",
+														"tags"
+													],
+													"variable": [
+														{
+															"key": "conversation_id"
+														}
+													]
+												}
+											},
+											"status": "Moved Permanently",
+											"code": 301,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": []
 										}
 									]
 								},
@@ -6343,6 +6817,50 @@
 											],
 											"cookie": [],
 											"body": ""
+										},
+										{
+											"id": "c06ecb50-3194-4cb9-a680-d2f0afa44818",
+											"name": "If the conversation has been merged, the response redirects you to the merged conversation.",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"tag_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/conversations/:conversation_id/tags",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"conversations",
+														":conversation_id",
+														"tags"
+													],
+													"variable": [
+														{
+															"key": "conversation_id"
+														}
+													]
+												}
+											},
+											"status": "Moved Permanently",
+											"code": 301,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": []
 										}
 									]
 								}
@@ -6425,6 +6943,40 @@
 									],
 									"cookie": [],
 									"body": "{\n  \"_links\": {\n    \"self\": \"consequat amet pariatur\",\n    \"related\": {\n      \"events\": \"minim\",\n      \"followers\": \"minim ex eiusmod exercitation\",\n      \"messages\": \"ipsum ad\",\n      \"comments\": \"deserunt in eiusmod voluptate ut\",\n      \"inboxes\": \"exercitation fugiat labore\",\n      \"last_message\": \"esse mollit\"\n    }\n  },\n  \"id\": \"ipsum mollit\",\n  \"subject\": \"eu do\",\n  \"status\": \"archived\",\n  \"assignee\": {\n    \"_links\": {\n      \"self\": \"fugiat voluptate qui veniam ut\",\n      \"related\": {\n        \"inboxes\": \"laborum aliqua do\",\n        \"conversations\": \"ex quis deserunt commodo ut\"\n      }\n    },\n    \"id\": \"dolor cillum dolor pariatur\",\n    \"email\": \"ut consequat magna\",\n    \"username\": \"in nulla qui\",\n    \"first_name\": \"occaecat amet ullamco nisi enim\",\n    \"last_name\": \"id sint mollit \",\n    \"is_admin\": false,\n    \"is_available\": false,\n    \"is_blocked\": true\n  },\n  \"recipient\": {\n    \"_links\": {\n      \"related\": {\n        \"contact\": \"in mollit aliqua est\"\n      }\n    },\n    \"handle\": \"ut officia ut\",\n    \"role\": \"bcc\"\n  },\n  \"tags\": [\n    {\n      \"_links\": {\n        \"self\": \"ad eiusmod minim fugiat\",\n        \"related\": {\n          \"conversations\": \"pariatur veniam cillum\",\n          \"owner\": \"non velit\",\n          \"children\": \"sint consectetur exercitation ut\"\n        }\n      },\n      \"id\": \"aute enim dolor\",\n      \"name\": \"reprehenderit ullamco\",\n      \"highlight\": \"red\",\n      \"is_private\": false,\n      \"is_visible_in_conversation_lists\": false,\n      \"created_at\": 30226592,\n      \"updated_at\": -78667829\n    },\n    {\n      \"_links\": {\n        \"self\": \"minim adipisicing magna do\",\n        \"related\": {\n          \"conversations\": \"laborum Ut\",\n          \"owner\": \"quis ipsum exercitation\",\n          \"children\": \"incididunt sint irure\"\n        }\n      },\n      \"id\": \"eiusmod enim\",\n      \"name\": \"aliquip pariatur velit\",\n      \"highlight\": \"orange\",\n      \"is_private\": false,\n      \"is_visible_in_conversation_lists\": false,\n      \"created_at\": 8789766,\n      \"updated_at\": -4056377\n    }\n  ],\n  \"links\": [\n    {\n      \"_links\": {\n        \"self\": \"et ut\"\n      },\n      \"id\": \"laborum\",\n      \"name\": \"ex sunt in ut\",\n      \"type\": \"in nulla sit eu Lorem\",\n      \"external_url\": \"Lorem cupidatat\"\n    },\n    {\n      \"_links\": {\n        \"self\": \"magna\"\n      },\n      \"id\": \"labore officia\",\n      \"name\": \"et quis dolore ut sint\",\n      \"type\": \"eiusmod ex\",\n      \"external_url\": \"ut culpa Lorem irure\"\n    }\n  ],\n  \"created_at\": -37428124,\n  \"is_private\": true,\n  \"scheduled_reminders\": [\n    {\n      \"_links\": {\n        \"related\": {\n          \"owner\": \"exercitation\"\n        }\n      },\n      \"created_at\": 99838603,\n      \"scheduled_at\": -42299506,\n      \"updated_at\": 9994186\n    },\n    {\n      \"_links\": {\n        \"related\": {\n          \"owner\": \"commodo et laborum\"\n        }\n      },\n      \"created_at\": 42962082,\n      \"scheduled_at\": 40751329,\n      \"updated_at\": 39028991\n    }\n  ],\n  \"metadata\": {\n    \"external_conversation_ids\": [\n      \"consequat\",\n      \"dolore enim dolore ut\"\n    ]\n  }\n}"
+								},
+								{
+									"id": "01504fa1-8637-4fd8-879c-2654c32e573f",
+									"name": "If the conversation has been merged, the response redirects you to the merged conversation.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/conversations/:conversation_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"conversations",
+												":conversation_id"
+											],
+											"variable": [
+												{
+													"key": "conversation_id"
+												}
+											]
+										}
+									},
+									"status": "Moved Permanently",
+									"code": 301,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": []
 								}
 							]
 						},
@@ -6565,6 +7117,49 @@
 									"_postman_previewlanguage": "Text",
 									"header": [],
 									"cookie": []
+								},
+								{
+									"id": "9d7d5e94-d7f9-440f-b8fb-656a0018b92f",
+									"name": "If the conversation has been merged, the response redirects you to the merged conversation.",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"assignee_id\": \"labori\",\n  \"inbox_id\": \"proident\",\n  \"status\": \"archived\",\n  \"tag_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/conversations/:conversation_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"conversations",
+												":conversation_id"
+											],
+											"variable": [
+												{
+													"key": "conversation_id"
+												}
+											]
+										}
+									},
+									"status": "Moved Permanently",
+									"code": 301,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": []
 								}
 							]
 						},
@@ -6664,6 +7259,50 @@
 									],
 									"cookie": [],
 									"body": ""
+								},
+								{
+									"id": "37a49bdd-e2d8-409c-ab4d-63b8a6c47a35",
+									"name": "If the conversation has been merged, the response redirects you to the merged conversation.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"assignee_id\": \"eiusmod adipisicing enim non\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/conversations/:conversation_id/assignee",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"conversations",
+												":conversation_id",
+												"assignee"
+											],
+											"variable": [
+												{
+													"key": "conversation_id"
+												}
+											]
+										}
+									},
+									"status": "Moved Permanently",
+									"code": 301,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": []
 								}
 							]
 						},
@@ -6745,6 +7384,41 @@
 									],
 									"cookie": [],
 									"body": "{\n  \"_links\": {\n    \"self\": \"occaecat sit non aliquip est\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"qui voluptate Duis velit\",\n        \"related\": {\n          \"teammates\": \"nostrud pariatur adipisicing\",\n          \"conversations\": \"Lor\",\n          \"channels\": \"ipsum\",\n          \"owner\": \"incididunt\"\n        }\n      },\n      \"id\": \"amet eu\",\n      \"name\": \"culpa in sunt id dolor\",\n      \"is_private\": false\n    },\n    {\n      \"_links\": {\n        \"self\": \"esse deserunt culpa\",\n        \"related\": {\n          \"teammates\": \"enim nisi aliquip sit\",\n          \"conversations\": \"fugiat et\",\n          \"channels\": \"ut ullamco ut\",\n          \"owner\": \"Lorem pariatur\"\n        }\n      },\n      \"id\": \"aute ad id in\",\n      \"name\": \"et\",\n      \"is_private\": true\n    }\n  ]\n}"
+								},
+								{
+									"id": "e1cbe892-3bfd-4ca5-9d93-db4daf77d30b",
+									"name": "If the conversation has been merged, the response redirects you to the merged conversation.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/conversations/:conversation_id/inboxes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"conversations",
+												":conversation_id",
+												"inboxes"
+											],
+											"variable": [
+												{
+													"key": "conversation_id"
+												}
+											]
+										}
+									},
+									"status": "Moved Permanently",
+									"code": 301,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": []
 								}
 							]
 						},
@@ -6849,6 +7523,41 @@
 									],
 									"cookie": [],
 									"body": "{\n  \"_pagination\": {\n    \"next\": \"eu esse ex adipisicing\"\n  },\n  \"_links\": {\n    \"self\": \"veniam\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"Duis\"\n      },\n      \"id\": \"<string>\",\n      \"type\": \"outbound\",\n      \"emitted_at\": \"<number>\",\n      \"source\": {\n        \"_meta\": {\n          \"type\": \"inboxes\"\n        },\n        \"data\": {\n          \"_links\": {\n            \"self\": \"anim ut\",\n            \"related\": {\n              \"inboxes\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"conversations\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          },\n          \"id\": \"ut esse ut reprehenderit et\",\n          \"email\": \"in incididunt sint id\",\n          \"username\": \"sunt labore est laborum\",\n          \"first_name\": \"deserunt nisi\",\n          \"last_name\": \"ex irure\",\n          \"is_admin\": true,\n          \"is_available\": true,\n          \"is_blocked\": true\n        }\n      },\n      \"target\": {\n        \"_meta\": {\n          \"type\": \"message\",\n          \"data\": {\n            \"_links\": {\n              \"self\": \"<string>\",\n              \"related\": {\n                \"inboxes\": \"<string>\",\n                \"conversations\": \"<string>\"\n              }\n            },\n            \"id\": \"<string>\",\n            \"email\": \"<string>\",\n            \"username\": \"<string>\",\n            \"first_name\": \"<string>\",\n            \"last_name\": \"<string>\",\n            \"is_admin\": \"<boolean>\",\n            \"is_available\": \"<boolean>\",\n            \"is_blocked\": \"<boolean>\"\n          }\n        }\n      },\n      \"conversation\": {\n        \"_links\": {\n          \"self\": \"ea amet ad minim\",\n          \"related\": {\n            \"events\": \"enim\",\n            \"followers\": \"proident Duis dolore\",\n            \"messages\": \"veniam\",\n            \"comments\": \"tempor in dolor laboris nostrud\",\n            \"inboxes\": \"fugiat\",\n            \"last_message\": \"ad minim sed\"\n          }\n        },\n        \"id\": \"occaecat sit proident\",\n        \"subject\": \"dolore Excepteur\",\n        \"status\": \"unassigned\",\n        \"assignee\": {\n          \"_links\": {\n            \"self\": \"aute cillum\",\n            \"related\": {\n              \"inboxes\": \"<string>\",\n              \"conversations\": \"<string>\"\n            }\n          },\n          \"id\": \"ad ut\",\n          \"email\": \"fugiat quis\",\n          \"username\": \"Excepteur eu\",\n          \"first_name\": \"deserunt nisi esse\",\n          \"last_name\": \"qui et dolore\",\n          \"is_admin\": true,\n          \"is_available\": false,\n          \"is_blocked\": false\n        },\n        \"recipient\": {\n          \"_links\": {\n            \"related\": {\n              \"contact\": \"<string>\"\n            }\n          },\n          \"handle\": \"dolore nisi\",\n          \"role\": \"to\"\n        },\n        \"tags\": [\n          {\n            \"_links\": {\n              \"self\": \"<string>\",\n              \"related\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            \"id\": \"qui incididunt\",\n            \"name\": \"aliqua ad laborum\",\n            \"highlight\": \"grey\",\n            \"is_private\": true,\n            \"is_visible_in_conversation_lists\": true,\n            \"created_at\": 29460626,\n            \"updated_at\": 83626088\n          },\n          {\n            \"_links\": {\n              \"self\": \"<string>\",\n              \"related\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            \"id\": \"Excepteur anim velit\",\n            \"name\": \"ea cupidatat nulla Excepteur ipsum\",\n            \"highlight\": \"yellow\",\n            \"is_private\": false,\n            \"is_visible_in_conversation_lists\": true,\n            \"created_at\": -13127936,\n            \"updated_at\": -57119996\n          }\n        ],\n        \"links\": [\n          {\n            \"_links\": {\n              \"self\": \"<string>\"\n            },\n            \"id\": \"enim\",\n            \"name\": \"esse qui\",\n            \"type\": \"eiusmod ullamco nostrud sint\",\n            \"external_url\": \"eiusmod in esse magna est\"\n          },\n          {\n            \"_links\": {\n              \"self\": \"<string>\"\n            },\n            \"id\": \"ipsum voluptate veniam elit\",\n            \"name\": \"Duis dolor ullamco irure non\",\n            \"type\": \"sit non\",\n            \"external_url\": \"tempor Lorem\"\n          }\n        ],\n        \"created_at\": -45308586,\n        \"is_private\": true,\n        \"scheduled_reminders\": [\n          {\n            \"_links\": {\n              \"related\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            \"created_at\": 33352998,\n            \"scheduled_at\": -13373230,\n            \"updated_at\": 2939188\n          },\n          {\n            \"_links\": {\n              \"related\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            \"created_at\": -27564067,\n            \"scheduled_at\": 12790542,\n            \"updated_at\": -75928806\n          }\n        ],\n        \"metadata\": {\n          \"external_conversation_ids\": [\n            \"aliquip sunt do\",\n            \"velit aute in\"\n          ]\n        }\n      },\n      \"sourcedata\": null,\n      \"target_metadata\": null\n    },\n    {\n      \"_links\": {\n        \"self\": \"Ut sed quis\"\n      },\n      \"id\": \"<string>\",\n      \"type\": \"forward\",\n      \"emitted_at\": \"<number>\",\n      \"source\": {\n        \"_meta\": {\n          \"type\": \"oauth_client\"\n        },\n        \"data\": {\n          \"0\": {\n            \"_links\": {\n              \"self\": null\n            }\n          },\n          \"1\": {\n            \"_links\": {\n              \"self\": null\n            }\n          },\n          \"_links\": {\n            \"self\": \"<string>\",\n            \"related\": {\n              \"owner\": \"<string>\"\n            }\n          },\n          \"id\": \"<string>\",\n          \"name\": \"<string>\",\n          \"actions\": [\n            \"<string>\",\n            \"<string>\"\n          ],\n          \"is_private\": \"<boolean>\"\n        }\n      },\n      \"target\": {\n        \"_meta\": {\n          \"type\": \"comment\",\n          \"data\": {\n            \"_links\": {\n              \"self\": \"<string>\",\n              \"related\": {\n                \"inboxes\": \"<string>\",\n                \"conversations\": \"<string>\"\n              }\n            },\n            \"id\": \"<string>\",\n            \"email\": \"<string>\",\n            \"username\": \"<string>\",\n            \"first_name\": \"<string>\",\n            \"last_name\": \"<string>\",\n            \"is_admin\": \"<boolean>\",\n            \"is_available\": \"<boolean>\",\n            \"is_blocked\": \"<boolean>\"\n          }\n        }\n      },\n      \"conversation\": {\n        \"_links\": {\n          \"self\": \"ex exercitation ullamco incididunt consequat\",\n          \"related\": {\n            \"events\": \"voluptate in magna qui\",\n            \"followers\": \"laboris do ipsum culpa elit\",\n            \"messages\": \"ut sunt\",\n            \"comments\": \"elit exercitation magna\",\n            \"inboxes\": \"elit\",\n            \"last_message\": \"aute\"\n          }\n        },\n        \"id\": \"magna\",\n        \"subject\": \"dolor cillum dolore\",\n        \"status\": \"deleted\",\n        \"assignee\": {\n          \"_links\": {\n            \"self\": \"dolor pariatur\",\n            \"related\": {\n              \"inboxes\": \"<string>\",\n              \"conversations\": \"<string>\"\n            }\n          },\n          \"id\": \"enim consectetur mollit ut minim\",\n          \"email\": \"incididunt occaecat\",\n          \"username\": \"adipisicing\",\n          \"first_name\": \"a\",\n          \"last_name\": \"ipsum nostrud Excepteur\",\n          \"is_admin\": false,\n          \"is_available\": false,\n          \"is_blocked\": true\n        },\n        \"recipient\": {\n          \"_links\": {\n            \"related\": {\n              \"contact\": \"<string>\"\n            }\n          },\n          \"handle\": \"minim\",\n          \"role\": \"cc\"\n        },\n        \"tags\": [\n          {\n            \"_links\": {\n              \"self\": \"<string>\",\n              \"related\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            \"id\": \"reprehenderit in\",\n            \"name\": \"nostrud\",\n            \"highlight\": \"red\",\n            \"is_private\": true,\n            \"is_visible_in_conversation_lists\": true,\n            \"created_at\": -25268392,\n            \"updated_at\": 90402004\n          },\n          {\n            \"_links\": {\n              \"self\": \"<string>\",\n              \"related\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            \"id\": \"velit\",\n            \"name\": \"ut\",\n            \"highlight\": \"grey\",\n            \"is_private\": false,\n            \"is_visible_in_conversation_lists\": true,\n            \"created_at\": -40052216,\n            \"updated_at\": -93234470\n          }\n        ],\n        \"links\": [\n          {\n            \"_links\": {\n              \"self\": \"<string>\"\n            },\n            \"id\": \"Duis dolore\",\n            \"name\": \"commodo nostrud proident consectetur\",\n            \"type\": \"veniam non\",\n            \"external_url\": \"irure eu\"\n          },\n          {\n            \"_links\": {\n              \"self\": \"<string>\"\n            },\n            \"id\": \"non mollit voluptate adipisicin\",\n            \"name\": \"aute\",\n            \"type\": \"laborum dolor commodo anim aliquip\",\n            \"external_url\": \"qu\"\n          }\n        ],\n        \"created_at\": -24780088,\n        \"is_private\": false,\n        \"scheduled_reminders\": [\n          {\n            \"_links\": {\n              \"related\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            \"created_at\": -34974747,\n            \"scheduled_at\": -25127746,\n            \"updated_at\": -64822257\n          },\n          {\n            \"_links\": {\n              \"related\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            \"created_at\": 77755160,\n            \"scheduled_at\": 96925465,\n            \"updated_at\": 20658066\n          }\n        ],\n        \"metadata\": {\n          \"external_conversation_ids\": [\n            \"esse nulla\",\n            \"dolor non\"\n          ]\n        }\n      },\n      \"sourcedata\": null,\n      \"target_metadata\": null\n    }\n  ]\n}"
+								},
+								{
+									"id": "c3cb514e-0e12-4046-bad6-2101b14a2ff7",
+									"name": "If the conversation has been merged, the response redirects you to the merged conversation.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/conversations/:conversation_id/events",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"conversations",
+												":conversation_id",
+												"events"
+											],
+											"variable": [
+												{
+													"key": "conversation_id"
+												}
+											]
+										}
+									},
+									"status": "Moved Permanently",
+									"code": 301,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": []
 								}
 							]
 						},
@@ -6943,6 +7652,45 @@
 									],
 									"cookie": [],
 									"body": ""
+								},
+								{
+									"id": "9dca1f20-afda-41c3-89df-53f6f5154cd3",
+									"name": "If the conversation has been merged, the response redirects you to the merged conversation.",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"teammate_id\": \"irure\",\n  \"scheduled_at\": \"<number>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/conversations/:conversation_id/reminders",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"conversations",
+												":conversation_id",
+												"reminders"
+											],
+											"variable": [
+												{
+													"key": "conversation_id"
+												}
+											]
+										}
+									},
+									"status": "Moved Permanently",
+									"code": 301,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": []
 								}
 							]
 						}
