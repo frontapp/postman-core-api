@@ -2505,6 +2505,116 @@
 							"body": "{\n  \"_links\": {\n    \"self\": \"sint fugiat ut esse adipisicing\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"in sunt veniam minim\",\n        \"related\": {\n          \"inboxes\": \"non \",\n          \"conversations\": \"magna voluptate dolor\"\n        }\n      },\n      \"id\": \"esse se\",\n      \"email\": \"incididunt in laboris commodo\",\n      \"username\": \"officia\",\n      \"first_name\": \"culpa\",\n      \"last_name\": \"cillum dolor mollit\",\n      \"is_admin\": false,\n      \"is_available\": true,\n      \"is_blocked\": false\n    },\n    {\n      \"_links\": {\n        \"self\": \"Ut sint commodo Exc\",\n        \"related\": {\n          \"inboxes\": \"incididunt minim sunt\",\n          \"conversations\": \"dolor dolore\"\n        }\n      },\n      \"id\": \"cupidatat dolor\",\n      \"email\": \"deserunt fugiat proident eiusmod\",\n      \"username\": \"incididunt cupidatat in laboris\",\n      \"first_name\": \"amet magna\",\n      \"last_name\": \"aute aliqua\",\n      \"is_admin\": false,\n      \"is_available\": false,\n      \"is_blocked\": false\n    }\n  ]\n}"
 						}
 					]
+				},
+				{
+					"name": "Add comment reply",
+					"id": "f83db522-ad62-4775-a2a9-4b6204c4c053",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"body\": \"<string>\",\n  \"author_id\": \"<string>\",\n  \"is_pinned\": \"<boolean>\",\n  \"attachments\": [\n    \"<binary>\",\n    \"<binary>\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/comments/:comment_id/replies",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"comments",
+								":comment_id",
+								"replies"
+							],
+							"variable": [
+								{
+									"key": "comment_id",
+									"value": "com_123",
+									"description": "(Required) The comment ID to reply to"
+								}
+							]
+						},
+						"description": "Add a reply to a comment on a [conversation](https://dev.frontapp.com/reference/conversations). Comment replies visually indicate which comment is being responded to, helping users follow the conversation."
+					},
+					"response": [
+						{
+							"id": "b5ab39ea-2e4e-44f8-b321-80d30d2e8ba2",
+							"name": "A comment",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"body\": \"<string>\",\n  \"author_id\": \"<string>\",\n  \"is_pinned\": \"<boolean>\",\n  \"attachments\": [\n    \"<binary>\",\n    \"<binary>\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/comments/:comment_id/replies",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"comments",
+										":comment_id",
+										"replies"
+									],
+									"variable": [
+										{
+											"key": "comment_id"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"ullamco amet\",\n    \"related\": {\n      \"conversations\": \"Ut esse\",\n      \"mentions\": \"ex officia\"\n    }\n  },\n  \"id\": \"do pariatur labore sit\",\n  \"author\": {\n    \"_links\": {\n      \"self\": \"fugiat sunt pariatur in commodo\",\n      \"related\": {\n        \"inboxes\": \"cup\",\n        \"conversations\": \"consequat anim labore ullamco\",\n        \"botSource\": \"sed ex veniam\"\n      }\n    },\n    \"id\": \"proident nulla officia\",\n    \"email\": \"minim nulla \",\n    \"username\": \"Ut ea\",\n    \"first_name\": \"eiusmod veniam in esse\",\n    \"last_name\": \"ullamco\",\n    \"is_admin\": true,\n    \"is_available\": false,\n    \"is_blocked\": true,\n    \"type\": \"macro\",\n    \"custom_fields\": {}\n  },\n  \"body\": \"dolore culpa nisi nostrud\",\n  \"posted_at\": -9016981.37027058,\n  \"attachments\": [\n    {\n      \"id\": \"commodo dolore dolor eiusmod ut\",\n      \"filename\": \"consectetur incididunt ut anim\",\n      \"url\": \"ea aliqua\",\n      \"content_type\": \"consectetur ad in veniam\",\n      \"size\": -38026348,\n      \"metadata\": {\n        \"is_inline\": false,\n        \"cid\": \"Duis\"\n      }\n    },\n    {\n      \"id\": \"dolore in Excepteur ex\",\n      \"filename\": \"esse\",\n      \"url\": \"aliqua dolore ad mollit\",\n      \"content_type\": \"sed proident\",\n      \"size\": -76954383,\n      \"metadata\": {\n        \"is_inline\": true,\n        \"cid\": \"laboris elit ut\"\n      }\n    }\n  ],\n  \"is_pinned\": true\n}"
+						}
+					]
 				}
 			],
 			"id": "c8dc1c78-279d-4225-8320-5ff344b4a72b"
@@ -21868,116 +21978,6 @@
 					],
 					"cookie": [],
 					"body": "{\n  \"_links\": {\n    \"self\": \"labore\"\n  },\n  \"id\": -70450280,\n  \"name\": \"et quis\"\n}"
-				}
-			]
-		},
-		{
-			"name": "Add comment reply",
-			"id": "f83db522-ad62-4775-a2a9-4b6204c4c053",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					},
-					{
-						"key": "Accept",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"body\": \"<string>\",\n  \"author_id\": \"<string>\",\n  \"is_pinned\": \"<boolean>\",\n  \"attachments\": [\n    \"<binary>\",\n    \"<binary>\"\n  ]\n}",
-					"options": {
-						"raw": {
-							"headerFamily": "json",
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{baseUrl}}/comments/:comment_id/replies",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"comments",
-						":comment_id",
-						"replies"
-					],
-					"variable": [
-						{
-							"key": "comment_id",
-							"value": "com_123",
-							"description": "(Required) The comment ID to reply to"
-						}
-					]
-				},
-				"description": "Add a reply to a comment on a [conversation](https://dev.frontapp.com/reference/conversations). Comment replies visually indicate which comment is being responded to, helping users follow the conversation."
-			},
-			"response": [
-				{
-					"id": "b5ab39ea-2e4e-44f8-b321-80d30d2e8ba2",
-					"name": "A comment",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Accept",
-								"value": "application/json"
-							},
-							{
-								"description": "Added as a part of security scheme: bearer",
-								"key": "Authorization",
-								"value": "Bearer <token>"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"body\": \"<string>\",\n  \"author_id\": \"<string>\",\n  \"is_pinned\": \"<boolean>\",\n  \"attachments\": [\n    \"<binary>\",\n    \"<binary>\"\n  ]\n}",
-							"options": {
-								"raw": {
-									"headerFamily": "json",
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/comments/:comment_id/replies",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"comments",
-								":comment_id",
-								"replies"
-							],
-							"variable": [
-								{
-									"key": "comment_id"
-								}
-							]
-						}
-					},
-					"status": "Created",
-					"code": 201,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"cookie": [],
-					"body": "{\n  \"_links\": {\n    \"self\": \"ullamco amet\",\n    \"related\": {\n      \"conversations\": \"Ut esse\",\n      \"mentions\": \"ex officia\"\n    }\n  },\n  \"id\": \"do pariatur labore sit\",\n  \"author\": {\n    \"_links\": {\n      \"self\": \"fugiat sunt pariatur in commodo\",\n      \"related\": {\n        \"inboxes\": \"cup\",\n        \"conversations\": \"consequat anim labore ullamco\",\n        \"botSource\": \"sed ex veniam\"\n      }\n    },\n    \"id\": \"proident nulla officia\",\n    \"email\": \"minim nulla \",\n    \"username\": \"Ut ea\",\n    \"first_name\": \"eiusmod veniam in esse\",\n    \"last_name\": \"ullamco\",\n    \"is_admin\": true,\n    \"is_available\": false,\n    \"is_blocked\": true,\n    \"type\": \"macro\",\n    \"custom_fields\": {}\n  },\n  \"body\": \"dolore culpa nisi nostrud\",\n  \"posted_at\": -9016981.37027058,\n  \"attachments\": [\n    {\n      \"id\": \"commodo dolore dolor eiusmod ut\",\n      \"filename\": \"consectetur incididunt ut anim\",\n      \"url\": \"ea aliqua\",\n      \"content_type\": \"consectetur ad in veniam\",\n      \"size\": -38026348,\n      \"metadata\": {\n        \"is_inline\": false,\n        \"cid\": \"Duis\"\n      }\n    },\n    {\n      \"id\": \"dolore in Excepteur ex\",\n      \"filename\": \"esse\",\n      \"url\": \"aliqua dolore ad mollit\",\n      \"content_type\": \"sed proident\",\n      \"size\": -76954383,\n      \"metadata\": {\n        \"is_inline\": true,\n        \"cid\": \"laboris elit ut\"\n      }\n    }\n  ],\n  \"is_pinned\": true\n}"
 				}
 			]
 		}
