@@ -14825,6 +14825,360 @@
 							"body": ""
 						}
 					]
+				},
+				{
+					"name": "Get shift",
+					"id": "82a9340c-b29b-4f29-b34c-4941f182087e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/shifts/:shift_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"shifts",
+								":shift_id"
+							],
+							"variable": [
+								{
+									"key": "shift_id",
+									"value": "shf_123",
+									"description": "(Required) The Shift ID"
+								}
+							]
+						},
+						"description": "Fetch a shift."
+					},
+					"response": [
+						{
+							"id": "282e3380-9a90-47b8-b3bd-b081775026fe",
+							"name": "A shift",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/shifts/:shift_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"shifts",
+										":shift_id"
+									],
+									"variable": [
+										{
+											"key": "shift_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"magna proident anim\",\n    \"related\": {\n      \"teammates\": \"in exercitation \",\n      \"owner\": \"Ut\"\n    }\n  },\n  \"id\": \"eu consequat dolor\",\n  \"name\": \"dolor amet\",\n  \"color\": \"purple\",\n  \"timezone\": \"sunt nulla in aliqua officia\",\n  \"times\": {\n    \"mon\": {\n      \"start\": \"do voluptate pariatur\",\n      \"end\": \"laboris ad cupidatat\"\n    },\n    \"tue\": {\n      \"start\": \"et id deserunt\",\n      \"end\": \"dolore nostrud dolor veniam\"\n    },\n    \"wed\": {\n      \"start\": \"tempor sed ut amet\",\n      \"end\": \"ex\"\n    },\n    \"thu\": {\n      \"start\": \"sunt et veniam\",\n      \"end\": \"occ\"\n    },\n    \"fri\": {\n      \"start\": \"in\",\n      \"end\": \"eiusmod occaecat\"\n    },\n    \"sat\": {\n      \"start\": \"in proident deseru\",\n      \"end\": \"proident laboris labore ullamco Excepteur\"\n    },\n    \"sun\": {\n      \"start\": \"sint dolore labore\",\n      \"end\": \"consectetur\"\n    }\n  },\n  \"created_at\": 36407530.08331901,\n  \"updated_at\": 40364354.9863013\n}"
+						}
+					]
+				},
+				{
+					"name": "List shift's teammates",
+					"id": "40ee8eb0-bcc1-40c8-9702-d0227477837e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/shifts/:shift_id/teammates",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"shifts",
+								":shift_id",
+								"teammates"
+							],
+							"variable": [
+								{
+									"key": "shift_id",
+									"value": "shf_123",
+									"description": "(Required) The Shift ID"
+								}
+							]
+						},
+						"description": "List the teammates assigned to a shift."
+					},
+					"response": [
+						{
+							"id": "cea63306-1452-4733-aeef-51eccf581fab",
+							"name": "Array of teammates",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/shifts/:shift_id/teammates",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"shifts",
+										":shift_id",
+										"teammates"
+									],
+									"variable": [
+										{
+											"key": "shift_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"inboxes\": \"<string>\",\n          \"conversations\": \"<string>\",\n          \"botSource\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"email\": \"<string>\",\n      \"username\": \"<string>\",\n      \"first_name\": \"<string>\",\n      \"last_name\": \"<string>\",\n      \"is_admin\": \"<boolean>\",\n      \"is_available\": \"<boolean>\",\n      \"is_blocked\": \"<boolean>\",\n      \"type\": \"integration\",\n      \"custom_fields\": {}\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"inboxes\": \"<string>\",\n          \"conversations\": \"<string>\",\n          \"botSource\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"email\": \"<string>\",\n      \"username\": \"<string>\",\n      \"first_name\": \"<string>\",\n      \"last_name\": \"<string>\",\n      \"is_admin\": \"<boolean>\",\n      \"is_available\": \"<boolean>\",\n      \"is_blocked\": \"<boolean>\",\n      \"type\": \"CSAT\",\n      \"custom_fields\": {}\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Add teammates to shift",
+					"id": "ce544250-e44d-4816-8745-d51bf8a86eaf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"teammate_ids\": [\n    \"velit labore cillum sit\",\n    \"ex\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/shifts/:shift_id/teammates",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"shifts",
+								":shift_id",
+								"teammates"
+							],
+							"variable": [
+								{
+									"key": "shift_id",
+									"value": "shf_123",
+									"description": "(Required) The Shift ID"
+								}
+							]
+						},
+						"description": "Add teammates to a shift. The selected teammates must be in the team that owns the shift."
+					},
+					"response": [
+						{
+							"id": "32d67b3a-7628-493a-8e08-c9940ad2e350",
+							"name": "No content",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"teammate_ids\": [\n    \"velit labore cillum sit\",\n    \"ex\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/shifts/:shift_id/teammates",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"shifts",
+										":shift_id",
+										"teammates"
+									],
+									"variable": [
+										{
+											"key": "shift_id"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				},
+				{
+					"name": "Remove teammates from shift",
+					"id": "14978261-c104-4ecc-a96e-7f822ba08172",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"teammate_ids\": [\n    \"velit labore cillum sit\",\n    \"ex\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/shifts/:shift_id/teammates",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"shifts",
+								":shift_id",
+								"teammates"
+							],
+							"variable": [
+								{
+									"key": "shift_id",
+									"value": "shf_123",
+									"description": "(Required) The Shift ID"
+								}
+							]
+						},
+						"description": "Remove teammates from a shift."
+					},
+					"response": [
+						{
+							"id": "48f75c95-7fcb-4427-b291-c10f52f543c7",
+							"name": "No content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"teammate_ids\": [\n    \"velit labore cillum sit\",\n    \"ex\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/shifts/:shift_id/teammates",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"shifts",
+										":shift_id",
+										"teammates"
+									],
+									"variable": [
+										{
+											"key": "shift_id"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
 				}
 			],
 			"id": "2bf9f0f5-2e5d-4fcf-b45f-d712e0c8ea54"
@@ -21619,360 +21973,6 @@
 					],
 					"cookie": [],
 					"body": "{\n  \"_links\": {\n    \"self\": \"labore\"\n  },\n  \"id\": -70450280,\n  \"name\": \"et quis\"\n}"
-				}
-			]
-		},
-		{
-			"name": "Get shift",
-			"id": "82a9340c-b29b-4f29-b34c-4941f182087e",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json"
-					}
-				],
-				"url": {
-					"raw": "{{baseUrl}}/shifts/:shift_id",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"shifts",
-						":shift_id"
-					],
-					"variable": [
-						{
-							"key": "shift_id",
-							"value": "shf_123",
-							"description": "(Required) The Shift ID"
-						}
-					]
-				},
-				"description": "Fetch a shift."
-			},
-			"response": [
-				{
-					"id": "282e3380-9a90-47b8-b3bd-b081775026fe",
-					"name": "A shift",
-					"originalRequest": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json"
-							},
-							{
-								"description": "Added as a part of security scheme: bearer",
-								"key": "Authorization",
-								"value": "Bearer <token>"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/shifts/:shift_id",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"shifts",
-								":shift_id"
-							],
-							"variable": [
-								{
-									"key": "shift_id"
-								}
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"cookie": [],
-					"body": "{\n  \"_links\": {\n    \"self\": \"magna proident anim\",\n    \"related\": {\n      \"teammates\": \"in exercitation \",\n      \"owner\": \"Ut\"\n    }\n  },\n  \"id\": \"eu consequat dolor\",\n  \"name\": \"dolor amet\",\n  \"color\": \"purple\",\n  \"timezone\": \"sunt nulla in aliqua officia\",\n  \"times\": {\n    \"mon\": {\n      \"start\": \"do voluptate pariatur\",\n      \"end\": \"laboris ad cupidatat\"\n    },\n    \"tue\": {\n      \"start\": \"et id deserunt\",\n      \"end\": \"dolore nostrud dolor veniam\"\n    },\n    \"wed\": {\n      \"start\": \"tempor sed ut amet\",\n      \"end\": \"ex\"\n    },\n    \"thu\": {\n      \"start\": \"sunt et veniam\",\n      \"end\": \"occ\"\n    },\n    \"fri\": {\n      \"start\": \"in\",\n      \"end\": \"eiusmod occaecat\"\n    },\n    \"sat\": {\n      \"start\": \"in proident deseru\",\n      \"end\": \"proident laboris labore ullamco Excepteur\"\n    },\n    \"sun\": {\n      \"start\": \"sint dolore labore\",\n      \"end\": \"consectetur\"\n    }\n  },\n  \"created_at\": 36407530.08331901,\n  \"updated_at\": 40364354.9863013\n}"
-				}
-			]
-		},
-		{
-			"name": "List shift's teammates",
-			"id": "40ee8eb0-bcc1-40c8-9702-d0227477837e",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json"
-					}
-				],
-				"url": {
-					"raw": "{{baseUrl}}/shifts/:shift_id/teammates",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"shifts",
-						":shift_id",
-						"teammates"
-					],
-					"variable": [
-						{
-							"key": "shift_id",
-							"value": "shf_123",
-							"description": "(Required) The Shift ID"
-						}
-					]
-				},
-				"description": "List the teammates assigned to a shift."
-			},
-			"response": [
-				{
-					"id": "cea63306-1452-4733-aeef-51eccf581fab",
-					"name": "Array of teammates",
-					"originalRequest": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json"
-							},
-							{
-								"description": "Added as a part of security scheme: bearer",
-								"key": "Authorization",
-								"value": "Bearer <token>"
-							}
-						],
-						"url": {
-							"raw": "{{baseUrl}}/shifts/:shift_id/teammates",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"shifts",
-								":shift_id",
-								"teammates"
-							],
-							"variable": [
-								{
-									"key": "shift_id"
-								}
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/json"
-						}
-					],
-					"cookie": [],
-					"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"inboxes\": \"<string>\",\n          \"conversations\": \"<string>\",\n          \"botSource\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"email\": \"<string>\",\n      \"username\": \"<string>\",\n      \"first_name\": \"<string>\",\n      \"last_name\": \"<string>\",\n      \"is_admin\": \"<boolean>\",\n      \"is_available\": \"<boolean>\",\n      \"is_blocked\": \"<boolean>\",\n      \"type\": \"integration\",\n      \"custom_fields\": {}\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"inboxes\": \"<string>\",\n          \"conversations\": \"<string>\",\n          \"botSource\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"email\": \"<string>\",\n      \"username\": \"<string>\",\n      \"first_name\": \"<string>\",\n      \"last_name\": \"<string>\",\n      \"is_admin\": \"<boolean>\",\n      \"is_available\": \"<boolean>\",\n      \"is_blocked\": \"<boolean>\",\n      \"type\": \"CSAT\",\n      \"custom_fields\": {}\n    }\n  ]\n}"
-				}
-			]
-		},
-		{
-			"name": "Add teammates to shift",
-			"id": "ce544250-e44d-4816-8745-d51bf8a86eaf",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"teammate_ids\": [\n    \"velit labore cillum sit\",\n    \"ex\"\n  ]\n}",
-					"options": {
-						"raw": {
-							"headerFamily": "json",
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{baseUrl}}/shifts/:shift_id/teammates",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"shifts",
-						":shift_id",
-						"teammates"
-					],
-					"variable": [
-						{
-							"key": "shift_id",
-							"value": "shf_123",
-							"description": "(Required) The Shift ID"
-						}
-					]
-				},
-				"description": "Add teammates to a shift. The selected teammates must be in the team that owns the shift."
-			},
-			"response": [
-				{
-					"id": "32d67b3a-7628-493a-8e08-c9940ad2e350",
-					"name": "No content",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"description": "Added as a part of security scheme: bearer",
-								"key": "Authorization",
-								"value": "Bearer <token>"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"teammate_ids\": [\n    \"velit labore cillum sit\",\n    \"ex\"\n  ]\n}",
-							"options": {
-								"raw": {
-									"headerFamily": "json",
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/shifts/:shift_id/teammates",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"shifts",
-								":shift_id",
-								"teammates"
-							],
-							"variable": [
-								{
-									"key": "shift_id"
-								}
-							]
-						}
-					},
-					"status": "No Content",
-					"code": 204,
-					"_postman_previewlanguage": "text",
-					"header": [],
-					"cookie": []
-				}
-			]
-		},
-		{
-			"name": "Remove teammates from shift",
-			"id": "14978261-c104-4ecc-a96e-7f822ba08172",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "DELETE",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"teammate_ids\": [\n    \"velit labore cillum sit\",\n    \"ex\"\n  ]\n}",
-					"options": {
-						"raw": {
-							"headerFamily": "json",
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{baseUrl}}/shifts/:shift_id/teammates",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"shifts",
-						":shift_id",
-						"teammates"
-					],
-					"variable": [
-						{
-							"key": "shift_id",
-							"value": "shf_123",
-							"description": "(Required) The Shift ID"
-						}
-					]
-				},
-				"description": "Remove teammates from a shift."
-			},
-			"response": [
-				{
-					"id": "48f75c95-7fcb-4427-b291-c10f52f543c7",
-					"name": "No content",
-					"originalRequest": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"description": "Added as a part of security scheme: bearer",
-								"key": "Authorization",
-								"value": "Bearer <token>"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"teammate_ids\": [\n    \"velit labore cillum sit\",\n    \"ex\"\n  ]\n}",
-							"options": {
-								"raw": {
-									"headerFamily": "json",
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/shifts/:shift_id/teammates",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"shifts",
-								":shift_id",
-								"teammates"
-							],
-							"variable": [
-								{
-									"key": "shift_id"
-								}
-							]
-						}
-					},
-					"status": "No Content",
-					"code": 204,
-					"_postman_previewlanguage": "text",
-					"header": [],
-					"cookie": []
 				}
 			]
 		}
