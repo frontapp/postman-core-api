@@ -5836,17 +5836,8 @@
 												"value": "application/json"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n  \"teammate_ids\": [\n    \"aliquip sed\",\n    \"amet mol\"\n  ]\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
 										"url": {
-											"raw": "{{baseUrl}}/conversations/:conversation_id/followers",
+											"raw": "{{baseUrl}}/conversations/:conversation_id/followers?ignore_errors=false",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -5854,6 +5845,13 @@
 												"conversations",
 												":conversation_id",
 												"followers"
+											],
+											"query": [
+												{
+													"key": "ignore_errors",
+													"value": "false",
+													"description": "Whether to ignore invalid teammate IDs and continue adding valid ones."
+												}
 											],
 											"variable": [
 												{
