@@ -1693,12 +1693,11 @@
 									"header": [
 										{
 											"key": "Content-Type",
-											"value": "application/json",
-											"enabled": true
+											"value": "application/json"
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"_links\": {\n    \"self\": \"dolore culpa ad cupidatat proident\",\n    \"related\": {\n      \"inbox\": \"quis pariatur tempor\",\n      \"owner\": \"aliquip Duis in fugiat Lorem\"\n    }\n  },\n  \"id\": \"ut fugiat pariatur\",\n  \"address\": \"tempor deserunt\",\n  \"types\": \"facebook\",\n  \"send_as\": \"sed in\",\n  \"settings\": {\n    \"undo_send_time\": 0,\n    \"all_teammates_can_reply\": false\n  },\n  \"is_private\": false,\n  \"is_valid\": false\n}"
+									"body": "{\n  \"_links\": {\n    \"self\": \"dolore culpa ad cupidatat proident\",\n    \"related\": {\n      \"inbox\": \"quis pariatur tempor\",\n      \"owner\": \"aliquip Duis in fugiat Lorem\"\n    }\n  },\n  \"id\": \"ut fugiat pariatur\",\n  \"address\": \"tempor deserunt\",\n  \"types\": \"facebook\",\n  \"send_as\": \"sed in\",\n  \"settings\": {\n    \"undo_send_time\": 0,\n    \"all_teammates_can_reply\": false\n  },\n  \"is_private\": false,\n  \"is_valid\": false,\n  \"type\": \"twitter\"\n}"
 								}
 							]
 						},
@@ -2247,12 +2246,11 @@
 							"header": [
 								{
 									"key": "Content-Type",
-									"value": "application/json",
-									"enabled": true
+									"value": "application/json"
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"_links\": {\n    \"self\": \"culpa ut dolore aliqua\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"in anim elit\",\n        \"related\": {\n          \"inbox\": \"proident ea ut culpa nulla\",\n          \"owner\": \"ipsum labore sint cillum\"\n        }\n      },\n      \"id\": \"proident Excepteur\",\n      \"address\": \"velit exercitation pariatur\",\n      \"types\": \"intercom\",\n      \"send_as\": \"et cupidat\",\n      \"settings\": {\n        \"undo_send_time\": 0,\n        \"all_teammates_can_reply\": false\n      },\n      \"is_private\": false,\n      \"is_valid\": false\n    },\n    {\n      \"_links\": {\n        \"self\": \"veniam in consequat minim est\",\n        \"related\": {\n          \"inbox\": \"aliqua\",\n          \"owner\": \"proident aute minim esse\"\n        }\n      },\n      \"id\": \"tempor incididunt nulla in dolore\",\n      \"address\": \"deserunt cillum aliquip culpa\",\n      \"types\": \"twitter\",\n      \"send_as\": \"do\",\n      \"settings\": {\n        \"undo_send_time\": 0,\n        \"all_teammates_can_reply\": true\n      },\n      \"is_private\": false,\n      \"is_valid\": false\n    }\n  ]\n}"
+							"body": "{\n  \"_links\": {\n    \"self\": \"culpa ut dolore aliqua\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"in anim elit\",\n        \"related\": {\n          \"inbox\": \"proident ea ut culpa nulla\",\n          \"owner\": \"ipsum labore sint cillum\"\n        }\n      },\n      \"id\": \"proident Excepteur\",\n      \"address\": \"velit exercitation pariatur\",\n      \"types\": \"intercom\",\n      \"send_as\": \"et cupidat\",\n      \"settings\": {\n        \"undo_send_time\": 0,\n        \"all_teammates_can_reply\": false\n      },\n      \"is_private\": false,\n      \"is_valid\": false,\n      \"type\": \"layer_anon\"\n    },\n    {\n      \"_links\": {\n        \"self\": \"veniam in consequat minim est\",\n        \"related\": {\n          \"inbox\": \"aliqua\",\n          \"owner\": \"proident aute minim esse\"\n        }\n      },\n      \"id\": \"tempor incididunt nulla in dolore\",\n      \"address\": \"deserunt cillum aliquip culpa\",\n      \"types\": \"twitter\",\n      \"send_as\": \"do\",\n      \"settings\": {\n        \"undo_send_time\": 0,\n        \"all_teammates_can_reply\": true\n      },\n      \"is_private\": false,\n      \"is_valid\": false,\n      \"type\": \"smtp\"\n    }\n  ]\n}"
 						}
 					]
 				}
@@ -9012,12 +9010,11 @@
 											"header": [
 												{
 													"key": "Content-Type",
-													"value": "application/json",
-													"enabled": true
+													"value": "application/json"
 												}
 											],
 											"cookie": [],
-											"body": "{\n  \"_links\": {\n    \"self\": \"culpa ut dolore aliqua\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"in anim elit\",\n        \"related\": {\n          \"inbox\": \"proident ea ut culpa nulla\",\n          \"owner\": \"ipsum labore sint cillum\"\n        }\n      },\n      \"id\": \"proident Excepteur\",\n      \"address\": \"velit exercitation pariatur\",\n      \"types\": \"intercom\",\n      \"send_as\": \"et cupidat\",\n      \"settings\": {\n        \"undo_send_time\": 0,\n        \"all_teammates_can_reply\": false\n      },\n      \"is_private\": false,\n      \"is_valid\": false\n    },\n    {\n      \"_links\": {\n        \"self\": \"veniam in consequat minim est\",\n        \"related\": {\n          \"inbox\": \"aliqua\",\n          \"owner\": \"proident aute minim esse\"\n        }\n      },\n      \"id\": \"tempor incididunt nulla in dolore\",\n      \"address\": \"deserunt cillum aliquip culpa\",\n      \"types\": \"twitter\",\n      \"send_as\": \"do\",\n      \"settings\": {\n        \"undo_send_time\": 0,\n        \"all_teammates_can_reply\": true\n      },\n      \"is_private\": false,\n      \"is_valid\": false\n    }\n  ]\n}"
+											"body": "{\n  \"_links\": {\n    \"self\": \"culpa ut dolore aliqua\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"in anim elit\",\n        \"related\": {\n          \"inbox\": \"proident ea ut culpa nulla\",\n          \"owner\": \"ipsum labore sint cillum\"\n        }\n      },\n      \"id\": \"proident Excepteur\",\n      \"address\": \"velit exercitation pariatur\",\n      \"types\": \"intercom\",\n      \"send_as\": \"et cupidat\",\n      \"settings\": {\n        \"undo_send_time\": 0,\n        \"all_teammates_can_reply\": false\n      },\n      \"is_private\": false,\n      \"is_valid\": false,\n      \"type\": \"facebook\"\n    },\n    {\n      \"_links\": {\n        \"self\": \"veniam in consequat minim est\",\n        \"related\": {\n          \"inbox\": \"aliqua\",\n          \"owner\": \"proident aute minim esse\"\n        }\n      },\n      \"id\": \"tempor incididunt nulla in dolore\",\n      \"address\": \"deserunt cillum aliquip culpa\",\n      \"types\": \"twitter\",\n      \"send_as\": \"do\",\n      \"settings\": {\n        \"undo_send_time\": 0,\n        \"all_teammates_can_reply\": true\n      },\n      \"is_private\": false,\n      \"is_valid\": false,\n      \"type\": \"gmail\"\n    }\n  ]\n}"
 										}
 									]
 								}
@@ -18060,12 +18057,11 @@
 									"header": [
 										{
 											"key": "Content-Type",
-											"value": "application/json",
-											"enabled": true
+											"value": "application/json"
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"_links\": {\n    \"self\": \"culpa ut dolore aliqua\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"in anim elit\",\n        \"related\": {\n          \"inbox\": \"proident ea ut culpa nulla\",\n          \"owner\": \"ipsum labore sint cillum\"\n        }\n      },\n      \"id\": \"proident Excepteur\",\n      \"address\": \"velit exercitation pariatur\",\n      \"types\": \"intercom\",\n      \"send_as\": \"et cupidat\",\n      \"settings\": {\n        \"undo_send_time\": 0,\n        \"all_teammates_can_reply\": false\n      },\n      \"is_private\": false,\n      \"is_valid\": false\n    },\n    {\n      \"_links\": {\n        \"self\": \"veniam in consequat minim est\",\n        \"related\": {\n          \"inbox\": \"aliqua\",\n          \"owner\": \"proident aute minim esse\"\n        }\n      },\n      \"id\": \"tempor incididunt nulla in dolore\",\n      \"address\": \"deserunt cillum aliquip culpa\",\n      \"types\": \"twitter\",\n      \"send_as\": \"do\",\n      \"settings\": {\n        \"undo_send_time\": 0,\n        \"all_teammates_can_reply\": true\n      },\n      \"is_private\": false,\n      \"is_valid\": false\n    }\n  ]\n}"
+									"body": "{\n  \"_links\": {\n    \"self\": \"culpa ut dolore aliqua\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"in anim elit\",\n        \"related\": {\n          \"inbox\": \"proident ea ut culpa nulla\",\n          \"owner\": \"ipsum labore sint cillum\"\n        }\n      },\n      \"id\": \"proident Excepteur\",\n      \"address\": \"velit exercitation pariatur\",\n      \"types\": \"intercom\",\n      \"send_as\": \"et cupidat\",\n      \"settings\": {\n        \"undo_send_time\": 0,\n        \"all_teammates_can_reply\": false\n      },\n      \"is_private\": false,\n      \"is_valid\": false,\n      \"type\": \"twilio\"\n    },\n    {\n      \"_links\": {\n        \"self\": \"veniam in consequat minim est\",\n        \"related\": {\n          \"inbox\": \"aliqua\",\n          \"owner\": \"proident aute minim esse\"\n        }\n      },\n      \"id\": \"tempor incididunt nulla in dolore\",\n      \"address\": \"deserunt cillum aliquip culpa\",\n      \"types\": \"twitter\",\n      \"send_as\": \"do\",\n      \"settings\": {\n        \"undo_send_time\": 0,\n        \"all_teammates_can_reply\": true\n      },\n      \"is_private\": false,\n      \"is_valid\": false,\n      \"type\": \"twilio_whatsapp\"\n    }\n  ]\n}"
 								}
 							]
 						},
@@ -21739,12 +21735,11 @@
 									"header": [
 										{
 											"key": "Content-Type",
-											"value": "application/json",
-											"enabled": true
+											"value": "application/json"
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"_links\": {\n    \"self\": \"Ut pariat\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"aliquip esse vel\",\n        \"related\": {\n          \"inbox\": \"anim eiusmod in\",\n          \"owner\": \"eiusmod ali\"\n        }\n      },\n      \"id\": \"ut Duis ea\",\n      \"address\": \"ipsum\",\n      \"types\": \"twilio\",\n      \"send_as\": \"culpa\",\n      \"settings\": {\n        \"undo_send_time\": 0,\n        \"all_teammates_can_reply\": false\n      },\n      \"is_private\": false,\n      \"is_valid\": false\n    },\n    {\n      \"_links\": {\n        \"self\": \"ea eiusmo\",\n        \"related\": {\n          \"inbox\": \"mollit fugiat reprehenderit ad\",\n          \"owner\": \"nulla deserunt adipisicing\"\n        }\n      },\n      \"id\": \"sint exercitation\",\n      \"address\": \"occaecat aute\",\n      \"types\": \"intercom\",\n      \"send_as\": \"eiusmod quis\",\n      \"settings\": {\n        \"undo_send_time\": 0,\n        \"all_teammates_can_reply\": false\n      },\n      \"is_private\": false,\n      \"is_valid\": false\n    }\n  ]\n}"
+									"body": "{\n  \"_links\": {\n    \"self\": \"Ut pariat\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"aliquip esse vel\",\n        \"related\": {\n          \"inbox\": \"anim eiusmod in\",\n          \"owner\": \"eiusmod ali\"\n        }\n      },\n      \"id\": \"ut Duis ea\",\n      \"address\": \"ipsum\",\n      \"types\": \"twilio\",\n      \"send_as\": \"culpa\",\n      \"settings\": {\n        \"undo_send_time\": 0,\n        \"all_teammates_can_reply\": false\n      },\n      \"is_private\": false,\n      \"is_valid\": false,\n      \"type\": \"gmail\"\n    },\n    {\n      \"_links\": {\n        \"self\": \"ea eiusmo\",\n        \"related\": {\n          \"inbox\": \"mollit fugiat reprehenderit ad\",\n          \"owner\": \"nulla deserunt adipisicing\"\n        }\n      },\n      \"id\": \"sint exercitation\",\n      \"address\": \"occaecat aute\",\n      \"types\": \"intercom\",\n      \"send_as\": \"eiusmod quis\",\n      \"settings\": {\n        \"undo_send_time\": 0,\n        \"all_teammates_can_reply\": false\n      },\n      \"is_private\": false,\n      \"is_valid\": false,\n      \"type\": \"front_mail\"\n    }\n  ]\n}"
 								}
 							]
 						},
