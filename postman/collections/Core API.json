@@ -7914,6 +7914,181 @@
 					]
 				},
 				{
+					"name": "Delete conversation",
+					"id": "41e08d99-7fc5-4e7f-a895-849e6dfe0d9c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/conversations/:conversation_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"conversations",
+								":conversation_id"
+							],
+							"variable": [
+								{
+									"key": "conversation_id",
+									"value": "cnv_123",
+									"description": "(Required) The conversation ID"
+								}
+							]
+						},
+						"description": "Permanently delete a conversation. The conversation must have status \"trashed\"\n(in the trash) before it can be permanently deleted. This action cannot be undone.\n\n\nRequired scope: `conversations:delete`"
+					},
+					"response": [
+						{
+							"id": "cb64b70b-dfd9-47bc-af6a-3639c4c9651c",
+							"name": "No content",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/conversations/:conversation_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"conversations",
+										":conversation_id"
+									],
+									"variable": [
+										{
+											"key": "conversation_id",
+											"value": "cnv_123",
+											"description": "(Required) The conversation ID"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						},
+						{
+							"id": "a9437251-08f9-4763-99ea-208bb6a503e0",
+							"name": "Conversation must have status \"trashed\" before it can be permanently deleted",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/conversations/:conversation_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"conversations",
+										":conversation_id"
+									],
+									"variable": [
+										{
+											"key": "conversation_id",
+											"value": "cnv_123",
+											"description": "(Required) The conversation ID"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						},
+						{
+							"id": "aca3ec38-aa2e-4067-9d4e-245fc293ba8a",
+							"name": "Token lacks the required `conversations:delete` scope",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/conversations/:conversation_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"conversations",
+										":conversation_id"
+									],
+									"variable": [
+										{
+											"key": "conversation_id",
+											"value": "cnv_123",
+											"description": "(Required) The conversation ID"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						},
+						{
+							"id": "b830b5bb-a9f7-4ffd-82b5-d8071fa7eec1",
+							"name": "Conversation not found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/conversations/:conversation_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"conversations",
+										":conversation_id"
+									],
+									"variable": [
+										{
+											"key": "conversation_id",
+											"value": "cnv_123",
+											"description": "(Required) The conversation ID"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				},
+				{
 					"name": "Create discussion conversation",
 					"id": "62b5dd39-8e2b-415f-895a-39c0294b6974",
 					"protocolProfileBehavior": {
@@ -21892,6 +22067,598 @@
 				}
 			],
 			"id": "8e8ba176-cddf-4631-aa67-bfda9b80acc0"
+		},
+		{
+			"name": "views",
+			"item": [
+				{
+					"name": "List team views",
+					"id": "874189d5-772e-47e9-a97a-05da26e6dbc4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/teams/:team_id/views?limit=<integer>&page_token=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"teams",
+								":team_id",
+								"views"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "<integer>",
+									"description": "Max number of results per [page](https://dev.frontapp.com/docs/pagination)"
+								},
+								{
+									"key": "page_token",
+									"value": "<string>",
+									"description": "Token to use to request the [next page](https://dev.frontapp.com/docs/pagination)"
+								}
+							],
+							"variable": [
+								{
+									"key": "team_id",
+									"value": "tim_xyz",
+									"description": "(Required) The team ID"
+								}
+							]
+						},
+						"description": "List the views of a team.\n\nRequired scope: `views:read`"
+					},
+					"response": [
+						{
+							"id": "7e860a8c-d0a6-4feb-a91d-ded2b774f281",
+							"name": "Array of views",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/teams/:team_id/views?limit=<integer>&page_token=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"teams",
+										":team_id",
+										"views"
+									],
+									"query": [
+										{
+											"description": "Max number of results per [page](https://dev.frontapp.com/docs/pagination)",
+											"key": "limit",
+											"value": "<integer>"
+										},
+										{
+											"description": "Token to use to request the [next page](https://dev.frontapp.com/docs/pagination)",
+											"key": "page_token",
+											"value": "<string>"
+										}
+									],
+									"variable": [
+										{
+											"key": "team_id",
+											"value": "tim_xyz",
+											"description": "(Required) The team ID"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_pagination\": {\n    \"next\": \"<string>\"\n  },\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"owner\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"highlight\": \"<string>\",\n      \"inbox_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tag_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"not_tag_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"no_tags\": \"<boolean>\",\n      \"assignee_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"not_assignee_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"owner\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"highlight\": \"<string>\",\n      \"inbox_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tag_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"not_tag_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"no_tags\": \"<boolean>\",\n      \"assignee_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"not_assignee_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "List views",
+					"id": "4279b6da-0412-489a-ba96-fb8a38230038",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/views?limit=<integer>&page_token=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"views"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "<integer>",
+									"description": "Max number of results per [page](https://dev.frontapp.com/docs/pagination)"
+								},
+								{
+									"key": "page_token",
+									"value": "<string>",
+									"description": "Token to use to request the [next page](https://dev.frontapp.com/docs/pagination)"
+								}
+							]
+						},
+						"description": "List the views accessible to the authenticated token.\n\nRequired scope: `views:read`"
+					},
+					"response": [
+						{
+							"id": "49174655-5991-4480-929b-60a4d287f03f",
+							"name": "Array of views",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/views?limit=<integer>&page_token=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"views"
+									],
+									"query": [
+										{
+											"description": "Max number of results per [page](https://dev.frontapp.com/docs/pagination)",
+											"key": "limit",
+											"value": "<integer>"
+										},
+										{
+											"description": "Token to use to request the [next page](https://dev.frontapp.com/docs/pagination)",
+											"key": "page_token",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_pagination\": {\n    \"next\": \"<string>\"\n  },\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"owner\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"highlight\": \"<string>\",\n      \"inbox_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tag_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"not_tag_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"no_tags\": \"<boolean>\",\n      \"assignee_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"not_assignee_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"owner\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"highlight\": \"<string>\",\n      \"inbox_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"tag_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"not_tag_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"no_tags\": \"<boolean>\",\n      \"assignee_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"not_assignee_ids\": [\n        \"<string>\",\n        \"<string>\"\n      ]\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get view",
+					"id": "e71d785a-29d2-4884-b2a8-ebe462a434bd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/views/:view_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"views",
+								":view_id"
+							],
+							"variable": [
+								{
+									"key": "view_id",
+									"value": "lns_abc123",
+									"description": "(Required) The view ID"
+								}
+							]
+						},
+						"description": "Fetch a view.\n\nRequired scope: `views:read`"
+					},
+					"response": [
+						{
+							"id": "fc534166-6542-4a93-aa1a-6fa2be6fcd8c",
+							"name": "A view",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/views/:view_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"views",
+										":view_id"
+									],
+									"variable": [
+										{
+											"key": "view_id",
+											"value": "lns_abc123",
+											"description": "(Required) The view ID"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"owner\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"highlight\": \"<string>\",\n  \"inbox_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"tag_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"not_tag_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"no_tags\": \"<boolean>\",\n  \"assignee_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"not_assignee_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update view",
+					"id": "e249a2cb-cf5c-4b65-b2ac-dd90098d6965",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"<string>\",\n  \"inbox_ids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"tag_ids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"not_tag_ids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"no_tags\": \"<boolean>\",\n  \"assignee_ids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"not_assignee_ids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"highlight\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/views/:view_id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"views",
+								":view_id"
+							],
+							"variable": [
+								{
+									"key": "view_id",
+									"value": "lns_abc123",
+									"description": "(Required) The view ID"
+								}
+							]
+						},
+						"description": "Update a view.\n\nRequired scope: `views:write`"
+					},
+					"response": [
+						{
+							"id": "a5bd1426-ddcf-4786-b613-f3b3e59c09d2",
+							"name": "No content",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"inbox_ids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"tag_ids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"not_tag_ids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"no_tags\": \"<boolean>\",\n  \"assignee_ids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"not_assignee_ids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"highlight\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/views/:view_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"views",
+										":view_id"
+									],
+									"variable": [
+										{
+											"key": "view_id",
+											"value": "lns_abc123",
+											"description": "(Required) The view ID"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				},
+				{
+					"name": "Create team view",
+					"id": "ced402d8-4024-4339-9e3c-d74b3a2fe6a1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"<string>\",\n  \"inbox_ids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"tag_ids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"not_tag_ids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"no_tags\": \"<boolean>\",\n  \"assignee_ids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"not_assignee_ids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"highlight\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/teams/:team_id/views",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"teams",
+								":team_id",
+								"views"
+							],
+							"variable": [
+								{
+									"key": "team_id",
+									"value": "tim_xyz",
+									"description": "(Required) The team ID"
+								}
+							]
+						},
+						"description": "Create a new view for a team.\n\nRequired scope: `views:write`"
+					},
+					"response": [
+						{
+							"id": "0c99c107-d230-406f-86f6-1492bf38fa0b",
+							"name": "A view",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"inbox_ids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"tag_ids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"not_tag_ids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"no_tags\": \"<boolean>\",\n  \"assignee_ids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"not_assignee_ids\": [\n    \"string\",\n    \"string\"\n  ],\n  \"highlight\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/teams/:team_id/views",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"teams",
+										":team_id",
+										"views"
+									],
+									"variable": [
+										{
+											"key": "team_id",
+											"value": "tim_xyz",
+											"description": "(Required) The team ID"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"_links\": {\n    \"self\": \"<string>\",\n    \"related\": {\n      \"owner\": \"<string>\"\n    }\n  },\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"highlight\": \"<string>\",\n  \"inbox_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"tag_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"not_tag_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"no_tags\": \"<boolean>\",\n  \"assignee_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"not_assignee_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Add view to teammate sidebars",
+					"id": "d05cb286-b4d1-43a9-9476-3a61e77ede39",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"teammate_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/views/:view_id/teammates",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"views",
+								":view_id",
+								"teammates"
+							],
+							"variable": [
+								{
+									"key": "view_id",
+									"value": "lns_abc123",
+									"description": "(Required) The view ID"
+								}
+							]
+						},
+						"description": "Makes this view visible in specified teammates' sidebar navigation.\n\nRequired scope: `views:write`"
+					},
+					"response": [
+						{
+							"id": "2e3b93ba-b5e0-4fe4-9a32-9c51f5c9eb6d",
+							"name": "No content",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"teammate_ids\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/views/:view_id/teammates",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"views",
+										":view_id",
+										"teammates"
+									],
+									"variable": [
+										{
+											"key": "view_id",
+											"value": "lns_abc123",
+											"description": "(Required) The view ID"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": []
+						}
+					]
+				}
+			],
+			"id": "9fc61b18-9bd4-47e3-a4e1-3f3a34df8928"
 		},
 		{
 			"name": "API Token details",
