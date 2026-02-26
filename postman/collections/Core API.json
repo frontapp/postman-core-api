@@ -4,7 +4,7 @@
 		"name": "Core API",
 		"description": "Contact Support:  \nName: Front Platform  \nUrl: https://community.front.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "19393231-da8fe9ca-ebf2-4253-a284-125915606119"
+		"_uid": "52345464-da8fe9ca-ebf2-4253-a284-125915606119"
 	},
 	"item": [
 		{
@@ -22719,6 +22719,90 @@
 					],
 					"cookie": [],
 					"body": "{\n  \"_links\": {\n    \"self\": \"labore\"\n  },\n  \"id\": \"<string>\",\n  \"name\": \"et quis\"\n}"
+				}
+			]
+		},
+		{
+			"name": "List teammate private inboxes",
+			"id": "eff4a818-84a5-4f09-884d-817dd9565fa6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/teammates/:teammate_id/private_inboxes",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"teammates",
+						":teammate_id",
+						"private_inboxes"
+					],
+					"variable": [
+						{
+							"key": "teammate_id",
+							"value": "tea_123",
+							"description": "(Required) The teammate ID"
+						}
+					]
+				},
+				"description": "List the private inboxes of a teammate.\n\nRequired scope: `inboxes:read`"
+			},
+			"response": [
+				{
+					"id": "995f68c5-4a94-470f-bb29-74a988962a1c",
+					"name": "Array of Inboxes",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"description": "Added as a part of security scheme: bearer",
+								"key": "Authorization",
+								"value": "Bearer <token>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/teammates/:teammate_id/private_inboxes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"teammates",
+								":teammate_id",
+								"private_inboxes"
+							],
+							"variable": [
+								{
+									"key": "teammate_id",
+									"value": "tea_123",
+									"description": "(Required) The teammate ID"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"_links\": {\n    \"self\": \"<string>\"\n  },\n  \"_results\": [\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"teammates\": \"<string>\",\n          \"conversations\": \"<string>\",\n          \"channels\": \"<string>\",\n          \"owner\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"is_private\": \"<boolean>\",\n      \"is_public\": \"<boolean>\",\n      \"custom_fields\": {}\n    },\n    {\n      \"_links\": {\n        \"self\": \"<string>\",\n        \"related\": {\n          \"teammates\": \"<string>\",\n          \"conversations\": \"<string>\",\n          \"channels\": \"<string>\",\n          \"owner\": \"<string>\"\n        }\n      },\n      \"id\": \"<string>\",\n      \"name\": \"<string>\",\n      \"is_private\": \"<boolean>\",\n      \"is_public\": \"<boolean>\",\n      \"custom_fields\": {}\n    }\n  ]\n}"
 				}
 			]
 		}
